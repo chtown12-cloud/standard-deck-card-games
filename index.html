@@ -4,10 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Card Game Compendium</title>
-    <meta name="description" content="Rules for 53 standard-deck card games from around the world, plus the universal basics of trick-taking, melding, and shedding games.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <meta name="description" content="Rules for 61 standard-deck card games from around the world, plus the universal basics of trick-taking, melding, and shedding games.">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -16,88 +13,43 @@
         <header>
             <div class="logo" aria-hidden="true">♠️♥️♣️♦️</div>
             <h1>Card Game Compendium</h1>
-            <p class="tagline">Learn the basics + 53 card games from every continent</p>
+            <p class="tagline">Learn the basics + 61 card games from every continent</p>
         </header>
         
-        <nav class="nav-container" aria-label="Game selection">
-            <div class="category-tabs" role="group" aria-label="Filter games by category">
-                <button class="category-tab active" aria-pressed="true" data-category="all">All Games</button>
-                <button class="category-tab" aria-pressed="false" data-category="trick-taking">Trick-Taking</button>
-                <button class="category-tab" aria-pressed="false" data-category="shedding">Shedding</button>
-                <button class="category-tab" aria-pressed="false" data-category="matching">Matching</button>
-                <button class="category-tab" aria-pressed="false" data-category="combat">Combat</button>
-                <button class="category-tab" aria-pressed="false" data-category="casino">Casino</button>
-                <button class="category-tab" aria-pressed="false" data-category="solitaire">Solitaire</button>
-                <button class="category-tab" aria-pressed="false" data-category="bluffing">Bluffing</button>
-            </div>
-            <div class="player-filters" role="group" aria-label="Filter games by player count">
-                <button class="player-filter active" aria-pressed="true" data-players="all">Any Players</button>
-                <button class="player-filter" aria-pressed="false" data-players="1">1 Player</button>
-                <button class="player-filter" aria-pressed="false" data-players="2">2 Players</button>
-                <button class="player-filter" aria-pressed="false" data-players="3-4">3-4 Players</button>
-                <button class="player-filter" aria-pressed="false" data-players="5+">5+ Players</button>
-            </div>
-            <div class="nav" role="group" aria-label="Choose a game">
-                <button class="nav-btn active" aria-current="page" data-game="basics" data-category="all" data-players="all">📚 Learn Basics First</button>
-                <button class="nav-btn" data-game="cabo" data-category="matching" data-players="2-4">Cabo</button>
-                <button class="nav-btn" data-game="golf" data-category="matching" data-players="2-6">Golf</button>
-                <button class="nav-btn" data-game="yaniv" data-category="shedding" data-players="2-8">Yaniv</button>
-                <button class="nav-btn" data-game="kemps" data-category="matching" data-players="4+">Kemps</button>
-                <button class="nav-btn" data-game="idiot" data-category="shedding" data-players="2-6">Idiot/Palace</button>
-                <button class="nav-btn" data-game="durak" data-category="combat" data-players="2-6">Durak</button>
-                <button class="nav-btn" data-game="nerts" data-category="shedding" data-players="2-6">Nerts</button>
-                <button class="nav-btn" data-game="spades" data-category="trick-taking" data-players="4">Spades</button>
-                <button class="nav-btn" data-game="ers" data-category="combat" data-players="2-8">Egyptian Rat Screw</button>
-                <button class="nav-btn" data-game="president" data-category="shedding" data-players="4-8">President</button>
-                <button class="nav-btn" data-game="german_whist" data-category="trick-taking" data-players="2">German Whist</button>
-                <button class="nav-btn" data-game="hearts" data-category="trick-taking" data-players="4">Hearts</button>
-                <button class="nav-btn" data-game="euchre" data-category="trick-taking" data-players="4">Euchre</button>
-                <button class="nav-btn" data-game="fox_forest" data-category="trick-taking" data-players="2">Fox in the Forest</button>
-                <button class="nav-btn" data-game="gin_rummy" data-category="matching" data-players="2">Gin Rummy</button>
-                <button class="nav-btn" data-game="cribbage" data-category="matching" data-players="2">Cribbage</button>
-                <button class="nav-btn" data-game="war" data-category="combat" data-players="2">War</button>
-                <button class="nav-btn" data-game="spit" data-category="shedding" data-players="2">Spit</button>
-                <button class="nav-btn" data-game="blackjack" data-category="casino" data-players="2-7">Blackjack</button>
-                <button class="nav-btn" data-game="crazy_eights" data-category="shedding" data-players="2-7">Crazy Eights</button>
-                <button class="nav-btn" data-game="klondike" data-category="solitaire" data-players="1">Klondike Solitaire</button>
-                <button class="nav-btn" data-game="spider" data-category="solitaire" data-players="1">Spider Solitaire</button>
-                <button class="nav-btn" data-game="pyramid" data-category="solitaire" data-players="1">Pyramid</button>
-                <button class="nav-btn" data-game="speed" data-category="shedding" data-players="2">Speed</button>
-                <button class="nav-btn" data-game="kings_corner" data-category="shedding" data-players="2-4">Kings Corner</button>
-                <button class="nav-btn" data-game="go_fish" data-category="matching" data-players="2-6">Go Fish</button>
-                <button class="nav-btn" data-game="concentration" data-category="matching" data-players="1-4">Concentration</button>
-                <button class="nav-btn" data-game="clock" data-category="solitaire" data-players="1">Clock Patience</button>
-                <button class="nav-btn" data-game="coup" data-category="bluffing" data-players="2-6">Coup</button>
-                <button class="nav-btn" data-game="scopa" data-category="trick-taking" data-players="2-4">Scopa (Italy)</button>
-                <button class="nav-btn" data-game="truco" data-category="trick-taking" data-players="2-6">Truco (Argentina)</button>
-                <button class="nav-btn" data-game="big_two" data-category="shedding" data-players="4">Big Two (China)</button>
-                <button class="nav-btn" data-game="teen_patti" data-category="casino" data-players="3-6">Teen Patti (India)</button>
-                <button class="nav-btn" data-game="briscola" data-category="trick-taking" data-players="2-4">Briscola (Italy)</button>
-                <button class="nav-btn" data-game="tien_len" data-category="shedding" data-players="4">Tien Len (Vietnam)</button>
-                <button class="nav-btn" data-game="tarneeb" data-category="trick-taking" data-players="4">Tarneeb (Middle East)</button>
-                <button class="nav-btn" data-game="kalooki" data-category="matching" data-players="2-4">Kalooki (Jamaica)</button>
-                <button class="nav-btn" data-game="daifugo" data-category="shedding" data-players="3-8">Daifugō (Japan)</button>
-                <button class="nav-btn" data-game="belote" data-category="trick-taking" data-players="4">Belote (France)</button>
-                <button class="nav-btn" data-game="mus" data-category="bluffing" data-players="4">Mus (Spain)</button>
-                <button class="nav-btn" data-game="bisca" data-category="trick-taking" data-players="2-4">Bisca (Portugal)</button>
-                <button class="nav-btn" data-game="buraco" data-category="matching" data-players="2-4">Buraco (Brazil)</button>
-                <button class="nav-btn" data-game="preferans" data-category="trick-taking" data-players="3">Preferans (Russia)</button>
-                <button class="nav-btn" data-game="baloot" data-category="trick-taking" data-players="4">Baloot (Saudi Arabia)</button>
-                <button class="nav-btn" data-game="cucumber" data-category="trick-taking" data-players="2-7">Cucumber (Scandinavia)</button>
-                <button class="nav-btn" data-game="pusoy_dos" data-category="shedding" data-players="4">Pusoy Dos (Philippines)</button>
-                <button class="nav-btn" data-game="tysiac" data-category="trick-taking" data-players="3">Tysiąc/1000 (Poland)</button>
-                <button class="nav-btn" data-game="conquian" data-category="matching" data-players="2">Conquian (Mexico)</button>
-                <button class="nav-btn" data-game="batak" data-category="trick-taking" data-players="4">Batak (Turkey)</button>
-                <button class="nav-btn" data-game="diloti" data-category="trick-taking" data-players="4">Diloti (Greece)</button>
-                <button class="nav-btn" data-game="jass" data-category="trick-taking" data-players="4">Jass (Switzerland)</button>
-                <button class="nav-btn" data-game="spar" data-category="combat" data-players="2">Spar (Ghana)</button>
-                <button class="nav-btn" data-game="phase10" data-category="matching" data-players="2-6">Phase 10</button>
-            </div>
-        </nav>
+        <div class="toolbar">
+            <button type="button" class="toolbar-home" id="toolbar-home">♠️ All Games</button>
+            <input type="search" id="game-search" placeholder="Find a game…  ( / )" aria-label="Search games">
+            <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Color theme">🌗</button>
+        </div>
 
         <main id="content" class="content">
+            <!-- GAME LIBRARY (HOME) -->
+            <section id="home" class="game-section active">
+                <h1 class="game-title" data-icon="🃏">Choose Your Game</h1>
+                <div class="filters">
+                    <div class="category-tabs" role="group" aria-label="Filter games by category">
+                        <button class="category-tab active" aria-pressed="true" data-category="all">All Games</button>
+                        <button class="category-tab" aria-pressed="false" data-category="trick-taking">Trick-Taking</button>
+                        <button class="category-tab" aria-pressed="false" data-category="shedding">Shedding</button>
+                        <button class="category-tab" aria-pressed="false" data-category="matching">Matching</button>
+                        <button class="category-tab" aria-pressed="false" data-category="combat">Combat</button>
+                        <button class="category-tab" aria-pressed="false" data-category="casino">Casino</button>
+                        <button class="category-tab" aria-pressed="false" data-category="solitaire">Solitaire</button>
+                        <button class="category-tab" aria-pressed="false" data-category="bluffing">Bluffing</button>
+                    </div>
+                    <div class="player-filters" role="group" aria-label="Filter games by player count">
+                        <button class="player-filter active" aria-pressed="true" data-players="all">Any Players</button>
+                        <button class="player-filter" aria-pressed="false" data-players="1">1 Player</button>
+                        <button class="player-filter" aria-pressed="false" data-players="2">2 Players</button>
+                        <button class="player-filter" aria-pressed="false" data-players="3-4">3-4 Players</button>
+                        <button class="player-filter" aria-pressed="false" data-players="5+">5+ Players</button>
+                    </div>
+                </div>
+                <div class="game-grid" id="game-grid"></div>
+            </section>
+
             <!-- BASIC CONCEPTS -->
-            <section id="basics" class="game-section active">
+            <section id="basics" class="game-section">
                 <h1 class="game-title" data-icon="📚">Basic Card Game Concepts</h1>
                 
                 <div class="info-card primary">
@@ -3953,6 +3905,490 @@
                     <li><strong>No stick-the-dealer:</strong> If everyone passes twice, throw in the hand and redeal.</li>
                     <li><strong>Defend alone:</strong> A defender may also go alone against a lone maker, scoring 4 points if they euchre them.</li>
                     <li><strong>British Euchre (25 points):</strong> Played with a Joker ("Benny") as the highest trump, game to 25.</li>
+                </ol>
+            </section>
+
+            <!-- CHEAT / BS -->
+            <section id="cheat" class="game-section">
+                <h1 class="game-title" data-icon="🤥">Cheat (BS / I Doubt It)</h1>
+
+                <div class="info-card primary">
+                    <strong>Players:</strong> 3-10 players &nbsp;|&nbsp; <strong>Ages:</strong> 8+<br>
+                    Cheat is the world's favorite lying game. Cards are played face down with a claim — "three Kings" — and nobody knows if it's true unless someone dares to call "Cheat!" Guess right and the liar swallows the pile; guess wrong and it's yours. A perfect poker face beats a perfect hand.
+                </div>
+
+                <h2>Object</h2>
+                <p>Be the first player to get rid of all your cards — by honest play or barefaced lying.</p>
+
+                <h2>Contents</h2>
+                <ul>
+                    <li>Standard 52-card deck (shuffle in a second deck for 7+ players)</li>
+                    <li>No card values — only ranks and nerve matter</li>
+                </ul>
+
+                <h2>Setup</h2>
+                <p>Deal the entire deck as evenly as possible — it's fine if some players hold one extra card. Players sort their hands by rank. The player holding the <strong>A♠ goes first</strong> (or the player left of the dealer). Play proceeds clockwise.</p>
+
+                <h2>Let's Play!</h2>
+                <p>Each turn is a claim that may or may not be true:</p>
+                <ol>
+                    <li>Place 1-4 cards <strong>face down</strong> on the pile, announcing the quantity and the current rank.</li>
+                    <li>Anyone may call "Cheat!" before the next player plays.</li>
+                    <li>If no one calls, play passes on and the rank advances.</li>
+                </ol>
+
+                <h3>Step 1: Making a Claim</h3>
+                <p>Ranks advance in order around the table: the first player claims <strong>Aces</strong>, the next <strong>2s</strong>, then 3s, and so on through Kings, then back to Aces. On your turn you must play at least one card and claim it matches the current rank — <em>"two 7s"</em> — whether or not it's true. You may mix truth and lies in a single play.</p>
+
+                <h3>Step 2: Calling Cheat</h3>
+                <p>Any player who doubts the claim shouts <strong>"Cheat!"</strong> (or "BS!"). The played cards are flipped over for all to see:</p>
+                <ul>
+                    <li><strong>The claim was a lie:</strong> The liar picks up the <strong>entire pile</strong>.</li>
+                    <li><strong>The claim was true:</strong> The challenger picks up the entire pile.</li>
+                </ul>
+                <p>Either way, the next player continues with the next rank. If several players call at once, the first to shout (or the nearest to the player's left) is the official challenger.</p>
+                <div class="info-card success">
+                    <h3>Example</h3>
+                    <p>The rank is Queens, but you hold none. You slide two cards forward — a 4 and a 9 — and announce "two Queens" without blinking.</p>
+                    <p>Maria narrows her eyes: she's holding three Queens herself, so yours can't all be real. <strong>"Cheat!"</strong> The cards flip, the lie is exposed, and the whole pile is yours. Next time, lie when the odds are friendlier.</p>
+                </div>
+
+                <h2>Ending the Game</h2>
+                <p>You must survive your final play: if your last cards are challenged and you lied, you're back in the game with a full pile. Going out honestly — or having your last-play bluff go unchallenged — wins.</p>
+
+                <h2>Winning the Game</h2>
+                <p>The first player with no cards (after any challenge on their final play resolves) wins. Play on for second place, or shuffle up and let the loser deal.</p>
+
+                <h2>Variations</h2>
+                <ol>
+                    <li><strong>Fixed ranks:</strong> The rank resets to Aces after each challenge instead of advancing continuously.</li>
+                    <li><strong>Free rank:</strong> Each player announces any rank equal to or one away from the previous claim, opening up new bluffing lines.</li>
+                    <li><strong>Burn on truth:</strong> If a challenge fails, the honest player's cards are removed from the game instead of joining the pile — games run shorter.</li>
+                </ol>
+            </section>
+
+            <!-- FREECELL -->
+            <section id="freecell" class="game-section">
+                <h1 class="game-title" data-icon="🗂️">FreeCell</h1>
+
+                <div class="info-card primary">
+                    <strong>Players:</strong> 1 player &nbsp;|&nbsp; <strong>Ages:</strong> 8+<br>
+                    FreeCell is the thinking player's solitaire: every card is dealt face up, so nothing is hidden and almost nothing is luck. Four spare "free cells" give you just enough room to untangle the board — if you plan far enough ahead. Nearly every deal can be won.
+                </div>
+
+                <h2>Object</h2>
+                <p>Move all 52 cards to the four foundations, each built up by suit from Ace to King.</p>
+
+                <h2>Contents</h2>
+                <ul>
+                    <li>Standard 52-card deck</li>
+                    <li>Table space for 8 columns, 4 free cells, and 4 foundations</li>
+                </ul>
+
+                <h2>Setup</h2>
+                <p>Shuffle and deal the entire deck <strong>face up</strong> into 8 columns ("cascades"): the first four columns get 7 cards, the last four get 6. Leave room above for four <strong>free cells</strong> (empty spaces) on the left and four <strong>foundations</strong> on the right.</p>
+
+                <h2>Let's Play!</h2>
+                <p>Untangle the cascades using the free cells as parking spots:</p>
+                <ol>
+                    <li>Move cards between cascades, building down in alternating colors.</li>
+                    <li>Park any card in an empty free cell — one card per cell.</li>
+                    <li>Send Aces up to the foundations, building each suit A → K.</li>
+                </ol>
+
+                <h3>Moving Cards</h3>
+                <ul>
+                    <li><strong>Cascades:</strong> The exposed bottom card of each column may move onto a card one rank higher of the opposite color (a red 6 on a black 7), to a free cell, or to a foundation.</li>
+                    <li><strong>Free cells:</strong> Hold exactly one card each, retrievable at any time.</li>
+                    <li><strong>Empty cascades:</strong> Any card may start a new column — an empty column is the most valuable space on the board.</li>
+                </ul>
+
+                <h3>Moving Groups</h3>
+                <p>Strictly you move one card at a time — but an ordered run can hop as a group when you have room: with all cells empty you can move up to <strong>5 cards</strong> at once (free cells + 1, doubled for each empty cascade). If you couldn't do it card-by-card, you can't do it as a group.</p>
+                <div class="info-card success">
+                    <h3>Example Opening</h3>
+                    <p>A 5♦ sits under a K♠. Park the K♠ in a free cell, play the 5♦ onto a black 6, and the A♣ underneath comes free — straight to the foundations. Three moves, and the board is already breathing easier.</p>
+                </div>
+
+                <h2>Ending the Game</h2>
+                <p>The game ends when all four foundations are complete (a win) or no legal moves remain (a rare loss).</p>
+
+                <h2>Winning the Game</h2>
+                <p>All 52 cards on the foundations wins. Unlike most solitaires, <strong>over 99% of FreeCell deals are winnable</strong> — a loss usually means a plan went wrong, not the cards.</p>
+
+                <h2>Variations</h2>
+                <ol>
+                    <li><strong>Three-cell FreeCell:</strong> Play with only 3 free cells for a serious challenge (or 2 for experts).</li>
+                    <li><strong>Baker's Game:</strong> Build cascades down by <strong>suit</strong> instead of alternating colors — the older, harder ancestor.</li>
+                    <li><strong>Relaxed empty columns:</strong> Beginners may allow any group move into an empty column regardless of capacity.</li>
+                </ol>
+            </section>
+
+            <!-- RUMMY 500 -->
+            <section id="rummy500" class="game-section">
+                <h1 class="game-title" data-icon="💯">Rummy 500</h1>
+
+                <div class="info-card primary">
+                    <strong>Players:</strong> 2-8 players &nbsp;|&nbsp; <strong>Ages:</strong> 8+<br>
+                    Rummy 500 is the classic scoring rummy — the version many families simply call "Rummy." Every meld you lay scores its face value, and the discard pile is fair game all the way down: dig deep for the card you need, but everything above it comes with. First to 500 wins.
+                </div>
+
+                <h2>Object</h2>
+                <p>Score points by melding sets and runs. The first player to reach 500 points wins.</p>
+
+                <h2>Contents</h2>
+                <ul>
+                    <li>Standard 52-card deck (use two decks shuffled together for 5+ players)</li>
+                    <li>Card values: <strong>Ace = 15</strong> (or 5 when played low in A-2-3), face cards = 10, number cards = face value</li>
+                    <li>Paper and pencil for scoring</li>
+                </ul>
+
+                <h2>Setup</h2>
+                <p>The dealer deals <strong>13 cards each with 2 players</strong>, or <strong>7 cards each with 3 or more</strong>. Place the rest face down as the stock and turn one card face up beside it — the start of the discard pile, which is kept <strong>spread out</strong> so every card stays visible. The player left of the dealer goes first; play proceeds clockwise.</p>
+
+                <h2>Let's Play!</h2>
+                <p>Each turn follows the rummy rhythm:</p>
+                <ol>
+                    <li>Draw — from the stock, or from anywhere in the discard pile.</li>
+                    <li>Meld and lay off any cards you wish.</li>
+                    <li>Discard one card to end your turn.</li>
+                </ol>
+
+                <h3>Step 1: Drawing (the Deep Dig)</h3>
+                <p>Take the top stock card — or take <strong>any card in the discard pile</strong>, under two conditions: you must immediately use that card in a meld or lay-off, and you must take <strong>every card above it</strong> into your hand. The deep dig is Rummy 500's signature gamble: a rich haul now, but a heavy hand to empty later.</p>
+
+                <h3>Step 2: Melding and Laying Off</h3>
+                <ul>
+                    <li><strong>Sets:</strong> 3 or 4 cards of the same rank &nbsp;|&nbsp; <strong>Runs:</strong> 3+ consecutive cards of one suit</li>
+                    <li>Melds go face up in front of you and score <strong>for</strong> you at the end of the hand.</li>
+                    <li>You may lay off cards onto <strong>anyone's</strong> melds — the points count as yours; keep laid-off cards in front of yourself.</li>
+                </ul>
+
+                <h3>Step 3: Discarding</h3>
+                <p>End your turn with one discard onto the spread pile. If you took cards from the discard pile this turn, you may not discard the deep card you dug for.</p>
+                <div class="info-card success">
+                    <h3>Deep Dig Example</h3>
+                    <p>The 9♥ you need for your 7♥-8♥ run is buried under four cards. You take all five: the 9♥ melds immediately (7-8-9 of hearts = 24 points), and the other four join your hand — future melds, or future liabilities.</p>
+                </div>
+
+                <h2>Ending the Round</h2>
+                <p>The round ends the instant a player melds or discards their last card — or when the stock runs out (players may keep playing from the discard pile until someone can't or won't).</p>
+
+                <h2>Scoring</h2>
+                <p>Each player totals the value of everything they melded, <strong>minus</strong> the value of cards still in their hand. Yes — a bad hand can score negative! The player who went out gets no extra bonus beyond escaping deductions.</p>
+
+                <h2>Winning the Game</h2>
+                <p>Hands are played until someone's running total reaches <strong>500</strong>. If two players cross 500 in the same hand, the higher total wins.</p>
+
+                <h2>Variations</h2>
+                <ol>
+                    <li><strong>Boathouse:</strong> A discard-pile draw requires only the top card to be melded — gentler digging.</li>
+                    <li><strong>Floating out:</strong> Going out without a final discard scores a 10-point bonus.</li>
+                    <li><strong>Rummy to 300:</strong> A shorter target for a quicker game.</li>
+                </ol>
+            </section>
+
+            <!-- OH HELL -->
+            <section id="oh_hell" class="game-section">
+                <h1 class="game-title" data-icon="😈">Oh Hell!</h1>
+
+                <div class="info-card primary">
+                    <strong>Players:</strong> 3-7 players &nbsp;|&nbsp; <strong>Ages:</strong> 10+<br>
+                    Oh Hell! is the bidding game where exactness is everything: predict precisely how many tricks you'll win — no more, no fewer — as the hand size shrinks from ten cards down to a single agonizing one, then climbs back up. Winning a trick you didn't want hurts just as much as losing one you needed.
+                </div>
+
+                <h2>Object</h2>
+                <p>Win <strong>exactly</strong> the number of tricks you bid, hand after hand. The highest score after the full cycle of hands wins.</p>
+
+                <h2>Contents</h2>
+                <ul>
+                    <li>Standard 52-card deck</li>
+                    <li>Card ranking in each suit: A (high), K, Q, J, 10 ... 2 (low)</li>
+                    <li>Paper and pencil for scoring</li>
+                </ul>
+
+                <h2>Setup</h2>
+                <p>The number of cards dealt changes every hand: start with <strong>10 cards each</strong> (7 with six or seven players), deal one fewer each hand down to <strong>1 card</strong>, then climb back up to the starting size. After dealing, <strong>flip the next card of the deck face up — its suit is trump</strong> for the hand. (On hands using the whole deck, play without trump.) The deal rotates clockwise.</p>
+
+                <h2>Bidding</h2>
+                <p>Starting left of the dealer, each player bids the exact number of tricks they will take — zero is always allowed. Write the bids down.</p>
+                <p><strong>The hook (recommended):</strong> the dealer, bidding last, may not bring the total bids equal to the number of tricks in the hand. Someone is always guaranteed to be wrong.</p>
+
+                <h2>Let's Play!</h2>
+                <p>Standard trick play, with every trick loaded:</p>
+                <ol>
+                    <li>The player left of the dealer leads any card.</li>
+                    <li>Follow suit if able; void players may trump or discard.</li>
+                    <li>The highest trump — or highest card of the led suit — wins. The winner leads next.</li>
+                </ol>
+                <p>Remember: winning tricks beyond your bid is failure. Some of the finest plays in Oh Hell! are deliberate losses.</p>
+                <div class="info-card success">
+                    <h3>The One-Card Hand</h3>
+                    <p>Everyone holds a single card; trump is ♦. You hold the 3♦ — a small trump. If anyone leads a non-diamond, your 3♦ wins whether you like it or not.</p>
+                    <p>You grit your teeth and bid 1. Sara leads the A♠... and the next player trumps with the 8♦, swallowing your 3♦. Your "sure" trick evaporates — <em>oh, hell.</em></p>
+                </div>
+
+                <h2>Scoring</h2>
+                <ul>
+                    <li><strong>Exact bid:</strong> 10 points + 1 per trick won. <em>(Bid 3, won 3 = 13 points; bid 0, won 0 = 10 points.)</em></li>
+                    <li><strong>Missed bid:</strong> 0 points — or, in stricter circles, minus the difference.</li>
+                </ul>
+
+                <h2>Winning the Game</h2>
+                <p>When the full down-and-back cycle of hands is done, the highest total wins.</p>
+
+                <h2>Variations</h2>
+                <ol>
+                    <li><strong>Blind bid on the 1-card hand:</strong> Players hold their single card facing <strong>outward</strong> — everyone sees your card but you.</li>
+                    <li><strong>Progressive scoring:</strong> Exact bids score 10 + bid², rewarding brave big bids.</li>
+                    <li><strong>Fixed deal:</strong> Play every hand at 7 cards for a more conventional game.</li>
+                </ol>
+            </section>
+
+            <!-- TEXAS HOLD'EM -->
+            <section id="holdem" class="game-section">
+                <h1 class="game-title" data-icon="🤠">Texas Hold'em</h1>
+
+                <div class="info-card primary">
+                    <strong>Players:</strong> 2-10 players &nbsp;|&nbsp; <strong>Ages:</strong> 12+<br>
+                    Texas Hold'em is the world's most famous poker game: two secret cards, five shared, and four rounds of betting nerve. Anyone can play the community cards — the game is about knowing what your opponents don't have. Play with chips or counters, never for real stakes.
+                </div>
+
+                <h2>Object</h2>
+                <p>Win chips by holding the best five-card hand at showdown — or by betting everyone else out of the pot first.</p>
+
+                <h2>Contents</h2>
+                <ul>
+                    <li>Standard 52-card deck</li>
+                    <li>Chips or counters, plus a "dealer button" marker (any coin)</li>
+                </ul>
+                <div class="info-card warning">
+                    <h3>Hand Rankings (High to Low)</h3>
+                    <ol>
+                        <li><strong>Royal Flush:</strong> A-K-Q-J-10, one suit</li>
+                        <li><strong>Straight Flush:</strong> Five in a row, one suit</li>
+                        <li><strong>Four of a Kind</strong></li>
+                        <li><strong>Full House:</strong> Three of a kind + a pair</li>
+                        <li><strong>Flush:</strong> Five of one suit</li>
+                        <li><strong>Straight:</strong> Five in a row, mixed suits (Ace high or low)</li>
+                        <li><strong>Three of a Kind</strong></li>
+                        <li><strong>Two Pair</strong></li>
+                        <li><strong>One Pair</strong></li>
+                        <li><strong>High Card</strong></li>
+                    </ol>
+                </div>
+
+                <h2>Setup</h2>
+                <p>Give every player an equal stack of chips. The dealer button rotates clockwise each hand. Before the deal, the player left of the button posts the <strong>small blind</strong> and the next player the <strong>big blind</strong> (forced bets, e.g., 1 and 2 chips). The dealer then gives each player <strong>2 cards face down</strong> — the "hole cards."</p>
+
+                <h2>Let's Play!</h2>
+                <p>A hand has up to four betting rounds around the growing board of community cards:</p>
+                <ol>
+                    <li><strong>Pre-flop:</strong> bet on your two hole cards.</li>
+                    <li><strong>The Flop:</strong> 3 community cards, then bet.</li>
+                    <li><strong>The Turn:</strong> a 4th card, then bet.</li>
+                    <li><strong>The River:</strong> a 5th card, final bets, then showdown.</li>
+                </ol>
+
+                <h3>Betting Actions</h3>
+                <ul>
+                    <li><strong>Check:</strong> Pass the action without betting (only if no one has bet this round).</li>
+                    <li><strong>Bet / Raise:</strong> Put chips in the pot; everyone must match to stay in.</li>
+                    <li><strong>Call:</strong> Match the current bet.</li>
+                    <li><strong>Fold:</strong> Surrender your cards and any chips already committed.</li>
+                    <li><strong>All-in:</strong> Bet every chip you have.</li>
+                </ul>
+
+                <h3>The Showdown</h3>
+                <p>Remaining players reveal their hole cards. Each makes the best possible <strong>five-card hand from any combination</strong> of their 2 hole cards and the 5 community cards — you may use both, one, or none of your own. Best hand takes the pot; ties split it.</p>
+                <div class="info-card success">
+                    <h3>Example Hand</h3>
+                    <p><strong>Your hole cards:</strong> A♥ J♥ &nbsp;|&nbsp; <strong>Board:</strong> K♥ 9♥ 4♣ / 2♥ / 7♠</p>
+                    <p>The 2♥ on the turn completed your <strong>ace-high flush</strong> (A-K-J-9-2 of hearts). Your opponent bets big on the river with three kings — a strong hand, but your flush beats it. You raise, they call, the pot is yours.</p>
+                </div>
+
+                <h2>Ending the Hand</h2>
+                <p>The pot goes to the last player standing when everyone else folds, or to the best hand at showdown. The button moves left, blinds are posted, and a new hand begins.</p>
+
+                <h2>Winning the Game</h2>
+                <p>Play tournament style — everyone starts even, and the last player with chips wins — or set a time limit and count the stacks.</p>
+
+                <h2>Variations</h2>
+                <ol>
+                    <li><strong>No-limit vs. limit:</strong> No-limit allows any bet up to your stack; limit fixes the raise sizes for gentler games.</li>
+                    <li><strong>Omaha:</strong> Four hole cards — you must use exactly two of them.</li>
+                    <li><strong>Rising blinds:</strong> Double the blinds every 15 minutes to force tournament endings.</li>
+                </ol>
+            </section>
+
+            <!-- OLD MAID -->
+            <section id="old_maid" class="game-section">
+                <h1 class="game-title" data-icon="👵">Old Maid</h1>
+
+                <div class="info-card primary">
+                    <strong>Players:</strong> 2-8 players &nbsp;|&nbsp; <strong>Ages:</strong> 4+<br>
+                    Old Maid is the classic children's game of hot-potato luck. Pairs melt out of every hand until only one card in the whole game has no partner — the lonely Old Maid — and somebody is going to be left holding her. Master the innocent poker face early!
+                </div>
+
+                <h2>Object</h2>
+                <p>Pair away all your cards, and don't be the player left holding the unmatched Queen.</p>
+
+                <h2>Contents</h2>
+                <ul>
+                    <li>Standard 52-card deck with <strong>one Queen removed</strong> (51 cards) — leaving one Queen without a partner</li>
+                    <li>Cards pair by rank and color (two red 7s, two black Jacks)</li>
+                </ul>
+
+                <h2>Setup</h2>
+                <p>Remove one Queen from the deck, shuffle, and deal all the cards out — some players may have one more than others, which is fine. Everyone sorts their hand and immediately lays down every <strong>pair</strong> they were dealt, face up. (With three of a kind, lay down one pair and keep the third card.)</p>
+
+                <h2>Let's Play!</h2>
+                <p>Play moves clockwise, one blind draw at a time:</p>
+                <ol>
+                    <li>Fan your cards face down and offer them to the player on your left.</li>
+                    <li>They draw one card, unseen, into their hand.</li>
+                    <li>If it makes a pair, they lay the pair down — then offer their own fan to the next player.</li>
+                </ol>
+                <p>Theatrics are encouraged: sigh over cards you want taken, nudge the Old Maid a little higher in the fan, look devastated when she leaves. Little tells (true and false) are the whole game.</p>
+                <div class="info-card success">
+                    <h3>Example</h3>
+                    <p>You're holding the odd Queen. You tuck her in the middle of your fan, then — just as your neighbor reaches — lift the whole fan slightly toward the card beside her. He takes the bait... and the Queen. Keep your face perfectly blank until she's three players away.</p>
+                </div>
+
+                <h2>Ending the Game</h2>
+                <p>As players pair off their last cards they drop out, safe. Pairs keep forming until every card is matched — except one.</p>
+
+                <h2>Winning the Game</h2>
+                <p>Everyone who empties their hand wins. The player left holding the unpaired Queen is the <strong>Old Maid</strong> — and traditionally shuffles the next round.</p>
+
+                <h2>Variations</h2>
+                <ol>
+                    <li><strong>Old Man:</strong> Remove a Jack instead of a Queen.</li>
+                    <li><strong>Le Vieux Garçon:</strong> The French version removes three Jacks, leaving the J♠ as the unlucky card.</li>
+                    <li><strong>Any-color pairs:</strong> For the youngest players, let any two cards of the same rank pair up.</li>
+                </ol>
+            </section>
+
+            <!-- GARBAGE -->
+            <section id="garbage" class="game-section">
+                <h1 class="game-title" data-icon="🗑️">Garbage (Trash)</h1>
+
+                <div class="info-card primary">
+                    <strong>Players:</strong> 2-4 players &nbsp;|&nbsp; <strong>Ages:</strong> 5+<br>
+                    Garbage is the perfect first "real" card game: ten face-down slots, numbered Ace to 10 in your head, and every draw might belong somewhere. Fill a slot, flip what was there, and keep the chain going. Each round you win, your row shrinks — first to a single card takes it all.
+                </div>
+
+                <h2>Object</h2>
+                <p>Be the first to fill all your slots — Ace through 10 — and shrink your layout round by round until you win with a single card.</p>
+
+                <h2>Contents</h2>
+                <ul>
+                    <li>Standard 52-card deck (two decks for 3-4 players)</li>
+                    <li><strong>Kings are wild</strong> — a King fills any slot</li>
+                    <li>Jacks and Queens are "garbage" — they fill nothing</li>
+                </ul>
+
+                <h2>Setup</h2>
+                <p>Deal each player <strong>10 cards face down</strong>, arranged in two rows of five. The positions represent Ace, 2, 3, 4, 5 (top row) and 6, 7, 8, 9, 10 (bottom row) — no peeking! Place the rest as a draw pile with space beside it for discards. The youngest player goes first.</p>
+
+                <h2>Let's Play!</h2>
+                <p>Each turn is a chain of lucky placements:</p>
+                <ol>
+                    <li>Draw the top card of the draw pile (or take the top discard).</li>
+                    <li>If it fits an unfilled slot, place it there <strong>face up</strong> — and pick up the face-down card that was there.</li>
+                    <li>Keep placing each picked-up card in turn until one doesn't fit; discard it, and play passes on.</li>
+                </ol>
+
+                <h3>What Fits Where</h3>
+                <ul>
+                    <li>An Ace goes in slot 1, a 2 in slot 2 ... a 10 in slot 10.</li>
+                    <li>A <strong>King is wild</strong>: place it face up on any empty slot. (If you later draw that slot's true card, swap it in and play the King elsewhere.)</li>
+                    <li>A <strong>Jack or Queen ends your turn</strong> — garbage! Discard it.</li>
+                    <li>A card whose slot is already face up is also garbage.</li>
+                </ul>
+                <div class="info-card success">
+                    <h3>Example Chain</h3>
+                    <p>You draw a 3 → slot 3, flipping up a 7 → slot 7, flipping an Ace → slot 1, flipping a Queen. Garbage — but three slots filled in one glorious turn!</p>
+                </div>
+
+                <h2>Ending the Round</h2>
+                <p>The round ends the moment a player fills all ten slots. Everyone else gets no further turns (or, by house rule, one last turn each).</p>
+
+                <h2>Winning the Game</h2>
+                <p>The round winner plays the next round with <strong>one fewer slot</strong> (9, then 8, and so on — needing only Ace through 9, Ace through 8...). The first player to win the one-slot round — drawing an Ace or King — wins the game.</p>
+
+                <h2>Variations</h2>
+                <ol>
+                    <li><strong>Everyone shrinks:</strong> All players drop a slot each round regardless of who won — faster and friendlier for young players.</li>
+                    <li><strong>Jacks wild too:</strong> Only Queens are garbage — a more forgiving game.</li>
+                    <li><strong>Race mode (2 players):</strong> No turns — both players draw and place simultaneously from their own piles. Chaos!</li>
+                </ol>
+            </section>
+
+            <!-- SCHNAPSEN -->
+            <section id="schnapsen" class="game-section">
+                <h1 class="game-title" data-icon="🇦🇹">Schnapsen / Sixty-Six (Austria)</h1>
+
+                <div class="info-card primary">
+                    <strong>Players:</strong> 2 players &nbsp;|&nbsp; <strong>Ages:</strong> 10+<br>
+                    Schnapsen is the national card game of Austria — a tight, elegant two-player duel with just twenty cards. Score 66 points before your opponent, declare royal "marriages" for big bonuses, and know the moment to slam the stock closed and race for the finish.
+                </div>
+
+                <h2>Object</h2>
+                <p>Be first to collect <strong>66 card points</strong> in tricks and marriages each hand, and win 7 game points to take the match.</p>
+
+                <h2>Contents</h2>
+                <ul>
+                    <li>20 cards: the A, 10, K, Q, J of each suit</li>
+                    <li>Card points: <strong>Ace = 11, 10 = 10, King = 4, Queen = 3, Jack = 2</strong></li>
+                    <li>Card ranking in each suit: A, 10, K, Q, J — the 10 outranks the King</li>
+                    <li>Paper and pencil (each player counts down from 7 game points)</li>
+                </ul>
+
+                <h2>Setup</h2>
+                <p>Deal <strong>5 cards to each player</strong> (3, then 2). Turn the next card face up — its suit is <strong>trump</strong> — and slide it half under the face-down stock. The non-dealer leads first.</p>
+
+                <h2>Let's Play!</h2>
+                <p>The hand has two phases, split by the closing of the stock:</p>
+                <ol>
+                    <li>While the stock is open, play tricks freely and draw back to 5 cards.</li>
+                    <li>When the stock is closed or empty, strict rules take over.</li>
+                    <li>Declare 66 the moment you believe you have it.</li>
+                </ol>
+
+                <h3>Phase 1: Open Stock</h3>
+                <p>The leader plays any card; the opponent may respond with <strong>any card</strong> — no need to follow suit. The higher card of the led suit wins (or any trump beats a non-trump). The winner takes the trick's points, draws the top stock card (loser draws next), and leads again.</p>
+
+                <h3>Marriages</h3>
+                <p>Holding the King and Queen of one suit, you may declare them when <strong>leading</strong> either card: <strong>20 points</strong> (40 in trump). A marriage only counts once you've won at least one trick.</p>
+
+                <h3>The Trump Jack Swap</h3>
+                <p>Holding the lowly Jack of trump, you may swap it for the face-up trump card under the stock before leading — upgrading your hand for free.</p>
+
+                <h3>Phase 2: Closed or Exhausted Stock</h3>
+                <p>When the stock runs out — or when you flip the face-up trump over to <strong>"close"</strong> it early, betting you can reach 66 with the cards in hand — the endgame rules apply: players must <strong>follow suit</strong>, must <strong>win the trick if able</strong>, and must trump when void. No more drawing.</p>
+                <div class="info-card success">
+                    <h3>Closing Example</h3>
+                    <p>You've banked 34 points and hold A♠ (trump), A♥, and the K♦-Q♦ marriage. That's 11 + 11 + 20 = 42 more in sight — comfortably past 66. You flip the trump card: <strong>"Closed!"</strong> Now your opponent must follow suit while your aces harvest the tricks.</p>
+                </div>
+
+                <h2>Scoring</h2>
+                <p>Declare <strong>"66!"</strong> the moment your tricks and marriages total 66 or more — play stops immediately. The hand's winner scores game points based on the loser's haul:</p>
+                <ul>
+                    <li><strong>3 game points:</strong> opponent won no tricks at all</li>
+                    <li><strong>2 game points:</strong> opponent had fewer than 33 points</li>
+                    <li><strong>1 game point:</strong> opponent had 33 or more</li>
+                </ul>
+                <p>A player who closes the stock and <strong>fails</strong> to reach 66 hands the full score to their opponent (2 points, or 3 if the closer had no tricks). A false declaration of 66 costs 2 points.</p>
+
+                <h2>Winning the Game</h2>
+                <p>Both players count <strong>down from 7</strong>; game points are subtracted as they're won. The first to reach exactly 0 or below wins the match — the "Schnapser."</p>
+
+                <h2>Variations</h2>
+                <ol>
+                    <li><strong>Sixty-Six (66):</strong> The German cousin — 24 cards (9s added), played to 7 or 10 game points with minor rule shifts.</li>
+                    <li><strong>No closing:</strong> Beginners can skip the closing rule and simply play out the stock.</li>
+                    <li><strong>Four-player Schnapsen:</strong> Partnership play with 5 cards each and no drawing.</li>
                 </ol>
             </section>
 

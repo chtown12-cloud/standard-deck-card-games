@@ -1,0 +1,34 @@
+# Standard Deck Card Games
+
+A single-page **Card Game Compendium**: rules for 53 card games from around the
+world — all playable with standard 52-card decks — plus a "Learn the Basics"
+primer on trick-taking, melding, shedding, and bidding concepts.
+
+## Structure
+
+| File | Purpose |
+| --- | --- |
+| `index.html` | Page shell and all game rule content |
+| `css/styles.css` | Liquid-glass design system, light/dark themes, print styles |
+| `js/app.js` | Navigation, history, filters, and collapsible rule sections |
+
+No build step — open `index.html` in a browser, or serve the folder with any
+static file server.
+
+## Features
+
+- **53 games + basics**, every game formatted to the same instruction template
+  (Object → Contents → Setup → Let's Play! → Scoring → Winning the Game →
+  Variations)
+- **Collapsible rule sections** with per-game Expand all / Collapse all
+  controls, built on native `<details>`/`<summary>` for keyboard and
+  screen-reader support
+- **Filters** by category (trick-taking, shedding, matching, combat, casino,
+  solitaire, bluffing) and player count, with numeric range matching
+- **Liquid-glass UI** — translucent, blurred surfaces over a soft gradient,
+  in both light and dark color schemes
+- **Accessibility**: skip link, ARIA states on filters and navigation,
+  `prefers-reduced-motion` support, visible focus styles
+- **Deep links** — every game has a `#hash` URL, and browser back/forward
+  work as expected
+- **Print-friendly** — sections auto-expand and chrome is hidden when printing

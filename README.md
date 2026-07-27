@@ -12,6 +12,7 @@ every one of them is built from.
 | `css/styles.css` | The whole design system — paper, ink, rules, both schemes |
 | `js/app.js` | Game manifest, index, search, navigation, collapsible sections |
 | `fonts/` | Self-hosted Bodoni Moda and Spectral (woff2, latin) |
+| `favicon.svg` / `.ico` / `apple-touch-icon.png` | Site mark — a spade in ink and cream |
 
 No build step, no dependencies. Open `index.html`, or serve the folder with any
 static file server.
@@ -44,6 +45,34 @@ under a low lamp.
   per-game expand and collapse
 - **Day / night / auto** colour schemes, remembered between visits
 - **Deep links** — every game has a `#hash` URL, with working back and forward
-- **Accessible**: skip link, ARIA state on every control, visible focus,
-  `prefers-reduced-motion` respected, no horizontal scroll at 360px
 - **Print-friendly** — sections expand, chrome disappears, ink goes black
+
+## Accessibility
+
+The page targets **WCAG 2.2 Level AA**, the standard referenced by EN 301 549
+(EU), Section 508 (US), and ISO/IEC 40500. Verified with axe-core across six
+states — index and game pages, light and dark, filtered, searching, and with the
+theme forced against the system preference — with **zero violations**, plus
+manual checks of the criteria automated tools cannot judge:
+
+| Criterion | Result |
+| --- | --- |
+| 1.4.3 Contrast (Minimum) | All text ≥ 4.5:1 in both schemes; lowest is 4.9:1 |
+| 1.4.11 Non-text Contrast | Field borders and focus rings ≥ 3:1 |
+| 1.4.10 Reflow | No horizontal scroll at 320 px |
+| 1.4.4 Resize Text | No loss at 200% |
+| 1.4.12 Text Spacing | No clipping or overflow under the required spacing |
+| 2.1.4 Character Key Shortcuts | The `/` shortcut can be switched off (colophon) |
+| 2.4.11 Focus Not Obscured | `scroll-padding` keeps focus clear of the sticky bar |
+| 2.5.8 Target Size (Minimum) | Every control ≥ 24 × 24 px |
+| 1.3.1 / 4.1.2 Structure & Roles | Landmarks, ARIA state on every control, native `<details>` |
+
+Colour is never the only signal — active filters carry an underline as well as a
+colour change — and decorative glyphs (suit pips, the `+`/`−` markers, the `·`
+separators) are given empty alternative text so screen readers skip them.
+
+One judgment call worth recording: WCAG 3.1.2 (Language of Parts) is treated as
+satisfied by the proper-noun and technical-term exemption. Game names and terms
+of art — *Daifugō*, *Weis*, *Envido*, *Sette Bello* — function as vocabulary of
+the surrounding English text. A handful of quoted foreign phrases are the
+residual grey area.

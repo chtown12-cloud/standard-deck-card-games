@@ -6,6 +6,11 @@
     <meta name="color-scheme" content="light dark">
     <title>The Card Game Compendium</title>
     <meta name="description" content="Rules for 61 card games playable with an ordinary 52-card deck, from Spades and Cribbage to Belote, Truco and Daifugō — plus the fundamentals of trick-taking, melding and shedding.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name="theme-color" content="#f2ece0" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0e1712" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -17,13 +22,13 @@
             <p class="subtitle">Sixty-one games for an ordinary deck of cards &mdash; and the fundamentals besides</p>
         </header>
         
-        <div class="toolbar">
+        <nav class="toolbar" aria-label="Compendium">
             <button type="button" class="toolbar-index" id="toolbar-index">Index</button>
             <input type="search" id="game-search" placeholder="Search the compendium&hellip;" aria-label="Search games">
             <button type="button" class="theme-toggle" id="theme-toggle">Auto</button>
-        </div>
+        </nav>
 
-        <main id="content">
+        <main id="content" tabindex="-1">
             <!-- GAME LIBRARY (HOME) -->
             <section id="home" class="game-section active">
                 <div class="filters">
@@ -4399,6 +4404,7 @@
         <footer class="colophon">
             <p class="pips" aria-hidden="true">♠ <span class="red">♥</span> <span class="red">♦</span> ♣</p>
             <p>Sixty-one games, one deck. Set in Bodoni Moda &amp; Spectral.</p>
+            <p class="colophon-pref"><button type="button" id="shortcut-toggle" aria-pressed="true">Slash key opens search: on</button></p>
         </footer>
     </div>
 

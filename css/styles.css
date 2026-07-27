@@ -52,8 +52,9 @@
     --paper-well: #e9e1d1;
     --ink: #17150f;
     --ink-2: #4c463a;
-    --ink-3: #7d7565;
+    --ink-3: #665e50;
     --rule: #cbc1aa;
+    --field: #877d66;
     --rule-soft: #ded5c2;
     --red: #a4162c;
     --red-wash: rgba(164, 22, 44, 0.07);
@@ -67,8 +68,9 @@
         --paper-well: #16211b;
         --ink: #ece4d3;
         --ink-2: #b8b1a0;
-        --ink-3: #8b8474;
+        --ink-3: #9a9382;
         --rule: #2e3d34;
+        --field: #586c60;
         --rule-soft: #223029;
         --red: #e07a63;
         --red-wash: rgba(224, 122, 99, 0.1);
@@ -80,8 +82,9 @@
     --paper-well: #16211b;
     --ink: #ece4d3;
     --ink-2: #b8b1a0;
-    --ink-3: #8b8474;
+    --ink-3: #9a9382;
     --rule: #2e3d34;
+    --field: #586c60;
     --rule-soft: #223029;
     --red: #e07a63;
     --red-wash: rgba(224, 122, 99, 0.1);
@@ -89,6 +92,8 @@
 
 html {
     background: var(--paper);
+    /* Keeps the sticky rule bar from covering whatever receives focus */
+    scroll-padding-top: 5rem;
 }
 
 body {
@@ -216,8 +221,8 @@ body.on-home .toolbar-index {
     color: var(--ink);
     background: transparent;
     border: 0;
-    border-bottom: 1px solid var(--rule);
-    padding: 0.25rem 0.1rem;
+    border-bottom: 1px solid var(--field);
+    padding: 0.35rem 0.1rem;
     -webkit-appearance: none;
     appearance: none;
 }
@@ -281,7 +286,9 @@ body.on-home .toolbar-index {
     color: var(--ink-2);
     background: none;
     border: 0;
-    padding: 0.1rem 0;
+    padding: 0.25rem 0;
+    min-height: 24px;
+    min-width: 24px;
     cursor: pointer;
     border-bottom: 1px solid transparent;
 }
@@ -297,7 +304,8 @@ body.on-home .toolbar-index {
 
 .filter-row button + button::before {
     content: '·';
-    color: var(--rule);
+    content: '·' / '';
+    color: var(--ink-3);
     margin-right: 0.5rem;
 }
 
@@ -364,6 +372,7 @@ body.on-home .toolbar-index {
 
 .index-row::before {
     content: '♠';
+    content: '♠' / '';
     position: absolute;
     left: 0;
     top: 0.6rem;
@@ -649,7 +658,8 @@ pre {
     background: none;
     border: 0;
     cursor: pointer;
-    padding: 0.2rem 0;
+    padding: 0.35rem 0;
+    min-height: 24px;
 }
 
 .section-toolbar button:hover {
@@ -658,8 +668,9 @@ pre {
 
 .section-toolbar button + button::before {
     content: '·';
+    content: '·' / '';
     margin: 0 0.45rem;
-    color: var(--rule);
+    color: var(--ink-3);
 }
 
 .game-section {
@@ -695,6 +706,7 @@ pre {
 
 .rules-section > summary::after {
     content: '+';
+    content: '+' / '';
     margin-left: auto;
     color: var(--ink-3);
     font-size: 1rem;
@@ -704,6 +716,7 @@ pre {
 
 .rules-section[open] > summary::after {
     content: '–';
+    content: '–' / '';
 }
 
 .rules-section > summary:hover {
@@ -753,8 +766,11 @@ pre {
 }
 
 .game-pager a {
+    display: inline-block;
     color: var(--ink-2);
     text-decoration: none;
+    padding: 0.25rem 0;
+    min-height: 24px;
     border-bottom: 1px solid transparent;
 }
 
@@ -870,4 +886,27 @@ input:focus-visible {
     .rules-section > summary::after {
         content: '';
     }
+}
+
+/* Preference control for the single-key search shortcut (WCAG 2.1.4) */
+.colophon-pref {
+    margin-top: 0.75rem;
+}
+
+.colophon-pref button {
+    font-family: var(--text);
+    font-style: normal;
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    background: none;
+    border: 0;
+    padding: 0.35rem 0.2rem;
+    min-height: 24px;
+    cursor: pointer;
+}
+
+.colophon-pref button:hover {
+    color: var(--red);
 }

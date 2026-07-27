@@ -372,9 +372,38 @@
             }
         });
 
+        // WCAG 2.1.4 requires a way to switch off a single-character
+        // shortcut; the control for it sits in the colophon.
+        const shortcutToggle = document.getElementById('shortcut-toggle');
+        let slashEnabled = true;
+        try {
+            slashEnabled = localStorage.getItem('cgc-slash') !== 'off';
+        } catch (e) { /* storage unavailable */ }
+
+        function renderShortcutToggle() {
+            if (!shortcutToggle) return;
+            shortcutToggle.textContent = 'Slash key opens search: ' + (slashEnabled ? 'on' : 'off');
+            shortcutToggle.setAttribute('aria-pressed', String(slashEnabled));
+        }
+        renderShortcutToggle();
+
+        if (shortcutToggle) {
+            shortcutToggle.addEventListener('click', () => {
+                slashEnabled = !slashEnabled;
+                try {
+                    localStorage.setItem('cgc-slash', slashEnabled ? 'on' : 'off');
+                } catch (e) { /* ignore */ }
+                renderShortcutToggle();
+            });
+        }
+
         document.addEventListener('keydown', event => {
-            if (event.key === '/' && document.activeElement !== searchInput &&
-                !/^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName)) {
+            if (!slashEnabled) return;
+            if (event.altKey || event.ctrlKey || event.metaKey) return;
+            const el = document.activeElement;
+            if (event.key === '/' && el !== searchInput &&
+                !el.isContentEditable &&
+                !/^(INPUT|TEXTAREA|SELECT)$/.test(el.tagName)) {
                 event.preventDefault();
                 searchInput.focus();
             }

@@ -1,86 +1,85 @@
 (function () {
     'use strict';
 
-    // Game manifest: id, name, icon, category, players. Injected at build
-    // time and sorted alphabetically for the library grid and pager.
-    const GAMES = [{"id":"baloot","name":"Baloot (Saudi Arabia)","icon":"🇸🇦","category":"trick-taking","players":"4"},
-        {"id":"batak","name":"Batak (Turkey)","icon":"🇹🇷","category":"trick-taking","players":"4"},
-        {"id":"belote","name":"Belote (France)","icon":"🇫🇷","category":"trick-taking","players":"4"},
-        {"id":"big_two","name":"Big Two (China)","icon":"🇨🇳","category":"shedding","players":"4"},
-        {"id":"bisca","name":"Bisca (Portugal)","icon":"🇵🇹","category":"trick-taking","players":"2-4"},
-        {"id":"blackjack","name":"Blackjack (21)","icon":"🎰","category":"casino","players":"2-7"},
-        {"id":"briscola","name":"Briscola (Italy)","icon":"🏛️","category":"trick-taking","players":"2-4"},
-        {"id":"buraco","name":"Buraco (Brazil)","icon":"🇧🇷","category":"matching","players":"2-4"},
-        {"id":"cabo","name":"Cabo","icon":"🎯","category":"matching","players":"2-4"},
-        {"id":"cheat","name":"Cheat (BS)","icon":"🤥","category":"bluffing","players":"3-10"},
-        {"id":"clock","name":"Clock Patience","icon":"🕐","category":"solitaire","players":"1"},
-        {"id":"concentration","name":"Concentration (Memory)","icon":"🧠","category":"matching","players":"1-4"},
-        {"id":"conquian","name":"Conquian (Mexico)","icon":"🇲🇽","category":"matching","players":"2"},
-        {"id":"coup","name":"Coup","icon":"🎭","category":"bluffing","players":"2-6"},
-        {"id":"crazy_eights","name":"Crazy Eights","icon":"🎱","category":"shedding","players":"2-7"},
-        {"id":"cribbage","name":"Cribbage","icon":"🎯","category":"matching","players":"2"},
-        {"id":"cucumber","name":"Cucumber (Scandinavia)","icon":"🥒","category":"trick-taking","players":"2-7"},
-        {"id":"daifugo","name":"Daifugō (Japan)","icon":"🇯🇵","category":"shedding","players":"3-8"},
-        {"id":"diloti","name":"Diloti (Greece)","icon":"🇬🇷","category":"trick-taking","players":"4"},
-        {"id":"durak","name":"Durak","icon":"⚔️","category":"combat","players":"2-6"},
-        {"id":"ers","name":"Egyptian Rat Screw","icon":"👋","category":"combat","players":"2-8"},
-        {"id":"euchre","name":"Euchre","icon":"🎺","category":"trick-taking","players":"4"},
-        {"id":"fox_forest","name":"Fox in the Forest","icon":"🦊","category":"trick-taking","players":"2"},
-        {"id":"freecell","name":"FreeCell","icon":"🗂️","category":"solitaire","players":"1"},
-        {"id":"garbage","name":"Garbage (Trash)","icon":"🗑️","category":"matching","players":"2-4"},
-        {"id":"german_whist","name":"German Whist","icon":"🎩","category":"trick-taking","players":"2"},
-        {"id":"gin_rummy","name":"Gin Rummy","icon":"🥃","category":"matching","players":"2"},
-        {"id":"go_fish","name":"Go Fish","icon":"🐟","category":"matching","players":"2-6"},
-        {"id":"golf","name":"Golf","icon":"⛳","category":"matching","players":"2-6"},
-        {"id":"hearts","name":"Hearts","icon":"❤️","category":"trick-taking","players":"4"},
-        {"id":"idiot","name":"Idiot/Palace","icon":"🏰","category":"shedding","players":"2-6"},
-        {"id":"jass","name":"Jass (Switzerland)","icon":"🇨🇭","category":"trick-taking","players":"4"},
-        {"id":"kalooki","name":"Kalooki (Jamaica)","icon":"🏝️","category":"matching","players":"2-4"},
-        {"id":"kemps","name":"Kemps","icon":"🤝","category":"matching","players":"4+"},
-        {"id":"kings_corner","name":"Kings Corner","icon":"👑","category":"shedding","players":"2-4"},
-        {"id":"klondike","name":"Klondike Solitaire","icon":"♠️","category":"solitaire","players":"1"},
-        {"id":"mus","name":"Mus (Spain)","icon":"🇪🇸","category":"bluffing","players":"4"},
-        {"id":"nerts","name":"Nerts/Pounce","icon":"⚡","category":"shedding","players":"2-6"},
-        {"id":"oh_hell","name":"Oh Hell!","icon":"😈","category":"trick-taking","players":"3-7"},
-        {"id":"old_maid","name":"Old Maid","icon":"👵","category":"matching","players":"2-8"},
-        {"id":"phase10","name":"Phase 10","icon":"🔟","category":"matching","players":"2-6"},
-        {"id":"preferans","name":"Preferans (Russia)","icon":"🇷🇺","category":"trick-taking","players":"3"},
-        {"id":"president","name":"President","icon":"👑","category":"shedding","players":"4-8"},
-        {"id":"pusoy_dos","name":"Pusoy Dos (Philippines)","icon":"🇵🇭","category":"shedding","players":"4"},
-        {"id":"pyramid","name":"Pyramid Solitaire","icon":"🔺","category":"solitaire","players":"1"},
-        {"id":"rummy500","name":"Rummy 500","icon":"💯","category":"matching","players":"2-8"},
-        {"id":"schnapsen","name":"Schnapsen (Austria)","icon":"🇦🇹","category":"trick-taking","players":"2"},
-        {"id":"scopa","name":"Scopa (Italy)","icon":"🇮🇹","category":"trick-taking","players":"2-4"},
-        {"id":"spades","name":"Spades","icon":"♠️","category":"trick-taking","players":"4"},
-        {"id":"spar","name":"Spar (Ghana)","icon":"🌍","category":"combat","players":"2"},
-        {"id":"speed","name":"Speed","icon":"⚡","category":"shedding","players":"2"},
-        {"id":"spider","name":"Spider Solitaire","icon":"🕷️","category":"solitaire","players":"1"},
-        {"id":"spit","name":"Spit","icon":"💨","category":"shedding","players":"2"},
-        {"id":"tarneeb","name":"Tarneeb (Middle East)","icon":"🕌","category":"trick-taking","players":"4"},
-        {"id":"teen_patti","name":"Teen Patti (India)","icon":"🇮🇳","category":"casino","players":"3-6"},
-        {"id":"holdem","name":"Texas Hold'em","icon":"🤠","category":"casino","players":"2-10"},
-        {"id":"tien_len","name":"Tien Len (Vietnam)","icon":"🇻🇳","category":"shedding","players":"4"},
-        {"id":"truco","name":"Truco (Argentina)","icon":"🇦🇷","category":"trick-taking","players":"2-6"},
-        {"id":"tysiac","name":"Tysiąc/1000 (Poland)","icon":"🇵🇱","category":"trick-taking","players":"3"},
-        {"id":"war","name":"War","icon":"⚔️","category":"combat","players":"2"},
-        {"id":"yaniv","name":"Yaniv","icon":"🎲","category":"shedding","players":"2-8"}];
+    // Injected at build time: {id, name, origin, category, players, ages}
+    const GAMES = [{"id":"baloot","name":"Baloot","category":"trick-taking","players":"4","origin":"Saudi Arabia","ages":"12+"},
+        {"id":"batak","name":"Batak","category":"trick-taking","players":"4","origin":"Turkey","ages":"10+"},
+        {"id":"belote","name":"Belote","category":"trick-taking","players":"4","origin":"France","ages":"10+"},
+        {"id":"big_two","name":"Big Two","category":"shedding","players":"4","origin":"China","ages":"8+"},
+        {"id":"bisca","name":"Bisca","category":"trick-taking","players":"2-4","origin":"Portugal","ages":"8+"},
+        {"id":"blackjack","name":"Blackjack (21)","category":"casino","players":"2-7","ages":"12+"},
+        {"id":"briscola","name":"Briscola","category":"trick-taking","players":"2-4","origin":"Italy","ages":"8+"},
+        {"id":"buraco","name":"Buraco","category":"matching","players":"2-4","origin":"Brazil","ages":"10+"},
+        {"id":"cabo","name":"Cabo","category":"matching","players":"2-4","ages":"8+"},
+        {"id":"cheat","name":"Cheat (BS)","category":"bluffing","players":"3-10","ages":"8+"},
+        {"id":"clock","name":"Clock Patience","category":"solitaire","players":"1","ages":"6+"},
+        {"id":"concentration","name":"Concentration (Memory)","category":"matching","players":"1-4","ages":"4+"},
+        {"id":"conquian","name":"Conquian","category":"matching","players":"2","origin":"Mexico","ages":"8+"},
+        {"id":"coup","name":"Coup","category":"bluffing","players":"2-6","ages":"10+"},
+        {"id":"crazy_eights","name":"Crazy Eights","category":"shedding","players":"2-7","ages":"5+"},
+        {"id":"cribbage","name":"Cribbage","category":"matching","players":"2","ages":"10+"},
+        {"id":"cucumber","name":"Cucumber","category":"trick-taking","players":"2-7","origin":"Scandinavia","ages":"8+"},
+        {"id":"daifugo","name":"Daifugō","category":"shedding","players":"3-8","origin":"Japan","ages":"8+"},
+        {"id":"diloti","name":"Diloti","category":"trick-taking","players":"4","origin":"Greece","ages":"12+"},
+        {"id":"durak","name":"Durak","category":"combat","players":"2-6","ages":"8+"},
+        {"id":"ers","name":"Egyptian Rat Screw","category":"combat","players":"2-8","ages":"6+"},
+        {"id":"euchre","name":"Euchre","category":"trick-taking","players":"4","ages":"10+"},
+        {"id":"fox_forest","name":"Fox in the Forest","category":"trick-taking","players":"2","ages":"10+"},
+        {"id":"freecell","name":"FreeCell","category":"solitaire","players":"1","ages":"8+"},
+        {"id":"garbage","name":"Garbage (Trash)","category":"matching","players":"2-4","ages":"5+"},
+        {"id":"german_whist","name":"German Whist","category":"trick-taking","players":"2","ages":"10+"},
+        {"id":"gin_rummy","name":"Gin Rummy","category":"matching","players":"2","ages":"8+"},
+        {"id":"go_fish","name":"Go Fish","category":"matching","players":"2-6","ages":"4+"},
+        {"id":"golf","name":"Golf","category":"matching","players":"2-6","ages":"8+"},
+        {"id":"hearts","name":"Hearts","category":"trick-taking","players":"4","ages":"10+"},
+        {"id":"idiot","name":"Idiot/Palace","category":"shedding","players":"2-6","ages":"8+"},
+        {"id":"jass","name":"Jass","category":"trick-taking","players":"4","origin":"Switzerland","ages":"12+"},
+        {"id":"kalooki","name":"Kalooki","category":"matching","players":"2-4","origin":"Jamaica","ages":"10+"},
+        {"id":"kemps","name":"Kemps","category":"matching","players":"4+","ages":"8+"},
+        {"id":"kings_corner","name":"Kings Corner","category":"shedding","players":"2-4","ages":"8+"},
+        {"id":"klondike","name":"Klondike Solitaire","category":"solitaire","players":"1","ages":"8+"},
+        {"id":"mus","name":"Mus","category":"bluffing","players":"4","origin":"Spain","ages":"12+"},
+        {"id":"nerts","name":"Nerts/Pounce","category":"shedding","players":"2-6","ages":"10+"},
+        {"id":"oh_hell","name":"Oh Hell!","category":"trick-taking","players":"3-7","ages":"10+"},
+        {"id":"old_maid","name":"Old Maid","category":"matching","players":"2-8","ages":"4+"},
+        {"id":"phase10","name":"Phase 10","category":"matching","players":"2-6","ages":"7+"},
+        {"id":"preferans","name":"Preferans","category":"trick-taking","players":"3","origin":"Russia","ages":"14+"},
+        {"id":"president","name":"President","category":"shedding","players":"4-8","ages":"8+"},
+        {"id":"pusoy_dos","name":"Pusoy Dos","category":"shedding","players":"4","origin":"Philippines","ages":"8+"},
+        {"id":"pyramid","name":"Pyramid Solitaire","category":"solitaire","players":"1","ages":"8+"},
+        {"id":"rummy500","name":"Rummy 500","category":"matching","players":"2-8","ages":"8+"},
+        {"id":"schnapsen","name":"Schnapsen","category":"trick-taking","players":"2","origin":"Austria","ages":"10+"},
+        {"id":"scopa","name":"Scopa","category":"trick-taking","players":"2-4","origin":"Italy","ages":"8+"},
+        {"id":"spades","name":"Spades","category":"trick-taking","players":"4","ages":"10+"},
+        {"id":"spar","name":"Spar","category":"combat","players":"2","origin":"Ghana","ages":"6+"},
+        {"id":"speed","name":"Speed","category":"shedding","players":"2","ages":"8+"},
+        {"id":"spider","name":"Spider Solitaire","category":"solitaire","players":"1","ages":"10+"},
+        {"id":"spit","name":"Spit","category":"shedding","players":"2","ages":"8+"},
+        {"id":"tarneeb","name":"Tarneeb","category":"trick-taking","players":"4","origin":"Middle East","ages":"10+"},
+        {"id":"teen_patti","name":"Teen Patti","category":"casino","players":"3-6","origin":"India","ages":"12+"},
+        {"id":"holdem","name":"Texas Hold'em","category":"casino","players":"2-10","ages":"12+"},
+        {"id":"tien_len","name":"Tien Len","category":"shedding","players":"4","origin":"Vietnam","ages":"8+"},
+        {"id":"truco","name":"Truco","category":"trick-taking","players":"2-6","origin":"Argentina","ages":"10+"},
+        {"id":"tysiac","name":"Tysiąc/1000","category":"trick-taking","players":"3","origin":"Poland","ages":"12+"},
+        {"id":"war","name":"War","category":"combat","players":"2","ages":"4+"},
+        {"id":"yaniv","name":"Yaniv","category":"shedding","players":"2-8","ages":"7+"}];
 
-    const CATEGORY_LABELS = {
-        'trick-taking': 'Trick-Taking',
-        'shedding': 'Shedding',
-        'matching': 'Matching',
-        'combat': 'Combat',
-        'casino': 'Casino',
-        'solitaire': 'Solitaire',
-        'bluffing': 'Bluffing'
-    };
+    // Categories in reading order, each with the pip that marks it in the
+    // index. Repeats are fine — there are four suits and seven families.
+    const CATEGORIES = [
+        { key: 'trick-taking', label: 'Trick-Taking', pip: '♠' },
+        { key: 'shedding', label: 'Shedding', pip: '♥', red: true },
+        { key: 'matching', label: 'Matching & Melding', pip: '♦', red: true },
+        { key: 'combat', label: 'Combat & Speed', pip: '♣' },
+        { key: 'casino', label: 'Casino & Betting', pip: '♠' },
+        { key: 'bluffing', label: 'Bluffing', pip: '♥', red: true },
+        { key: 'solitaire', label: 'Solitaire', pip: '♦', red: true }
+    ];
 
     const gameSections = Array.from(document.querySelectorAll('.game-section'));
-    const categoryTabs = Array.from(document.querySelectorAll('.category-tab'));
-    const playerFilters = Array.from(document.querySelectorAll('.player-filter'));
-    const grid = document.getElementById('game-grid');
+    const indexEl = document.getElementById('game-index');
     const searchInput = document.getElementById('game-search');
-    const homeButton = document.getElementById('toolbar-home');
+    const homeButton = document.getElementById('toolbar-index');
     const themeToggle = document.getElementById('theme-toggle');
 
     const sectionCache = new Map();
@@ -88,49 +87,57 @@
 
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    /* ---------------------------------------------------------------
-     * Theme toggle: auto -> light -> dark, persisted in localStorage.
-     * ------------------------------------------------------------- */
-    const THEME_META = {
-        auto: { icon: '🌗', label: 'Theme: auto (follows your system)' },
-        light: { icon: '☀️', label: 'Theme: light' },
-        dark: { icon: '🌙', label: 'Theme: dark' }
-    };
+    /* ── Theme: auto → day → night, remembered ──────────────────── */
+    const THEMES = ['auto', 'light', 'dark'];
+    const THEME_LABEL = { auto: 'Auto', light: 'Day', dark: 'Night' };
 
     function applyTheme(theme) {
-        if (theme === 'light' || theme === 'dark') {
-            document.documentElement.setAttribute('data-theme', theme);
-        } else {
+        if (theme === 'auto') {
             document.documentElement.removeAttribute('data-theme');
+        } else {
+            document.documentElement.setAttribute('data-theme', theme);
         }
         if (themeToggle) {
-            themeToggle.textContent = THEME_META[theme].icon;
-            themeToggle.setAttribute('aria-label', THEME_META[theme].label);
-            themeToggle.title = THEME_META[theme].label;
+            themeToggle.textContent = THEME_LABEL[theme];
+            themeToggle.setAttribute('aria-label', 'Colour scheme: ' + THEME_LABEL[theme] + '. Click to change.');
         }
     }
 
-    let currentTheme = 'auto';
+    let theme = 'auto';
     try {
         const stored = localStorage.getItem('cgc-theme');
-        if (stored === 'light' || stored === 'dark') currentTheme = stored;
-    } catch (e) { /* private browsing */ }
-    applyTheme(currentTheme);
+        if (THEMES.includes(stored)) theme = stored;
+    } catch (e) { /* storage unavailable */ }
+    applyTheme(theme);
 
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
-            currentTheme = currentTheme === 'auto' ? 'light' : currentTheme === 'light' ? 'dark' : 'auto';
+            theme = THEMES[(THEMES.indexOf(theme) + 1) % THEMES.length];
             try {
-                if (currentTheme === 'auto') localStorage.removeItem('cgc-theme');
-                else localStorage.setItem('cgc-theme', currentTheme);
+                if (theme === 'auto') localStorage.removeItem('cgc-theme');
+                else localStorage.setItem('cgc-theme', theme);
             } catch (e) { /* ignore */ }
-            applyTheme(currentTheme);
+            applyTheme(theme);
         });
     }
 
-    /* ---------------------------------------------------------------
-     * Collapsible rules sections (details/summary built from h2 blocks).
-     * ------------------------------------------------------------- */
+    /* ── Per-game furniture: eyebrow line and collapsible rules ─── */
+    function describe(game) {
+        const parts = [];
+        const cat = CATEGORIES.find(c => c.key === game.category);
+        if (cat) parts.push(cat.label);
+        if (game.origin) parts.push(game.origin);
+        parts.push(playerLabel(game.players));
+        if (game.ages) parts.push('Ages ' + game.ages);
+        return parts.join(' · ');
+    }
+
+    function playerLabel(players) {
+        if (players === '1') return 'Solitaire';
+        if (/\+$/.test(players)) return players.replace('+', '+ players');
+        return players + ' players';
+    }
+
     function buildCollapsibles(section) {
         const nodes = Array.from(section.children);
         let body = null;
@@ -159,8 +166,8 @@
         const firstRules = section.querySelector('.rules-section');
         if (!firstRules) return;
 
-        const toolbar = document.createElement('div');
-        toolbar.className = 'section-toolbar';
+        const bar = document.createElement('div');
+        bar.className = 'section-toolbar';
         const makeButton = (label, open) => {
             const button = document.createElement('button');
             button.type = 'button';
@@ -170,21 +177,42 @@
             });
             return button;
         };
-        toolbar.appendChild(makeButton('Expand all', true));
-        toolbar.appendChild(makeButton('Collapse all', false));
-        section.insertBefore(toolbar, firstRules);
+        bar.appendChild(makeButton('Expand all', true));
+        bar.appendChild(makeButton('Collapse all', false));
+        section.insertBefore(bar, firstRules);
     }
 
-    gameSections.forEach(buildCollapsibles);
+    // Wide tables need their own scroll container so the page never does.
+    function wrapTables(section) {
+        section.querySelectorAll('table').forEach(table => {
+            const wrap = document.createElement('div');
+            wrap.className = 'table-scroll';
+            table.parentNode.insertBefore(wrap, table);
+            wrap.appendChild(table);
+        });
+    }
+
+    const gamesById = new Map(GAMES.map(g => [g.id, g]));
+
+    gameSections.forEach(section => {
+        if (section.id === 'home') return;
+        const game = gamesById.get(section.id);
+        const title = section.querySelector('.game-title');
+        if (game && title) {
+            const eyebrow = document.createElement('p');
+            eyebrow.className = 'eyebrow';
+            eyebrow.textContent = describe(game);
+            section.insertBefore(eyebrow, title);
+        }
+        buildCollapsibles(section);
+        wrapTables(section);
+    });
 
     window.addEventListener('beforeprint', () => {
         document.querySelectorAll('.rules-section').forEach(d => { d.open = true; });
     });
 
-    /* ---------------------------------------------------------------
-     * The game library grid: one card per game plus a basics card,
-     * filtered by category, player count, and search text.
-     * ------------------------------------------------------------- */
+    /* ── The index: games grouped by family, like a book's contents ─ */
     const FILTER_RANGES = {
         '1': { min: 1, max: 1 },
         '2': { min: 2, max: 2 },
@@ -197,118 +225,140 @@
     let query = '';
 
     function parseRange(value) {
-        if (!value || value === 'all') return null;
-        const match = /^(\d+)(?:-(\d+))?(\+)?$/.exec(value.trim());
+        const match = /^(\d+)(?:-(\d+))?(\+)?$/.exec(String(value).trim());
         if (!match) return null;
         const min = parseInt(match[1], 10);
         const max = match[2] ? parseInt(match[2], 10) : (match[3] ? Infinity : min);
         return { min, max };
     }
 
-    function makeCard(game) {
-        const card = document.createElement('button');
-        card.type = 'button';
-        card.className = 'game-card';
-        card.dataset.game = game.id;
+    const rows = [];
+    const groups = [];
 
-        const icon = document.createElement('span');
-        icon.className = 'game-card-icon';
-        icon.textContent = game.icon;
-        icon.setAttribute('aria-hidden', 'true');
+    if (indexEl) {
+        // "Learn the basics" sits above the index as its own entry.
+        const lede = document.createElement('button');
+        lede.type = 'button';
+        lede.className = 'index-lede';
+        lede.innerHTML = '<span class="lede-title">Learn the Basics</span>' +
+            '<span class="lede-sub">Tricks, trumps, melds and bidding — the ideas every game below is built from.</span>';
+        lede.addEventListener('click', () => navigateTo('basics'));
+        indexEl.appendChild(lede);
 
-        const name = document.createElement('span');
-        name.className = 'game-card-name';
-        name.textContent = game.name;
+        CATEGORIES.forEach(cat => {
+            const members = GAMES.filter(g => g.category === cat.key);
+            if (!members.length) return;
 
-        const meta = document.createElement('span');
-        meta.className = 'game-card-meta';
-        meta.textContent = game.meta;
+            const group = document.createElement('section');
+            group.className = 'cat-group';
 
-        card.append(icon, name, meta);
-        card.addEventListener('click', () => navigateToGame(game.id));
-        return card;
-    }
+            const head = document.createElement('h2');
+            head.className = 'cat-head';
+            const pip = document.createElement('span');
+            pip.className = 'pip' + (cat.red ? ' red' : '');
+            pip.textContent = cat.pip;
+            pip.setAttribute('aria-hidden', 'true');
+            const count = document.createElement('span');
+            count.className = 'cat-count';
+            count.textContent = members.length + ' games';
+            head.append(pip, document.createTextNode(cat.label), count);
+            group.appendChild(head);
 
-    const cards = [];
-    if (grid) {
-        const basicsCard = makeCard({
-            id: 'basics',
-            name: 'Learn the Basics',
-            icon: '📚',
-            meta: 'Start here — concepts every game uses'
-        });
-        basicsCard.classList.add('game-card-featured');
-        grid.appendChild(basicsCard);
-        cards.push({ game: { id: 'basics', name: 'learn the basics', category: 'all', players: 'all' }, el: basicsCard });
+            members.forEach(game => {
+                const row = document.createElement('button');
+                row.type = 'button';
+                row.className = 'index-row';
 
-        GAMES.forEach(game => {
-            const range = parseRange(game.players);
-            const playerText = game.players === '1' ? 'Solo'
-                : range && range.max === Infinity ? game.players.replace('+', '+ players')
-                : game.players + ' players';
-            const card = makeCard({
-                ...game,
-                meta: playerText + ' · ' + (CATEGORY_LABELS[game.category] || game.category)
+                const name = document.createElement('span');
+                name.className = 'row-name';
+                name.textContent = game.name;
+
+                const players = document.createElement('span');
+                players.className = 'row-players';
+                players.textContent = playerLabel(game.players);
+
+                row.append(name, players);
+
+                if (game.origin) {
+                    const origin = document.createElement('span');
+                    origin.className = 'row-origin';
+                    origin.textContent = game.origin;
+                    row.insertBefore(origin, players);
+                }
+
+                row.addEventListener('click', () => navigateTo(game.id));
+                group.appendChild(row);
+                rows.push({ game, el: row, group });
             });
-            grid.appendChild(card);
-            cards.push({ game, el: card });
+
+            indexEl.appendChild(group);
+            groups.push(group);
         });
+
+        const empty = document.createElement('p');
+        empty.className = 'index-empty';
+        empty.hidden = true;
+        empty.textContent = 'No games match those filters.';
+        indexEl.appendChild(empty);
+        groups.emptyNotice = empty;
     }
 
     function applyFilters() {
         const q = query.trim().toLowerCase();
-        cards.forEach(({ game, el }) => {
-            const matchesCategory = currentCategory === 'all' || game.category === 'all' || game.category === currentCategory;
+        let visible = 0;
+
+        rows.forEach(({ game, el }) => {
+            const matchesCategory = currentCategory === 'all' || game.category === currentCategory;
             const range = parseRange(game.players);
             const filter = FILTER_RANGES[currentPlayers];
             const matchesPlayers = !filter || !range || (range.min <= filter.max && range.max >= filter.min);
-            const matchesQuery = !q || game.name.toLowerCase().includes(q) || game.id.includes(q);
-            el.hidden = !(matchesCategory && matchesPlayers && matchesQuery);
+            const haystack = (game.name + ' ' + (game.origin || '')).toLowerCase();
+            const matchesQuery = !q || haystack.includes(q) || game.id.includes(q);
+            const show = matchesCategory && matchesPlayers && matchesQuery;
+            el.hidden = !show;
+            if (show) visible += 1;
+        });
+
+        groups.forEach(group => {
+            group.hidden = !group.querySelector('.index-row:not([hidden])');
+        });
+
+        if (groups.emptyNotice) groups.emptyNotice.hidden = visible > 0;
+    }
+
+    function bindFilterRow(selector, onPick) {
+        const buttons = Array.from(document.querySelectorAll(selector));
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                buttons.forEach(b => {
+                    const on = b === button;
+                    b.classList.toggle('active', on);
+                    b.setAttribute('aria-pressed', String(on));
+                });
+                onPick(button.dataset);
+                applyFilters();
+            });
         });
     }
 
-    function setPressed(group, activeElement) {
-        group.forEach(element => {
-            const on = element === activeElement;
-            element.classList.toggle('active', on);
-            element.setAttribute('aria-pressed', String(on));
-        });
-    }
+    bindFilterRow('.category-filter', data => { currentCategory = data.category; });
+    bindFilterRow('.player-filter', data => { currentPlayers = data.players; });
 
-    categoryTabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            currentCategory = tab.dataset.category;
-            setPressed(categoryTabs, tab);
-            applyFilters();
-        });
-    });
-
-    playerFilters.forEach(filter => {
-        filter.addEventListener('click', () => {
-            currentPlayers = filter.dataset.players;
-            setPressed(playerFilters, filter);
-            applyFilters();
-        });
-    });
-
-    /* ---------------------------------------------------------------
-     * Search: filters the grid; Enter opens the first match;
-     * "/" focuses the box from anywhere.
-     * ------------------------------------------------------------- */
+    /* ── Search ─────────────────────────────────────────────────── */
     if (searchInput) {
         searchInput.addEventListener('input', () => {
             query = searchInput.value;
             if (query && !sectionCache.get('home').classList.contains('active')) {
-                navigateToGame('home', false);
+                navigateTo('home', false);
             }
             applyFilters();
         });
 
         searchInput.addEventListener('keydown', event => {
             if (event.key === 'Enter') {
-                const first = cards.find(c => !c.el.hidden && c.game.id !== 'basics') || cards.find(c => !c.el.hidden);
+                const first = rows.find(r => !r.el.hidden);
                 if (first) {
-                    navigateToGame(first.game.id);
+                    navigateTo(first.game.id);
                     searchInput.value = '';
                     query = '';
                     applyFilters();
@@ -331,93 +381,92 @@
         });
     }
 
-    /* ---------------------------------------------------------------
-     * Prev / next pager at the bottom of every game page.
-     * ------------------------------------------------------------- */
-    GAMES.forEach((game, index) => {
+    /* ── Pager ──────────────────────────────────────────────────── */
+    function makeLink(label, target, cls) {
+        const a = document.createElement('a');
+        a.href = '#' + target;
+        a.className = cls;
+        a.textContent = label;
+        a.addEventListener('click', event => {
+            event.preventDefault();
+            navigateTo(target);
+        });
+        return a;
+    }
+
+    GAMES.forEach((game, i) => {
         const section = sectionCache.get(game.id);
         if (!section) return;
-
+        const prev = GAMES[(i - 1 + GAMES.length) % GAMES.length];
+        const next = GAMES[(i + 1) % GAMES.length];
         const pager = document.createElement('nav');
         pager.className = 'game-pager';
         pager.setAttribute('aria-label', 'More games');
-
-        const prev = GAMES[(index - 1 + GAMES.length) % GAMES.length];
-        const next = GAMES[(index + 1) % GAMES.length];
-
-        const makeLink = (label, target, cls) => {
-            const a = document.createElement('a');
-            a.href = '#' + target;
-            a.className = cls;
-            a.textContent = label;
-            a.addEventListener('click', event => {
-                event.preventDefault();
-                navigateToGame(target);
-            });
-            return a;
-        };
-
-        pager.appendChild(makeLink('← ' + prev.name, prev.id, 'pager-prev'));
-        pager.appendChild(makeLink('All games', 'home', 'pager-home'));
-        pager.appendChild(makeLink(next.name + ' →', next.id, 'pager-next'));
+        pager.append(
+            makeLink('← ' + prev.name, prev.id, 'pager-prev'),
+            makeLink('Index', 'home', 'pager-home'),
+            makeLink(next.name + ' →', next.id, 'pager-next')
+        );
         section.appendChild(pager);
     });
 
-    const basicsSection = sectionCache.get('basics');
-    if (basicsSection) {
+    const basics = sectionCache.get('basics');
+    if (basics) {
         const pager = document.createElement('nav');
         pager.className = 'game-pager';
         pager.setAttribute('aria-label', 'More games');
-        const back = document.createElement('a');
-        back.href = '#home';
-        back.className = 'pager-home';
-        back.textContent = 'Browse all games';
-        back.addEventListener('click', event => {
-            event.preventDefault();
-            navigateToGame('home');
-        });
-        pager.appendChild(back);
-        basicsSection.appendChild(pager);
+        pager.appendChild(makeLink('Index', 'home', 'pager-home'));
+        basics.appendChild(pager);
     }
 
-    /* ---------------------------------------------------------------
-     * Navigation and history.
-     * ------------------------------------------------------------- */
-    function navigateToGame(gameId, updateHistory = true) {
-        if (!sectionCache.has(gameId)) return;
+    /* ── Navigation ─────────────────────────────────────────────── */
+    function navigateTo(id, updateHistory = true) {
+        if (!sectionCache.has(id)) return;
 
         gameSections.forEach(section => {
-            section.classList.toggle('active', section.id === gameId);
+            section.classList.toggle('active', section.id === id);
         });
 
-        const onHome = gameId === 'home';
+        const onHome = id === 'home';
         document.body.classList.toggle('on-home', onHome);
         if (homeButton) homeButton.setAttribute('aria-current', onHome ? 'page' : 'false');
+
+        const game = gamesById.get(id);
+        document.title = game ? game.name + ' — The Card Game Compendium'
+            : id === 'basics' ? 'Learn the Basics — The Card Game Compendium'
+            : 'The Card Game Compendium';
 
         window.scrollTo({ top: 0, behavior: prefersReducedMotion ? 'auto' : 'smooth' });
 
         if (updateHistory) {
-            const target = onHome ? window.location.pathname + window.location.search : '#' + gameId;
-            if (!onHome && window.location.hash === '#' + gameId) return;
-            history.pushState({ game: gameId }, '', target);
+            if (onHome) {
+                history.pushState({ game: id }, '', window.location.pathname + window.location.search);
+            } else if (window.location.hash !== '#' + id) {
+                history.pushState({ game: id }, '', '#' + id);
+            }
         }
     }
 
     if (homeButton) {
-        homeButton.addEventListener('click', () => navigateToGame('home'));
+        homeButton.addEventListener('click', () => navigateTo('home'));
     }
 
     window.addEventListener('popstate', event => {
-        const gameId = (event.state && event.state.game) || window.location.hash.slice(1) || 'home';
-        if (sectionCache.has(gameId)) {
-            navigateToGame(gameId, false);
-        }
+        const id = (event.state && event.state.game) || window.location.hash.slice(1) || 'home';
+        if (sectionCache.has(id)) navigateTo(id, false);
     });
 
-    // Initial view: honor a #hash deep link, defaulting to the game library.
     const initialHash = window.location.hash.slice(1);
     const startId = sectionCache.has(initialHash) ? initialHash : 'home';
-    navigateToGame(startId, false);
+    navigateTo(startId, false);
     history.replaceState({ game: startId }, '');
     applyFilters();
+
+    // A #hash link makes the browser scroll to the section once we reveal it,
+    // tucking the title under the sticky bar. Land at the top of the page.
+    if (initialHash) {
+        window.scrollTo(0, 0);
+        requestAnimationFrame(() => window.scrollTo(0, 0));
+        window.addEventListener('load', () => window.scrollTo(0, 0), { once: true });
+    }
 })();

@@ -3,54 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card Game Compendium</title>
-    <meta name="description" content="Rules for 61 standard-deck card games from around the world, plus the universal basics of trick-taking, melding, and shedding games.">
+    <meta name="color-scheme" content="light dark">
+    <title>The Card Game Compendium</title>
+    <meta name="description" content="Rules for 61 card games playable with an ordinary 52-card deck, from Spades and Cribbage to Belote, Truco and Daifugō — plus the fundamentals of trick-taking, melding and shedding.">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <a class="skip-link" href="#content">Skip to game rules</a>
-    <div class="container">
-        <header>
-            <div class="logo" aria-hidden="true">♠️♥️♣️♦️</div>
-            <h1>Card Game Compendium</h1>
-            <p class="tagline">Learn the basics + 61 card games from every continent</p>
+    <div class="page">
+        <header class="masthead">
+            <p class="pips" aria-hidden="true">♠ <span class="red">♥</span> <span class="red">♦</span> ♣</p>
+            <h1>The Card Game<br>Compendium</h1>
+            <p class="subtitle">Sixty-one games for an ordinary deck of cards &mdash; and the fundamentals besides</p>
         </header>
         
         <div class="toolbar">
-            <button type="button" class="toolbar-home" id="toolbar-home">♠️ All Games</button>
-            <input type="search" id="game-search" placeholder="Find a game…  ( / )" aria-label="Search games">
-            <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Color theme">🌗</button>
+            <button type="button" class="toolbar-index" id="toolbar-index">Index</button>
+            <input type="search" id="game-search" placeholder="Search the compendium&hellip;" aria-label="Search games">
+            <button type="button" class="theme-toggle" id="theme-toggle">Auto</button>
         </div>
 
-        <main id="content" class="content">
+        <main id="content">
             <!-- GAME LIBRARY (HOME) -->
             <section id="home" class="game-section active">
-                <h1 class="game-title" data-icon="🃏">Choose Your Game</h1>
                 <div class="filters">
-                    <div class="category-tabs" role="group" aria-label="Filter games by category">
-                        <button class="category-tab active" aria-pressed="true" data-category="all">All Games</button>
-                        <button class="category-tab" aria-pressed="false" data-category="trick-taking">Trick-Taking</button>
-                        <button class="category-tab" aria-pressed="false" data-category="shedding">Shedding</button>
-                        <button class="category-tab" aria-pressed="false" data-category="matching">Matching</button>
-                        <button class="category-tab" aria-pressed="false" data-category="combat">Combat</button>
-                        <button class="category-tab" aria-pressed="false" data-category="casino">Casino</button>
-                        <button class="category-tab" aria-pressed="false" data-category="solitaire">Solitaire</button>
-                        <button class="category-tab" aria-pressed="false" data-category="bluffing">Bluffing</button>
+                    <div class="filter-row" role="group" aria-label="Filter by family of game">
+                        <span class="filter-label" aria-hidden="true">Family</span>
+                        <button class="category-filter active" aria-pressed="true" data-category="all">All</button>
+                        <button class="category-filter" aria-pressed="false" data-category="trick-taking">Trick-Taking</button>
+                        <button class="category-filter" aria-pressed="false" data-category="shedding">Shedding</button>
+                        <button class="category-filter" aria-pressed="false" data-category="matching">Matching</button>
+                        <button class="category-filter" aria-pressed="false" data-category="combat">Combat</button>
+                        <button class="category-filter" aria-pressed="false" data-category="casino">Casino</button>
+                        <button class="category-filter" aria-pressed="false" data-category="bluffing">Bluffing</button>
+                        <button class="category-filter" aria-pressed="false" data-category="solitaire">Solitaire</button>
                     </div>
-                    <div class="player-filters" role="group" aria-label="Filter games by player count">
-                        <button class="player-filter active" aria-pressed="true" data-players="all">Any Players</button>
-                        <button class="player-filter" aria-pressed="false" data-players="1">1 Player</button>
-                        <button class="player-filter" aria-pressed="false" data-players="2">2 Players</button>
-                        <button class="player-filter" aria-pressed="false" data-players="3-4">3-4 Players</button>
-                        <button class="player-filter" aria-pressed="false" data-players="5+">5+ Players</button>
+                    <div class="filter-row" role="group" aria-label="Filter by number of players">
+                        <span class="filter-label" aria-hidden="true">Players</span>
+                        <button class="player-filter active" aria-pressed="true" data-players="all">Any</button>
+                        <button class="player-filter" aria-pressed="false" data-players="1">Solo</button>
+                        <button class="player-filter" aria-pressed="false" data-players="2">Two</button>
+                        <button class="player-filter" aria-pressed="false" data-players="3-4">Three or four</button>
+                        <button class="player-filter" aria-pressed="false" data-players="5+">Five or more</button>
                     </div>
                 </div>
-                <div class="game-grid" id="game-grid"></div>
+                <div id="game-index"></div>
             </section>
 
             <!-- BASIC CONCEPTS -->
             <section id="basics" class="game-section">
-                <h1 class="game-title" data-icon="📚">Basic Card Game Concepts</h1>
+                <h1 class="game-title">Basic Card Game Concepts</h1>
                 
                 <div class="info-card primary">
                     <strong>Purpose:</strong> Master these universal concepts that apply to many card games<br>
@@ -217,7 +219,7 @@
 
             <!-- PHASE 10 -->
             <section id="phase10" class="game-section">
-                <h1 class="game-title" data-icon="🔟">Phase 10 (Standard Deck Adaptation)</h1>
+                <h1 class="game-title">Phase 10</h1>
                 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2-6 players &nbsp;|&nbsp; <strong>Ages:</strong> 7+<br>
@@ -359,7 +361,7 @@
 
             <!-- CABO -->
             <section id="cabo" class="game-section">
-                <h1 class="game-title" data-icon="🎯">Cabo</h1>
+                <h1 class="game-title">Cabo</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2-4 players &nbsp;|&nbsp; <strong>Ages:</strong> 8+<br>
@@ -452,7 +454,7 @@
 
             <!-- SPAR -->
             <section id="spar" class="game-section">
-                <h1 class="game-title" data-icon="🌍">Spar (Ghana)</h1>
+                <h1 class="game-title">Spar</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2 players &nbsp;|&nbsp; <strong>Ages:</strong> 6+<br>
@@ -508,7 +510,7 @@
 
             <!-- DAIFUGO -->
             <section id="daifugo" class="game-section">
-                <h1 class="game-title" data-icon="🇯🇵">Daifugō / Rich Man Poor Man (Japan)</h1>
+                <h1 class="game-title">Daifugō</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 3-8 players &nbsp;|&nbsp; <strong>Ages:</strong> 8+<br>
@@ -578,7 +580,7 @@
 
             <!-- BELOTE -->
             <section id="belote" class="game-section">
-                <h1 class="game-title" data-icon="🇫🇷">Belote (France)</h1>
+                <h1 class="game-title">Belote</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 4 players (two partnerships) &nbsp;|&nbsp; <strong>Ages:</strong> 10+<br>
@@ -650,7 +652,7 @@
 
             <!-- MUS -->
             <section id="mus" class="game-section">
-                <h1 class="game-title" data-icon="🇪🇸">Mus (Spain - Basque)</h1>
+                <h1 class="game-title">Mus</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 4 players (two partnerships) &nbsp;|&nbsp; <strong>Ages:</strong> 12+<br>
@@ -720,7 +722,7 @@
 
             <!-- BISCA -->
             <section id="bisca" class="game-section">
-                <h1 class="game-title" data-icon="🇵🇹">Bisca (Portugal)</h1>
+                <h1 class="game-title">Bisca</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2-4 players &nbsp;|&nbsp; <strong>Ages:</strong> 8+<br>
@@ -780,7 +782,7 @@
 
             <!-- BURACO -->
             <section id="buraco" class="game-section">
-                <h1 class="game-title" data-icon="🇧🇷">Buraco (Brazil)</h1>
+                <h1 class="game-title">Buraco</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2-4 players (usually partnerships) &nbsp;|&nbsp; <strong>Ages:</strong> 10+<br>
@@ -855,7 +857,7 @@
 
             <!-- PREFERANS -->
             <section id="preferans" class="game-section">
-                <h1 class="game-title" data-icon="🇷🇺">Preferans (Russia)</h1>
+                <h1 class="game-title">Preferans</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 3 players &nbsp;|&nbsp; <strong>Ages:</strong> 14+<br>
@@ -920,7 +922,7 @@
 
             <!-- BALOOT -->
             <section id="baloot" class="game-section">
-                <h1 class="game-title" data-icon="🇸🇦">Baloot (Saudi Arabia)</h1>
+                <h1 class="game-title">Baloot</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 4 players (two partnerships) &nbsp;|&nbsp; <strong>Ages:</strong> 12+<br>
@@ -991,7 +993,7 @@
 
             <!-- CUCUMBER -->
             <section id="cucumber" class="game-section">
-                <h1 class="game-title" data-icon="🥒">Cucumber/Gurka (Scandinavia)</h1>
+                <h1 class="game-title">Cucumber</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2-7 players &nbsp;|&nbsp; <strong>Ages:</strong> 8+<br>
@@ -1046,7 +1048,7 @@
 
             <!-- PUSOY DOS -->
             <section id="pusoy_dos" class="game-section">
-                <h1 class="game-title" data-icon="🇵🇭">Pusoy Dos (Philippines)</h1>
+                <h1 class="game-title">Pusoy Dos</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 4 players &nbsp;|&nbsp; <strong>Ages:</strong> 8+<br>
@@ -1111,7 +1113,7 @@
 
             <!-- TYSIAC -->
             <section id="tysiac" class="game-section">
-                <h1 class="game-title" data-icon="🇵🇱">Tysiąc/1000 (Poland)</h1>
+                <h1 class="game-title">Tysiąc/1000</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 3 players &nbsp;|&nbsp; <strong>Ages:</strong> 12+<br>
@@ -1174,7 +1176,7 @@
 
             <!-- CONQUIAN -->
             <section id="conquian" class="game-section">
-                <h1 class="game-title" data-icon="🇲🇽">Conquian (Mexico)</h1>
+                <h1 class="game-title">Conquian</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2 players &nbsp;|&nbsp; <strong>Ages:</strong> 8+<br>
@@ -1229,7 +1231,7 @@
 
             <!-- BATAK -->
             <section id="batak" class="game-section">
-                <h1 class="game-title" data-icon="🇹🇷">Batak (Turkey)</h1>
+                <h1 class="game-title">Batak</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 4 players &nbsp;|&nbsp; <strong>Ages:</strong> 10+<br>
@@ -1298,7 +1300,7 @@
 
             <!-- DILOTI -->
             <section id="diloti" class="game-section">
-                <h1 class="game-title" data-icon="🇬🇷">Diloti (Greece)</h1>
+                <h1 class="game-title">Diloti</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 4 players (two partnerships) &nbsp;|&nbsp; <strong>Ages:</strong> 12+<br>
@@ -1367,7 +1369,7 @@
 
             <!-- JASS -->
             <section id="jass" class="game-section">
-                <h1 class="game-title" data-icon="🇨🇭">Jass (Switzerland)</h1>
+                <h1 class="game-title">Jass</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 4 players (two partnerships) &nbsp;|&nbsp; <strong>Ages:</strong> 12+<br>
@@ -1440,7 +1442,7 @@
 
             <!-- COUP -->
             <section id="coup" class="game-section">
-                <h1 class="game-title" data-icon="🎭">Coup (Standard Deck Adaptation)</h1>
+                <h1 class="game-title">Coup</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2-6 players &nbsp;|&nbsp; <strong>Ages:</strong> 10+<br>
@@ -1524,7 +1526,7 @@
 
             <!-- SCOPA -->
             <section id="scopa" class="game-section">
-                <h1 class="game-title" data-icon="🇮🇹">Scopa (Italy)</h1>
+                <h1 class="game-title">Scopa</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2-4 players (best with 2) &nbsp;|&nbsp; <strong>Ages:</strong> 8+<br>
@@ -1598,7 +1600,7 @@
 
             <!-- TRUCO -->
             <section id="truco" class="game-section">
-                <h1 class="game-title" data-icon="🇦🇷">Truco (Argentina)</h1>
+                <h1 class="game-title">Truco</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2, 4, or 6 players (partnerships) &nbsp;|&nbsp; <strong>Ages:</strong> 10+<br>
@@ -1686,7 +1688,7 @@
 
             <!-- BIG TWO -->
             <section id="big_two" class="game-section">
-                <h1 class="game-title" data-icon="🇨🇳">Big Two / Dai Di (China)</h1>
+                <h1 class="game-title">Big Two</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 4 players &nbsp;|&nbsp; <strong>Ages:</strong> 8+<br>
@@ -1758,7 +1760,7 @@
 
             <!-- TEEN PATTI -->
             <section id="teen_patti" class="game-section">
-                <h1 class="game-title" data-icon="🇮🇳">Teen Patti (India)</h1>
+                <h1 class="game-title">Teen Patti</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 3-6 players &nbsp;|&nbsp; <strong>Ages:</strong> 12+<br>
@@ -1836,7 +1838,7 @@
 
             <!-- BRISCOLA -->
             <section id="briscola" class="game-section">
-                <h1 class="game-title" data-icon="🏛️">Briscola (Italy)</h1>
+                <h1 class="game-title">Briscola</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2-4 players &nbsp;|&nbsp; <strong>Ages:</strong> 8+<br>
@@ -1889,7 +1891,7 @@
 
             <!-- TIEN LEN -->
             <section id="tien_len" class="game-section">
-                <h1 class="game-title" data-icon="🇻🇳">Tien Len (Vietnam)</h1>
+                <h1 class="game-title">Tien Len</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 4 players &nbsp;|&nbsp; <strong>Ages:</strong> 8+<br>
@@ -1954,7 +1956,7 @@
 
             <!-- TARNEEB -->
             <section id="tarneeb" class="game-section">
-                <h1 class="game-title" data-icon="🕌">Tarneeb (Middle East)</h1>
+                <h1 class="game-title">Tarneeb</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 4 players (two partnerships) &nbsp;|&nbsp; <strong>Ages:</strong> 10+<br>
@@ -2014,7 +2016,7 @@
 
             <!-- KALOOKI -->
             <section id="kalooki" class="game-section">
-                <h1 class="game-title" data-icon="🏝️">Kalooki (Jamaica)</h1>
+                <h1 class="game-title">Kalooki</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2-4 players &nbsp;|&nbsp; <strong>Ages:</strong> 10+<br>
@@ -2082,7 +2084,7 @@
 
             <!-- KLONDIKE SOLITAIRE -->
             <section id="klondike" class="game-section">
-                <h1 class="game-title" data-icon="♠️">Klondike Solitaire</h1>
+                <h1 class="game-title">Klondike Solitaire</h1>
                 
                 <div class="info-card primary">
                     <strong>Players:</strong> 1 player &nbsp;|&nbsp; <strong>Ages:</strong> 8+<br>
@@ -2139,7 +2141,7 @@
 
             <!-- SPIDER SOLITAIRE -->
             <section id="spider" class="game-section">
-                <h1 class="game-title" data-icon="🕷️">Spider Solitaire</h1>
+                <h1 class="game-title">Spider Solitaire</h1>
                 
                 <div class="info-card primary">
                     <strong>Players:</strong> 1 player &nbsp;|&nbsp; <strong>Ages:</strong> 10+<br>
@@ -2196,7 +2198,7 @@
 
             <!-- PYRAMID -->
             <section id="pyramid" class="game-section">
-                <h1 class="game-title" data-icon="🔺">Pyramid Solitaire</h1>
+                <h1 class="game-title">Pyramid Solitaire</h1>
                 
                 <div class="info-card primary">
                     <strong>Players:</strong> 1 player &nbsp;|&nbsp; <strong>Ages:</strong> 8+<br>
@@ -2252,7 +2254,7 @@
 
             <!-- SPEED -->
             <section id="speed" class="game-section">
-                <h1 class="game-title" data-icon="⚡">Speed</h1>
+                <h1 class="game-title">Speed</h1>
                 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2 players &nbsp;|&nbsp; <strong>Ages:</strong> 8+<br>
@@ -2306,7 +2308,7 @@
 
             <!-- KINGS CORNER -->
             <section id="kings_corner" class="game-section">
-                <h1 class="game-title" data-icon="👑">Kings Corner</h1>
+                <h1 class="game-title">Kings Corner</h1>
                 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2-4 players &nbsp;|&nbsp; <strong>Ages:</strong> 8+<br>
@@ -2361,7 +2363,7 @@
 
             <!-- GO FISH -->
             <section id="go_fish" class="game-section">
-                <h1 class="game-title" data-icon="🐟">Go Fish</h1>
+                <h1 class="game-title">Go Fish</h1>
                 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2-6 players &nbsp;|&nbsp; <strong>Ages:</strong> 4+<br>
@@ -2418,7 +2420,7 @@
 
             <!-- CONCENTRATION -->
             <section id="concentration" class="game-section">
-                <h1 class="game-title" data-icon="🧠">Concentration (Memory)</h1>
+                <h1 class="game-title">Concentration (Memory)</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 1-4 players &nbsp;|&nbsp; <strong>Ages:</strong> 4+<br>
@@ -2471,7 +2473,7 @@
 
             <!-- CLOCK PATIENCE -->
             <section id="clock" class="game-section">
-                <h1 class="game-title" data-icon="🕐">Clock Patience</h1>
+                <h1 class="game-title">Clock Patience</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 1 player &nbsp;|&nbsp; <strong>Ages:</strong> 6+<br>
@@ -2524,7 +2526,7 @@
 
             <!-- FOX IN THE FOREST (Adapted) -->
             <section id="fox_forest" class="game-section">
-                <h1 class="game-title" data-icon="🦊">Fox in the Forest (Standard Deck)</h1>
+                <h1 class="game-title">Fox in the Forest</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2 players &nbsp;|&nbsp; <strong>Ages:</strong> 10+<br>
@@ -2595,7 +2597,7 @@
 
             <!-- GIN RUMMY -->
             <section id="gin_rummy" class="game-section">
-                <h1 class="game-title" data-icon="🥃">Gin Rummy</h1>
+                <h1 class="game-title">Gin Rummy</h1>
                 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2 players &nbsp;|&nbsp; <strong>Ages:</strong> 8+<br>
@@ -2663,7 +2665,7 @@
 
             <!-- CRIBBAGE -->
             <section id="cribbage" class="game-section">
-                <h1 class="game-title" data-icon="🎯">Cribbage</h1>
+                <h1 class="game-title">Cribbage</h1>
                 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2 players (3-4 player variants exist) &nbsp;|&nbsp; <strong>Ages:</strong> 10+<br>
@@ -2733,7 +2735,7 @@
 
             <!-- WAR -->
             <section id="war" class="game-section">
-                <h1 class="game-title" data-icon="⚔️">War</h1>
+                <h1 class="game-title">War</h1>
                 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2 players &nbsp;|&nbsp; <strong>Ages:</strong> 4+<br>
@@ -2795,7 +2797,7 @@
 
             <!-- SPIT -->
             <section id="spit" class="game-section">
-                <h1 class="game-title" data-icon="💨">Spit</h1>
+                <h1 class="game-title">Spit</h1>
                 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2 players &nbsp;|&nbsp; <strong>Ages:</strong> 8+<br>
@@ -2852,7 +2854,7 @@
 
             <!-- BLACKJACK -->
             <section id="blackjack" class="game-section">
-                <h1 class="game-title" data-icon="🎰">Blackjack (21)</h1>
+                <h1 class="game-title">Blackjack (21)</h1>
                 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2-7 players plus a dealer &nbsp;|&nbsp; <strong>Ages:</strong> 12+<br>
@@ -2917,7 +2919,7 @@
 
             <!-- CRAZY EIGHTS -->
             <section id="crazy_eights" class="game-section">
-                <h1 class="game-title" data-icon="🎱">Crazy Eights</h1>
+                <h1 class="game-title">Crazy Eights</h1>
                 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2-7 players &nbsp;|&nbsp; <strong>Ages:</strong> 5+<br>
@@ -2988,7 +2990,7 @@
 
             <!-- GOLF -->
             <section id="golf" class="game-section">
-                <h1 class="game-title" data-icon="⛳">Golf</h1>
+                <h1 class="game-title">Golf</h1>
                 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2-6 players &nbsp;|&nbsp; <strong>Ages:</strong> 8+<br>
@@ -3050,7 +3052,7 @@
 
             <!-- YANIV -->
             <section id="yaniv" class="game-section">
-                <h1 class="game-title" data-icon="🎲">Yaniv</h1>
+                <h1 class="game-title">Yaniv</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2-8 players &nbsp;|&nbsp; <strong>Ages:</strong> 7+<br>
@@ -3142,7 +3144,7 @@
 
             <!-- KEMPS -->
             <section id="kemps" class="game-section">
-                <h1 class="game-title" data-icon="🤝">Kemps</h1>
+                <h1 class="game-title">Kemps</h1>
                 
                 <div class="info-card primary">
                     <strong>Players:</strong> 4, 6, or 8 (teams of 2) &nbsp;|&nbsp; <strong>Ages:</strong> 8+<br>
@@ -3203,7 +3205,7 @@
 
             <!-- IDIOT/PALACE -->
             <section id="idiot" class="game-section">
-                <h1 class="game-title" data-icon="🏰">Idiot/Palace</h1>
+                <h1 class="game-title">Idiot/Palace</h1>
                 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2-6 players &nbsp;|&nbsp; <strong>Ages:</strong> 8+<br>
@@ -3276,7 +3278,7 @@
 
             <!-- DURAK -->
             <section id="durak" class="game-section">
-                <h1 class="game-title" data-icon="⚔️">Durak</h1>
+                <h1 class="game-title">Durak</h1>
                 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2-6 players &nbsp;|&nbsp; <strong>Ages:</strong> 8+<br>
@@ -3341,7 +3343,7 @@
 
             <!-- NERTS -->
             <section id="nerts" class="game-section">
-                <h1 class="game-title" data-icon="⚡">Nerts/Pounce</h1>
+                <h1 class="game-title">Nerts/Pounce</h1>
                 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2-6 players &nbsp;|&nbsp; <strong>Ages:</strong> 10+<br>
@@ -3411,7 +3413,7 @@
 
             <!-- SPADES -->
             <section id="spades" class="game-section">
-                <h1 class="game-title" data-icon="♠️">Spades</h1>
+                <h1 class="game-title">Spades</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 4 players (two partnerships) &nbsp;|&nbsp; <strong>Ages:</strong> 10+<br>
@@ -3528,7 +3530,7 @@
 
             <!-- EGYPTIAN RAT SCREW -->
             <section id="ers" class="game-section">
-                <h1 class="game-title" data-icon="👋">Egyptian Rat Screw</h1>
+                <h1 class="game-title">Egyptian Rat Screw</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2-8 players (best with 3-6) &nbsp;|&nbsp; <strong>Ages:</strong> 6+<br>
@@ -3613,7 +3615,7 @@
 
             <!-- PRESIDENT -->
             <section id="president" class="game-section">
-                <h1 class="game-title" data-icon="👑">President (Scum/Kings)</h1>
+                <h1 class="game-title">President</h1>
                 
                 <div class="info-card primary">
                     <strong>Players:</strong> 4-8 players &nbsp;|&nbsp; <strong>Ages:</strong> 8+<br>
@@ -3673,7 +3675,7 @@
 
             <!-- GERMAN WHIST -->
             <section id="german_whist" class="game-section">
-                <h1 class="game-title" data-icon="🎩">German Whist</h1>
+                <h1 class="game-title">German Whist</h1>
                 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2 players &nbsp;|&nbsp; <strong>Ages:</strong> 10+<br>
@@ -3728,7 +3730,7 @@
 
             <!-- HEARTS -->
             <section id="hearts" class="game-section">
-                <h1 class="game-title" data-icon="❤️">Hearts</h1>
+                <h1 class="game-title">Hearts</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 4 players (variants for 3-6) &nbsp;|&nbsp; <strong>Ages:</strong> 10+<br>
@@ -3832,7 +3834,7 @@
 
             <!-- EUCHRE -->
             <section id="euchre" class="game-section">
-                <h1 class="game-title" data-icon="🎺">Euchre</h1>
+                <h1 class="game-title">Euchre</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 4 players (two partnerships) &nbsp;|&nbsp; <strong>Ages:</strong> 10+<br>
@@ -3910,7 +3912,7 @@
 
             <!-- CHEAT / BS -->
             <section id="cheat" class="game-section">
-                <h1 class="game-title" data-icon="🤥">Cheat (BS / I Doubt It)</h1>
+                <h1 class="game-title">Cheat (BS)</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 3-10 players &nbsp;|&nbsp; <strong>Ages:</strong> 8+<br>
@@ -3969,7 +3971,7 @@
 
             <!-- FREECELL -->
             <section id="freecell" class="game-section">
-                <h1 class="game-title" data-icon="🗂️">FreeCell</h1>
+                <h1 class="game-title">FreeCell</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 1 player &nbsp;|&nbsp; <strong>Ages:</strong> 8+<br>
@@ -4026,7 +4028,7 @@
 
             <!-- RUMMY 500 -->
             <section id="rummy500" class="game-section">
-                <h1 class="game-title" data-icon="💯">Rummy 500</h1>
+                <h1 class="game-title">Rummy 500</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2-8 players &nbsp;|&nbsp; <strong>Ages:</strong> 8+<br>
@@ -4090,7 +4092,7 @@
 
             <!-- OH HELL -->
             <section id="oh_hell" class="game-section">
-                <h1 class="game-title" data-icon="😈">Oh Hell!</h1>
+                <h1 class="game-title">Oh Hell!</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 3-7 players &nbsp;|&nbsp; <strong>Ages:</strong> 10+<br>
@@ -4147,7 +4149,7 @@
 
             <!-- TEXAS HOLD'EM -->
             <section id="holdem" class="game-section">
-                <h1 class="game-title" data-icon="🤠">Texas Hold'em</h1>
+                <h1 class="game-title">Texas Hold'em</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2-10 players &nbsp;|&nbsp; <strong>Ages:</strong> 12+<br>
@@ -4223,7 +4225,7 @@
 
             <!-- OLD MAID -->
             <section id="old_maid" class="game-section">
-                <h1 class="game-title" data-icon="👵">Old Maid</h1>
+                <h1 class="game-title">Old Maid</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2-8 players &nbsp;|&nbsp; <strong>Ages:</strong> 4+<br>
@@ -4271,7 +4273,7 @@
 
             <!-- GARBAGE -->
             <section id="garbage" class="game-section">
-                <h1 class="game-title" data-icon="🗑️">Garbage (Trash)</h1>
+                <h1 class="game-title">Garbage (Trash)</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2-4 players &nbsp;|&nbsp; <strong>Ages:</strong> 5+<br>
@@ -4327,7 +4329,7 @@
 
             <!-- SCHNAPSEN -->
             <section id="schnapsen" class="game-section">
-                <h1 class="game-title" data-icon="🇦🇹">Schnapsen / Sixty-Six (Austria)</h1>
+                <h1 class="game-title">Schnapsen</h1>
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2 players &nbsp;|&nbsp; <strong>Ages:</strong> 10+<br>
@@ -4393,6 +4395,11 @@
             </section>
 
         </main>
+
+        <footer class="colophon">
+            <p class="pips" aria-hidden="true">♠ <span class="red">♥</span> <span class="red">♦</span> ♣</p>
+            <p>Sixty-one games, one deck. Set in Bodoni Moda &amp; Spectral.</p>
+        </footer>
     </div>
 
     <script src="js/app.js"></script>

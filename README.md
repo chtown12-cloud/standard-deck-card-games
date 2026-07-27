@@ -1,38 +1,49 @@
-# Standard Deck Card Games
+# The Card Game Compendium
 
-A single-page **Card Game Compendium**: rules for 61 card games from around the
-world — all playable with standard 52-card decks — plus a "Learn the Basics"
-primer on trick-taking, melding, shedding, and bidding concepts.
+Rules for 61 card games playable with an ordinary 52-card deck — from Spades
+and Cribbage to Belote, Truco and Daifugō — plus a primer on the fundamentals
+every one of them is built from.
 
 ## Structure
 
 | File | Purpose |
 | --- | --- |
 | `index.html` | Page shell and all game rule content |
-| `css/styles.css` | Liquid-glass design system, light/dark themes, print styles |
-| `js/app.js` | Game library grid, search, navigation, theme toggle, collapsibles |
-| `fonts/` | Self-hosted Crimson Text and Inter (woff2) |
+| `css/styles.css` | The whole design system — paper, ink, rules, both schemes |
+| `js/app.js` | Game manifest, index, search, navigation, collapsible sections |
+| `fonts/` | Self-hosted Bodoni Moda and Spectral (woff2, latin) |
 
-No build step — open `index.html` in a browser, or serve the folder with any
+No build step, no dependencies. Open `index.html`, or serve the folder with any
 static file server.
+
+## Design
+
+The page is set as a printed rulebook rather than a web app: warm paper stock,
+ink-black text, and a single accent drawn from the subject itself — **card
+red**. Structure comes from hairline rules and numbered sections instead of
+boxes and shadows; there are no gradients, no translucency, and no icons.
+Suit pips (♠ ♥ ♦ ♣) are the only ornament, used to mark the seven families of
+game in the index.
+
+Two typefaces do the work: **Bodoni Moda** for display and **Spectral** for
+everything else. Night mode is not grey — it is the deep green of a card table
+under a low lamp.
 
 ## Features
 
-- **61 games + basics**, every game formatted to the same instruction template
+- **61 games + the basics**, every one written to the same template
   (Object → Contents → Setup → Let's Play! → Scoring → Winning the Game →
   Variations)
-- **Collapsible rule sections** with per-game Expand all / Collapse all
-  controls, built on native `<details>`/`<summary>` for keyboard and
-  screen-reader support
-- **Game library home page** — a searchable card grid of every game, filtered
-  by category (trick-taking, shedding, matching, combat, casino, solitaire,
-  bluffing) and player count, with numeric range matching; press `/` to search
-- **Theme toggle** (auto / light / dark, remembered between visits) and
-  prev/next links to browse from game to game
-- **Liquid-glass UI** — translucent, blurred surfaces over a soft gradient,
-  in both light and dark color schemes
-- **Accessibility**: skip link, ARIA states on filters and navigation,
-  `prefers-reduced-motion` support, visible focus styles
-- **Deep links** — every game has a `#hash` URL, and browser back/forward
-  work as expected
-- **Print-friendly** — sections auto-expand and chrome is hidden when printing
+- **An index, not a menu** — games grouped by family, with origin and player
+  count, the way a reference book lists its contents
+- **Search** the whole compendium from the rule bar; press `/` from anywhere,
+  `Enter` to open the first match
+- **Filter** by family and by player count, with real numeric range matching
+  (a 2–7 player game shows up under "three or four")
+- **Numbered, collapsible rule sections** built on native `<details>`, with
+  per-game expand and collapse
+- **Day / night / auto** colour schemes, remembered between visits
+- **Deep links** — every game has a `#hash` URL, with working back and forward
+- **Accessible**: skip link, ARIA state on every control, visible focus,
+  `prefers-reduced-motion` respected, no horizontal scroll at 360px
+- **Print-friendly** — sections expand, chrome disappears, ink goes black

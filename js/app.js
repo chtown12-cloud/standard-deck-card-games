@@ -20,7 +20,7 @@
         {"id":"cribbage","name":"Cribbage","category":"matching","players":"2","ages":"10+"},
         {"id":"cucumber","name":"Cucumber","category":"trick-taking","players":"2-7","origin":"Scandinavia","ages":"8+"},
         {"id":"daifugo","name":"Daifugō","category":"shedding","players":"3-8","origin":"Japan","ages":"8+"},
-        {"id":"diloti","name":"Diloti","category":"trick-taking","players":"4","origin":"Greece","ages":"12+"},
+        {"id":"diloti","name":"Diloti","category":"matching","players":"2-4","origin":"Greece","ages":"10+"},
         {"id":"durak","name":"Durak","category":"combat","players":"2-6","ages":"8+"},
         {"id":"ers","name":"Egyptian Rat Screw","category":"combat","players":"2-8","ages":"6+"},
         {"id":"euchre","name":"Euchre","category":"trick-taking","players":"4","ages":"10+"},
@@ -49,9 +49,9 @@
         {"id":"pyramid","name":"Pyramid Solitaire","category":"solitaire","players":"1","ages":"8+"},
         {"id":"rummy500","name":"Rummy 500","category":"matching","players":"2-8","ages":"8+"},
         {"id":"schnapsen","name":"Schnapsen","category":"trick-taking","players":"2","origin":"Austria","ages":"10+"},
-        {"id":"scopa","name":"Scopa","category":"trick-taking","players":"2-4","origin":"Italy","ages":"8+"},
+        {"id":"scopa","name":"Scopa","category":"matching","players":"2-4","origin":"Italy","ages":"8+"},
         {"id":"spades","name":"Spades","category":"trick-taking","players":"4","ages":"10+"},
-        {"id":"spar","name":"Spar","category":"combat","players":"2","origin":"Ghana","ages":"6+"},
+        {"id":"spar","name":"Spar","category":"trick-taking","players":"2-4","origin":"Ghana","ages":"8+"},
         {"id":"speed","name":"Speed","category":"shedding","players":"2","ages":"8+"},
         {"id":"spider","name":"Spider Solitaire","category":"solitaire","players":"1","ages":"10+"},
         {"id":"spit","name":"Spit","category":"shedding","players":"2","ages":"8+"},
@@ -69,7 +69,7 @@
     const CATEGORIES = [
         { key: 'trick-taking', label: 'Trick-Taking', pip: '♠' },
         { key: 'shedding', label: 'Shedding', pip: '♥', red: true },
-        { key: 'matching', label: 'Matching & Melding', pip: '♦', red: true },
+        { key: 'matching', label: 'Matching, Melding & Fishing', pip: '♦', red: true },
         { key: 'combat', label: 'Combat & Speed', pip: '♣' },
         { key: 'casino', label: 'Casino & Betting', pip: '♠' },
         { key: 'bluffing', label: 'Bluffing', pip: '♥', red: true },
@@ -127,8 +127,6 @@
         const cat = CATEGORIES.find(c => c.key === game.category);
         if (cat) parts.push(cat.label);
         if (game.origin) parts.push(game.origin);
-        parts.push(playerLabel(game.players));
-        if (game.ages) parts.push('Ages ' + game.ages);
         return parts.join(' · ');
     }
 
@@ -141,16 +139,12 @@
     function buildCollapsibles(section) {
         const nodes = Array.from(section.children);
         let body = null;
-        let isFirst = true;
 
         nodes.forEach(node => {
             if (node.tagName === 'H2') {
                 const details = document.createElement('details');
                 details.className = 'rules-section';
-                if (isFirst) {
-                    details.open = true;
-                    isFirst = false;
-                }
+                details.open = true;
                 const summary = document.createElement('summary');
                 section.insertBefore(details, node);
                 summary.appendChild(node);

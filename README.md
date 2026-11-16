@@ -4,6 +4,8 @@ Rules for 61 card games playable with an ordinary 52-card deck — from Spades
 and Cribbage to Belote, Truco and Daifugō — plus a primer on the fundamentals
 every one of them is built from.
 
+**Live site:** https://chtown12-cloud.github.io/standard-deck-card-games/
+
 ## Structure
 
 | File | Purpose |

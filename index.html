@@ -13,12 +13,12 @@
     <meta name="theme-color" content="#0e1712" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="on-home">
     <a class="skip-link" href="#content">Skip to game rules</a>
     <div class="page">
         <header class="masthead">
             <p class="pips" aria-hidden="true">♠ <span class="red">♥</span> <span class="red">♦</span> ♣</p>
-            <h1>The Card Game<br>Compendium</h1>
+            <h1>The Card Game <br>Compendium</h1>
             <p class="subtitle">Sixty-one games for an ordinary deck of cards &mdash; and the fundamentals besides</p>
         </header>
         
@@ -396,22 +396,22 @@
                 <p>Each player's turn follows these steps:</p>
                 <ol>
                     <li>Draw a card from the draw pile or the discard pile.</li>
-                    <li>Use the drawn card's special power (if it has one).</li>
-                    <li>Replace one of your grid cards, or discard the drawn card.</li>
+                    <li>If the card has a special power, you may discard it to use that power.</li>
+                    <li>Otherwise, swap it for one of your grid cards, or discard it.</li>
                 </ol>
 
                 <h3>Step 1: Draw a Card</h3>
                 <p>Take the top card of either the draw pile (unknown) or the discard pile (visible).</p>
 
                 <h3>Step 2: Use Special Powers</h3>
-                <p>If you drew a special card from the draw pile, you may use its power immediately:</p>
+                <p>Some cards have a power. To use it you must have drawn the card from the <strong>draw pile</strong> (not the discard pile), and you must <strong>discard it</strong> rather than keep it. Using a power is your whole turn, so skip Step 3:</p>
                 <ul>
                     <li><strong>7 or 8 — Peek:</strong> Secretly look at one of <strong>your own</strong> face-down cards, then place it back.</li>
                     <li><strong>9 or 10 — Spy:</strong> Point to one <strong>opponent's</strong> card; they show it to you privately, then place it back.</li>
                     <li><strong>Jack or Queen — Blind Swap:</strong> Exchange one of your cards with one opponent's card, face down. Neither player looks at the swapped cards.</li>
                     <li><strong>King — Double Peek:</strong> Look at one of your own cards, then one opponent's card, and place both back.</li>
                 </ul>
-                <p>After using (or declining) a power, discard the special card unless you choose to keep it in your grid.</p>
+                <p>If you would rather keep a special card for its low value — a King is worth 0 — ignore its power and go on to Step 3 instead.</p>
 
                 <h3>Step 3: Replace or Discard</h3>
                 <ul>
@@ -462,54 +462,56 @@
                 <h1 class="game-title">Spar</h1>
 
                 <div class="info-card primary">
-                    <strong>Players:</strong> 2 players &nbsp;|&nbsp; <strong>Ages:</strong> 6+<br>
-                    Spar is a fast-paced counting duel from Ghana — equal parts arithmetic and reflexes. Cards fly onto the table, sums are shouted, and when the total hits 10 or 20, the first hand to slap the cards claims them. Sharp math wins piles; slow math loses them.
+                    <strong>Players:</strong> 2-4 players &nbsp;|&nbsp; <strong>Ages:</strong> 8+<br>
+                    Spar is Ghana's most popular card game — a short, sharp trick-taking game with a single aim: win the <strong>last</strong> trick. Each player holds only five cards and there are no trumps, so the first four tricks are a fight for the lead going into the fifth.
                 </div>
 
                 <h2>Object</h2>
-                <p>Capture the most cards by spotting — and slapping — sums of 10 and 20 before your opponent.</p>
+                <p>Win the fifth and final trick of each hand. That trick is the only one that scores. The first player to reach an agreed number of points wins the game.</p>
 
                 <h2>Contents</h2>
                 <ul>
-                    <li>Standard 52-card deck</li>
-                    <li>Card values: number cards = face value, J = 11, Q = 12, K = 13, Ace = 1 or 11 (player's choice at the moment of play)</li>
+                    <li>35 cards: a standard deck with all 2s, 3s, 4s, and 5s removed, and the A♠ removed as well</li>
+                    <li>Card ranking in each suit: A (high), K, Q, J, 10, 9, 8, 7, 6 (low)</li>
+                    <li>There is no trump suit</li>
+                    <li>Paper and pencil for scoring</li>
                 </ul>
 
                 <h2>Setup</h2>
-                <p>Deal <strong>4 cards face down to each player</strong> — you may look once, then keep them face down. Deal <strong>4 cards face up</strong> to the center. The rest of the deck forms a face-down draw pile.</p>
+                <p>Choose one player to be dealer. The dealer deals <strong>5 cards to each player</strong>, face down — traditionally a packet of 3, then a packet of 2. The undealt cards are set aside and take no part in the hand.</p>
+                <p>The player next to the dealer leads to the first trick. In Ghana play runs counter-clockwise; clockwise works just as well, as long as everyone agrees.</p>
 
                 <h2>Let's Play!</h2>
-                <p>Rounds are quick and simultaneous:</p>
+                <p>A hand is five tricks. In each trick, every player plays one card:</p>
                 <ol>
-                    <li>Both players play a card face up toward the center at the same time.</li>
-                    <li>Add your card's value to any center card — <strong>if the sum is 10 or 20, slap the pair to capture both cards!</strong></li>
-                    <li>Draw back up to 4 cards, and refill the center to 4 when it empties.</li>
+                    <li>The leader plays any card from their hand.</li>
+                    <li>Each other player must play a card of the <strong>same suit</strong> if they have one. A player with no card of that suit plays any card, but that card cannot win.</li>
+                    <li>The highest card of the suit that was led wins the trick, and its winner leads to the next trick.</li>
                 </ol>
-
-                <h3>Special Captures</h3>
-                <ul>
-                    <li><strong>Exact match:</strong> Playing the same rank as a center card captures it instantly.</li>
-                    <li><strong>Jack attack:</strong> A Jack captures any face card.</li>
-                    <li><strong>Twenty-one:</strong> Make exactly 21 and sweep the <strong>entire</strong> center!</li>
-                    <li><strong>False slap:</strong> Slap a wrong sum and your opponent takes the cards instead.</li>
-                </ul>
+                <p>Winning tricks one to four earns nothing in itself. Their value is the <strong>lead</strong>: whoever wins the fourth trick chooses the suit of the fifth, and the other players can only beat that card with a higher card of the same suit.</p>
                 <div class="info-card success">
-                    <h3>Quick Math Example</h3>
-                    <p><strong>Center:</strong> 7♦ 3♠ K♥ 4♣ &nbsp;|&nbsp; <strong>You play:</strong> 3♥</p>
-                    <p>3 + 7 = 10 — slap and capture both! (Playing a 7 on the 3♠ works the same way.) The K♥ is waiting for a 7: 13 + 7 = 20.</p>
+                    <h3>Why the Lead Matters</h3>
+                    <p><strong>Four tricks have been played.</strong> You won the fourth, so you lead the last. You hold the 6♦; your opponent holds the K♣.</p>
+                    <p>You lead the 6♦. Your opponent has no diamond, so their King cannot win — a card of another suit never does. Your 6 takes the last trick, even though it is the lowest card in the deck.</p>
                 </div>
 
-                <h2>Ending the Game</h2>
-                <p>The game ends when the draw pile is exhausted and both players have played out their hands. Uncaptured center cards stay on the table, unclaimed.</p>
+                <h2>Scoring</h2>
+                <p>Only the winner of the last trick scores, and the card they won it with decides how much:</p>
+                <ul>
+                    <li><strong>Won with an 8 or higher:</strong> 1 point</li>
+                    <li><strong>Won with a 7:</strong> 2 points</li>
+                    <li><strong>Won with a 6:</strong> 3 points</li>
+                </ul>
+                <p>Low cards score more because they are harder to win with: a 6 can only take the last trick if nobody else can follow its suit. These bonus values are the most common ones, but tables differ — agree on them before you start.</p>
 
                 <h2>Winning the Game</h2>
-                <p>Count your captured cards — the bigger pile wins. Play best of three for a match.</p>
+                <p>The winner of the last trick deals the next hand. Play hands until one player reaches the agreed target — 10 points makes a good game.</p>
 
                 <h2>Variations</h2>
                 <ol>
-                    <li><strong>Aces flexible:</strong> Fix Aces at 1 only, for younger players learning the sums.</li>
-                    <li><strong>No slaps:</strong> Captures are simply announced — a calmer, pure-math version.</li>
-                    <li><strong>Target play:</strong> First to 30 captured cards wins, however many deals it takes.</li>
+                    <li><strong>Last two tricks:</strong> If a player wins both the fourth and fifth tricks with 6s or 7s, both tricks score.</li>
+                    <li><strong>Flat scoring:</strong> Every last trick scores 1 point, whatever card wins it — the simplest version for new players.</li>
+                    <li><strong>Agram:</strong> A close relative from Niger and Mali, played with six cards each and a slightly different stripped deck.</li>
                 </ol>
             </section>
 
@@ -640,8 +642,8 @@
                 </ul>
                 <div class="info-card success">
                     <h3>Trump Power Example</h3>
-                    <p><strong>Trump:</strong> ♠ &nbsp;|&nbsp; <strong>Trick:</strong> A♥ led &nbsp;|&nbsp; <strong>You have:</strong> 3 low hearts gone, void — plus J♠ and 7♠.</p>
-                    <p>You must trump; your J♠ — the highest card in the game — takes the trick and the 11-point Ace with it.</p>
+                    <p><strong>Trump:</strong> ♠ &nbsp;|&nbsp; <strong>Trick:</strong> A♥ led &nbsp;|&nbsp; <strong>You hold:</strong> no hearts, but the J♠ and 7♠.</p>
+                    <p>An opponent led the Ace and you cannot follow suit, so you must play a trump. Your J♠ — the highest card in the game — takes the trick, and the 11-point Ace with it.</p>
                 </div>
 
                 <h2>Winning the Game</h2>
@@ -661,67 +663,123 @@
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 4 players (two partnerships) &nbsp;|&nbsp; <strong>Ages:</strong> 12+<br>
-                    Mus is the Basque Country's legendary betting game — the only card game where signalling to your partner isn't cheating, it's the rules. Wink, bite your lip, waggle your eyebrows: just don't get caught by the other team while you bet across four different contests at once.
+                    Mus is the Basque Country's great betting game, played all over Spain. No tricks are played: each hand is four separate bets on who holds the best four cards, judged four different ways. It is also one of the few card games where secretly signalling to your partner is part of the rules.
                 </div>
 
                 <h2>Object</h2>
-                <p>Win betting stones by taking the four bets — Grande, Chica, Pares, and Juego — and be the first team to the agreed total.</p>
+                <p>Win points — traditionally counted with small stones — by winning the hand's four bets: Grande, Chica, Pares, and Juego. The first partnership to 40 points wins the game.</p>
 
                 <h2>Contents</h2>
                 <ul>
-                    <li>40 cards: a standard deck with all 8s, 9s, and 10s removed (simulating the Spanish deck)</li>
-                    <li><strong>Special values:</strong> 3s count as Kings, and 2s count as Aces — so there are effectively eight "Kings" and eight "Aces"</li>
-                    <li>Point values: Kings/3s and face cards = 10, 7 down to 4 = face value, Aces/2s = 1</li>
-                    <li>Counters or "stones" for scoring (dried beans are traditional)</li>
+                    <li>40 cards: a standard deck with all 8s, 9s, and 10s removed (standing in for the Spanish deck)</li>
+                    <li><strong>3s count as Kings, and 2s count as Aces</strong> — in every way. So the deck effectively holds eight Kings and eight Aces.</li>
+                    <li>Rank, high to low: King (and 3), Queen, Jack, 7, 6, 5, 4, Ace (and 2)</li>
+                    <li>Point values, used only for the Juego bet: King, 3, Queen, and Jack = 10 each; 7, 6, 5, 4 = face value; Ace and 2 = 1 each</li>
+                    <li>About 30 counters to score with (dried beans are traditional), kept in a central pool</li>
                 </ul>
 
                 <h2>Setup</h2>
-                <p>Partners sit opposite each other. The dealer deals <strong>4 cards to each player</strong>. Before any betting, teams may quietly agree their secret signals — see below.</p>
+                <p>Partners sit opposite each other. The dealer deals <strong>4 cards to each player</strong>. The player to the dealer's right is the <em>mano</em> ("hand"): they speak first in everything, and play runs counter-clockwise from them. <strong>The mano's side wins all ties</strong> — or, more exactly, whichever tied player comes first in turn order from the mano.</p>
 
                 <h2>The Mus Phase (Discard and Redraw)</h2>
+                <p>Before any betting, players may improve their hands. Starting with the mano, each player says either <strong>"Mus"</strong> (I would like to change cards) or <strong>"No hay mus"</strong> (there is no mus).</p>
                 <ul>
-                    <li>If <strong>all four players</strong> say "Mus," everyone may discard any number of cards and draw replacements.</li>
-                    <li>This repeats as long as all agree; the moment anyone says <strong>"No hay mus"</strong> ("there is no mus"), betting begins.</li>
+                    <li>If <strong>all four</strong> say "Mus," everyone discards at least one card — up to all four — and is dealt replacements. Then the question is asked again.</li>
+                    <li>The moment <strong>any</strong> player says "No hay mus," nobody changes any more cards and the betting begins.</li>
                 </ul>
 
                 <h2>Let's Play! — The Four Bets</h2>
-                <p>The hand is bet in four rounds, always in this order. In each, players may pass, bet ("envido," 2 stones), raise, or accept — like a miniature poker round:</p>
+                <p>The same four-card hands are now bet on four times, always in this order. Cards are not shown until all four bets are finished.</p>
                 <ol>
-                    <li><strong>Grande:</strong> Who holds the <strong>highest</strong> cards</li>
-                    <li><strong>Chica:</strong> Who holds the <strong>lowest</strong> cards</li>
-                    <li><strong>Pares:</strong> Who holds the best pairs (pair &rarr; medias/three of a kind &rarr; duples/two pairs)</li>
-                    <li><strong>Juego:</strong> Whose hand totals 31 or more points (31 is best, then 32, then 40 down to 33). If nobody has 31+, a consolation round of "Punto" is played for the best total below 31.</li>
+                    <li><strong>Grande ("big"):</strong> Who has the <strong>highest</strong> cards. Compare each player's highest card; if those are equal, the next highest, and so on. <em>King-King-7-4 beats King-Queen-Queen-Jack, because the second card is higher.</em></li>
+                    <li><strong>Chica ("small"):</strong> Who has the <strong>lowest</strong> cards, compared the same way from the bottom up. Four Aces is the best possible Chica.</li>
+                    <li><strong>Pares ("pairs"):</strong> Who has the best matching cards. From weakest to strongest: a <strong>pair</strong> (two cards of one rank), <strong>medias</strong> (three of one rank), <strong>duples</strong> (two pairs — four of a kind counts as duples). Between hands of the same type, the higher ranks win.</li>
+                    <li><strong>Juego ("game"):</strong> Who has the best point total of <strong>31 or more</strong>, adding up all four cards. The order is not what you would expect: <strong>31 is best, then 32, then 40, then 37, 36, 35, 34, and 33</strong>.</li>
                 </ol>
-                <p>Bets that everyone declines ("paso") are settled at the showdown for a single stone. Accepted and raised bets go to whoever shows the better hand when the round ends.</p>
+                <p><strong>Declaring first:</strong> Before the Pares bet, each player in turn must say truthfully whether they hold pares ("pares sí" or "pares no"). Only players who have them can bet, and the bet is skipped if only one side has any. The same happens before Juego ("juego sí" / "juego no").</p>
+                <p><strong>Punto:</strong> If <em>nobody</em> has 31 or more, the Juego bet is replaced by Punto, won by the total closest to 30.</p>
+
+                <h3>How Each Bet Works</h3>
+                <p>For each of the four bets in turn, starting with the mano, each player may pass or bet:</p>
+                <ul>
+                    <li><strong>"Paso" (pass):</strong> Bet nothing. If all four pass, the bet is "left in pass" and is worth a single point at the end.</li>
+                    <li><strong>"Envido" (I bet):</strong> A bet of 2 points. A bigger opening bet is allowed — say the number.</li>
+                    <li>Once a bet is made, the <strong>other side</strong> must answer:
+                        <ul>
+                            <li><strong>"Quiero" (I accept):</strong> The bet stands and is settled when the cards are shown.</li>
+                            <li><strong>"No quiero" (I decline):</strong> The betting side immediately takes 1 point — or, if the bet had been raised, the amount that stood before the last raise.</li>
+                            <li><strong>Raise:</strong> Name a higher amount, and the first side must answer in the same three ways.</li>
+                        </ul>
+                    </li>
+                    <li><strong>"Órdago":</strong> The all-in bet. If the other side accepts, the cards are shown at once and whoever wins <em>this</em> bet wins the whole game on the spot.</li>
+                </ul>
+                <p>Either partner may answer for their side, and partners may talk openly about whether to accept.</p>
 
                 <h2>Legal Signals (Señas)</h2>
-                <p>Signal your hand to your partner when the other team isn't looking — these are the traditional signs:</p>
+                <p>Partners may tell each other what they hold using a fixed set of traditional facial signals — but only these, and only truthfully. The skill lies in flashing a signal when the opponents are not looking, and in catching theirs. The usual set:</p>
                 <ul>
-                    <li><strong>2 Kings:</strong> bite your lower lip</li>
-                    <li><strong>3 Kings:</strong> twist your mouth</li>
-                    <li><strong>2 Aces:</strong> wink</li>
-                    <li><strong>3 Aces:</strong> show the tip of your tongue</li>
-                    <li><strong>31 (best Juego):</strong> close both eyes briefly</li>
+                    <li><strong>Two Kings:</strong> bite your lower lip</li>
+                    <li><strong>Three Kings:</strong> bite one side of your lower lip</li>
+                    <li><strong>Two Aces:</strong> show the tip of your tongue</li>
+                    <li><strong>Duples:</strong> raise your eyebrows</li>
+                    <li><strong>31 (the best Juego):</strong> wink</li>
                 </ul>
-                <p>If opponents catch your signal, they'll bet accordingly — bluffed signals are legal too!</p>
+                <p>The exact list varies from region to region, so agree on it before you start. Invented private signals are cheating.</p>
                 <div class="info-card success">
                     <h3>Hand Example</h3>
-                    <p><strong>You hold:</strong> 3♠ 3♥ K♦ A♣ — which counts as K-K-K-A: three Kings!</p>
-                    <p><strong>Signal:</strong> twist your mouth when the coast is clear.</p>
-                    <p><strong>Your strength:</strong> Grande — excellent; Pares — medias (three of a kind); Juego — 10+10+10+1 = 31, the perfect total!</p>
+                    <p><strong>You hold:</strong> 3♠ 3♥ K♦ A♣. Because 3s are Kings, this plays as King-King-King-Ace.</p>
+                    <p><strong>Grande:</strong> very strong — three Kings. &nbsp; <strong>Chica:</strong> weak, despite the Ace. &nbsp; <strong>Pares:</strong> medias of Kings, the best possible medias. &nbsp; <strong>Juego:</strong> 10 + 10 + 10 + 1 = 31, the best possible total.</p>
+                    <p>You bite one side of your lip for your partner, say "No hay mus" to stop anyone improving, and bet on Grande, Pares, and Juego.</p>
                 </div>
 
                 <h2>Scoring</h2>
-                <p>Each bet is worth its stones to the winning team, tallied at the end of the hand (Juego and Pares also carry small fixed bonuses when shown). The deal rotates and hands repeat.</p>
+                <p>When all four bets are done, everyone shows their cards and the bets are settled in order — Grande, Chica, Pares, Juego. The side of the player with the best hand for that bet wins it.</p>
+                <ul>
+                    <li><strong>An accepted bet:</strong> the winning side scores the amount agreed.</li>
+                    <li><strong>A bet left in pass:</strong> the winning side scores 1 point.</li>
+                    <li><strong>A declined bet:</strong> already paid when it was declined; nothing more is scored for the bet itself.</li>
+                </ul>
+                <p>On top of the bet, the side that wins Pares or Juego scores a fixed bonus for <strong>each</strong> of its two players' hands — even if the bet was declined or left in pass:</p>
+                <table>
+                    <tr>
+                        <th>Hand</th>
+                        <th>Bonus</th>
+                    </tr>
+                    <tr>
+                        <td>Pair</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Medias (three of a kind)</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Duples (two pairs)</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Juego of exactly 31</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>Any other Juego (32 to 40)</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Punto (when nobody had Juego)</td>
+                        <td>1 for the winning side</td>
+                    </tr>
+                </table>
+                <p>Points are counted in strict order, and the game ends the instant a side reaches the target — so a side that wins Grande may win the game before Juego is ever counted.</p>
 
                 <h2>Winning the Game</h2>
-                <p>First team to the agreed total — commonly <strong>40 stones</strong> (8 "amarracos" of 5) — wins the game; matches are often best of three games ("vacas").</p>
+                <p>The first partnership to <strong>40 points</strong> wins the game (some regions play to 30). A match is usually the best of three games.</p>
 
                 <h2>Variations</h2>
                 <ol>
-                    <li><strong>Real Spanish deck:</strong> Play with a 40-card baraja española — sotas, caballos, and reyes replace J, Q, K.</li>
-                    <li><strong>Sin señas:</strong> No signals allowed — a purer bluffing game.</li>
-                    <li><strong>Mus a 8 Reyes:</strong> The version described here (3s as Kings); "4 Reyes" drops that rule for a stricter game.</li>
+                    <li><strong>Real Spanish deck:</strong> Play with a 40-card baraja española — the sota, caballo, and rey take the places of the Jack, Queen, and King.</li>
+                    <li><strong>Four Kings:</strong> 3s and 2s keep their own ranks and do not count as Kings and Aces. This is the older form of the game.</li>
+                    <li><strong>No signals:</strong> Play without señas for a quieter game.</li>
                 </ol>
             </section>
 
@@ -730,58 +788,48 @@
                 <h1 class="game-title">Bisca</h1>
 
                 <div class="info-card primary">
-                    <strong>Players:</strong> 2-4 players &nbsp;|&nbsp; <strong>Ages:</strong> 8+<br>
-                    Bisca is Portugal's cousin of Briscola — a relaxed trick-taking game where you never have to follow suit and the humble 7 is worth a fortune. Capture the point cards, declare your King-Jack "bisca" for a bonus, and count your way past 60.
+                    <strong>Players:</strong> 2 players, or 4 in two partnerships &nbsp;|&nbsp; <strong>Ages:</strong> 8+<br>
+                    Bisca is Portugal's version of Italian Briscola — a relaxed trick-taking game where you hold only three cards at a time and rarely have to follow suit. Its quirk is the 7, which is the second most powerful and second most valuable card in every suit.
                 </div>
 
                 <h2>Object</h2>
-                <p>Capture more than half of the card points in the deck — 61 or more of the 120 wins the hand.</p>
+                <p>Capture more than half of the 120 card points in the deck. A side with 61 or more wins the hand.</p>
 
                 <h2>Contents</h2>
                 <ul>
                     <li>40 cards: a standard deck with all 8s, 9s, and 10s removed</li>
-                    <li>Card points: <strong>Ace = 11</strong>, <strong>7 = 10</strong> (unique!), King = 4, Jack = 3, Queen = 2; all others = 0</li>
-                    <li>Trick-winning rank, high to low: A, 7, K, J, Q, 6, 5, 4, 3, 2</li>
+                    <li>Rank in each suit, high to low: <strong>A, 7, K, J, Q</strong>, 6, 5, 4, 3, 2 — note that the 7 beats the King, and the Jack beats the Queen</li>
+                    <li>Card points: <strong>Ace = 11</strong>, <strong>7 = 10</strong>, King = 4, Jack = 3, Queen = 2; the 6, 5, 4, 3, and 2 are worth nothing (120 points in the whole deck)</li>
                 </ul>
 
                 <h2>Setup</h2>
-                <p>The dealer deals <strong>3 cards to each player</strong>, then turns the next card face up — its suit is trump. Slide it partly under the face-down draw pile, where it stays visible as the last card to be drawn.</p>
+                <p>The dealer deals <strong>3 cards to each player</strong>, then turns the next card face up — its suit is <strong>trump</strong> for the hand. Slide that card halfway under the face-down draw pile so it stays visible. It will be the last card drawn.</p>
 
                 <h2>Let's Play!</h2>
-                <p>The player to the dealer's left leads. Each trick:</p>
+                <p>The player next to the dealer leads to the first trick. In each trick:</p>
                 <ol>
-                    <li>Each player plays any card — there is <strong>no</strong> need to follow suit.</li>
-                    <li>The highest trump wins; if no trump was played, the highest card of the led suit wins.</li>
-                    <li>The winner collects the trick, draws first from the pile, and leads next.</li>
+                    <li>The leader plays any card, and each other player then plays any card. While the draw pile lasts there is <strong>no need to follow suit</strong>.</li>
+                    <li>The highest trump wins the trick. If no trump was played, the highest card of the suit that was <strong>led</strong> wins — cards of other suits cannot win.</li>
+                    <li>The winner puts the trick face down in their pile, then draws the top card of the draw pile. The other players each draw one in turn. The winner leads to the next trick.</li>
                 </ol>
-                <p>Play continues until the draw pile (including the trump card) is exhausted and all hand cards are played.</p>
-
-                <h2>The Bisca Declaration</h2>
-                <ul>
-                    <li>Holding the <strong>King and Jack of trump</strong>: declare for <strong>+40 points</strong>.</li>
-                    <li>Holding the <strong>King and Jack of any other suit</strong>: declare for <strong>+20 points</strong>.</li>
-                    <li>You must declare as you play either of the two cards — and only after your side has won at least one trick.</li>
-                </ul>
+                <p>The face-up trump card is drawn last. After that, the final three tricks are played from the cards left in hand.</p>
                 <div class="info-card success">
                     <h3>7s Are Powerful!</h3>
-                    <p><strong>Trump:</strong> ♦ &nbsp;|&nbsp; <strong>On the table:</strong> A♠ (11 points)</p>
-                    <p><strong>You play 7♦:</strong> your trump 7 beats the Ace — capturing 11 points while carrying 10 of its own. A 21-point trick!</p>
+                    <p><strong>Trump:</strong> ♦ &nbsp;|&nbsp; <strong>Led:</strong> A♠ (worth 11 points)</p>
+                    <p><strong>You play the 7♦.</strong> Any trump beats any card of another suit, so your 7 wins the trick — and since the 7 is worth 10 points itself, you have just banked 21 points with one card.</p>
                 </div>
 
-                <h2>Ending the Round</h2>
-                <p>When all 40 cards have been played, each side totals the points in its captured tricks, plus any declarations.</p>
-
                 <h2>Scoring</h2>
-                <p>61+ points wins the hand; 60-60 is a draw. In match play, count each hand won as a game point.</p>
+                <p>When all 40 cards have been played, each side adds up the card points in the tricks it won. <strong>61 or more wins the hand</strong>; 60 each is a draw.</p>
 
                 <h2>Winning the Game</h2>
-                <p>Win the hand outright, or play to an agreed number of hand wins — first to 4 ("uma bisca") is traditional.</p>
+                <p>A single hand is a complete game. For a longer contest, agree on a number of hands — first to win four, say — and keep a tally.</p>
 
                 <h2>Variations</h2>
                 <ol>
-                    <li><strong>Bisca dos Nove (Nine-card Bisca):</strong> Deal 9 cards each with no drawing — a deeper, more strategic hand.</li>
-                    <li><strong>Four-player partnerships:</strong> Partners face each other and pool their captured points.</li>
-                    <li><strong>No declarations:</strong> Skip the King-Jack bonuses for a simpler counting game.</li>
+                    <li><strong>Follow suit at the end:</strong> Many players rule that once the draw pile is gone, you must follow suit in the last three tricks if you can.</li>
+                    <li><strong>Trump exchange:</strong> A player holding the 2 of trump (or, at some tables, the 7) may swap it for the face-up trump card. Agree beforehand whether this is allowed.</li>
+                    <li><strong>Bisca de Nove (Nine-card Bisca):</strong> Deal 9 cards each instead of 3 — a deeper, more strategic game for two.</li>
                 </ol>
             </section>
 
@@ -790,73 +838,113 @@
                 <h1 class="game-title">Buraco</h1>
 
                 <div class="info-card primary">
-                    <strong>Players:</strong> 2-4 players (usually partnerships) &nbsp;|&nbsp; <strong>Ages:</strong> 10+<br>
-                    Buraco is Brazil's passionate double-deck rummy. Build long runs toward seven-card "canastas," snatch entire discard piles, and when your hand runs dry, a secret reserve pile — the "morto" — brings you back to life.
+                    <strong>Players:</strong> 4 players in two partnerships (or 2 players) &nbsp;|&nbsp; <strong>Ages:</strong> 10+<br>
+                    Buraco is Brazil's favorite rummy game, a cousin of Canasta played with two decks. Partners build long runs of cards toward seven-card "canastras," scoop up whole discard piles, and — when a hand runs dry — pick up a second hand that has been waiting face down all along: the <em>morto</em>.
                 </div>
 
                 <h2>Object</h2>
-                <p>Score points by melding sets and runs, building canastas (7+ card melds), and going out. The first side to 3,000 points wins.</p>
+                <p>Score points by melding cards, especially in canastras (melds of seven or more cards), and by going out. The first side to 3,000 points wins.</p>
 
                 <h2>Contents</h2>
                 <ul>
-                    <li>Two standard decks plus 4 Jokers (108 cards)</li>
-                    <li><strong>Wild cards:</strong> all 2s and Jokers</li>
-                    <li><strong>Clean meld:</strong> no wildcards (worth double); <strong>dirty meld:</strong> contains a wildcard</li>
+                    <li>Two standard decks plus 4 Jokers, shuffled together (108 cards)</li>
+                    <li><strong>Wild cards:</strong> all Jokers and all 2s. A wild card can stand in for any card in a meld.</li>
                     <li>Paper and pencil for scoring</li>
                 </ul>
+                <p>Every card has a point value. It counts <strong>for</strong> you if you meld the card and <strong>against</strong> you if it is still in your hand when the round ends:</p>
+                <table>
+                    <tr>
+                        <th>Card</th>
+                        <th>Points</th>
+                    </tr>
+                    <tr>
+                        <td>Joker</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>Ace</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>King, Queen, Jack, 10, 9, 8</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>2 (wild)</td>
+                        <td>10</td>
+                    </tr>
+                    <tr>
+                        <td>7, 6, 5, 4, 3</td>
+                        <td>5</td>
+                    </tr>
+                </table>
 
                 <h2>Setup</h2>
-                <p>Partners sit opposite each other. Deal <strong>11 cards to each player</strong>, and deal two extra piles of 11 cards — the <strong>mortos</strong> ("dead piles") — set face down to the side. Place the rest as a face-down stock and turn one card face up to start the discard pile.</p>
+                <p>Partners sit opposite each other. The dealer deals <strong>11 cards to each player</strong>, and also deals two extra face-down piles of 11 cards — the two <strong>mortos</strong> ("dead hands"), one for each side. Put the mortos to one side. The rest of the deck goes face down in the middle as the stock, and its top card is turned face up beside it to start the discard pile.</p>
+                <p>The player to the dealer's left goes first; play proceeds clockwise.</p>
 
                 <h2>Let's Play!</h2>
-                <p>Each turn follows the rummy pattern, with a twist on the discard pile:</p>
+                <p>Each turn has three steps:</p>
                 <ol>
-                    <li>Draw the top stock card — <strong>or take the entire discard pile</strong>.</li>
-                    <li>Meld sets and runs, and extend your side's existing melds.</li>
-                    <li>Discard one card to end your turn.</li>
+                    <li><strong>Draw:</strong> take the top card of the stock — <strong>or</strong> take the entire discard pile.</li>
+                    <li><strong>Meld:</strong> lay down new melds and add cards to your side's existing melds, as many as you like. (This step is optional.)</li>
+                    <li><strong>Discard:</strong> place one card face up on the discard pile.</li>
                 </ol>
 
                 <h3>Melds</h3>
+                <p>A meld is a <strong>run</strong>: three or more cards of the same suit in consecutive order, such as 5♥ 6♥ 7♥. Melds are laid face up on the table and belong to the partnership — either partner may add to them on their own turn. You may never add to the other side's melds.</p>
                 <ul>
-                    <li><strong>Sets:</strong> 3 or more cards of the same rank</li>
-                    <li><strong>Runs:</strong> 3 or more consecutive cards of the same suit (Aces high or low)</li>
-                    <li>A meld may contain at most one wildcard; a <strong>canasta</strong> is any meld grown to 7+ cards — clean (no wilds) or dirty.</li>
+                    <li>The Ace may be low (A-2-3) or high (Q-K-A).</li>
+                    <li>A run may contain <strong>one</strong> wild card at most, standing in for a missing card. <em>Example: 5♥ 6♥ Joker 8♥.</em></li>
+                    <li>A 2 used in its own place and suit — the 2♥ in A♥ 2♥ 3♥ — is not acting as a wild card.</li>
+                </ul>
+
+                <h3>Canastras</h3>
+                <p>A meld that has grown to <strong>seven or more cards</strong> is a canastra, and earns a bonus:</p>
+                <ul>
+                    <li><strong>Clean canastra</strong> (<em>canastra limpa</em>): no wild card in it — 200 points.</li>
+                    <li><strong>Dirty canastra</strong> (<em>canastra suja</em>): contains a wild card — 100 points.</li>
                 </ul>
 
                 <h3>Taking the Discard Pile</h3>
-                <p>Instead of drawing from the stock, you may pick up the <strong>whole discard pile</strong> — but only if you can immediately meld its top card. The rest of the pile joins your hand, ready to fuel future melds.</p>
+                <p>Instead of drawing from the stock, you may pick up the <strong>whole</strong> discard pile, however large, and add all of it to your hand. In the standard "open" game there is no condition attached: the discards are spread so everyone can see them, and anyone may take them.</p>
 
                 <h3>The Morto</h3>
-                <p>The first time a player on your side runs out of cards, they immediately take a morto as their new hand and keep playing. Each side may take only one morto per hand.</p>
-
-                <h3>The 3s</h3>
-                <p>3s are penalty cards in Buraco: red 3s and black 3s in hand at the end count against you (black 3s can be discarded to block the pile, since a pile topped by a 3 cannot be taken).</p>
+                <p>When a player uses up every card in their hand, they pick up their side's morto as a new 11-card hand. Each side may take only one morto.</p>
+                <ul>
+                    <li>If you emptied your hand by <strong>melding</strong> every card, pick up the morto and carry straight on with your turn.</li>
+                    <li>If you emptied it by making your <strong>discard</strong>, pick up the morto and keep it for your next turn.</li>
+                </ul>
 
                 <h2>Ending the Round — Going Out</h2>
-                <p>A side may go out (meld all cards, with or without a final discard) only if it has taken its morto <strong>and</strong> completed at least one <strong>clean canasta</strong>. Going out ends the hand for everyone.</p>
-
-                <h2>Scoring</h2>
-                <ul>
-                    <li><strong>Clean canasta:</strong> 200 points &nbsp;|&nbsp; <strong>Dirty canasta:</strong> 100 points</li>
-                    <li><strong>Going out:</strong> 100 points</li>
-                    <li><strong>Card values melded:</strong> count for you; cards left in hands count against</li>
-                    <li><strong>Red 3s:</strong> −100 each; <strong>black 3s:</strong> −50 each (in hand at the end)</li>
-                    <li><strong>Untaken morto:</strong> −100</li>
-                </ul>
+                <p>A player goes out by getting rid of every card in their hand <strong>after</strong> their side has already taken its morto. This is only allowed if the side has completed at least one canastra; most tables require a clean one. Going out ends the round for everyone at once.</p>
+                <p>The round also ends if the stock runs out and the player whose turn it is does not want the discard pile.</p>
                 <div class="info-card success">
-                    <h3>Canasta Example</h3>
-                    <p><strong>Clean run:</strong> 4♥ 5♥ 6♥ 7♥ 8♥ 9♥ 10♥ — a clean canasta worth 200 points.</p>
-                    <p><strong>Dirty set:</strong> K♠ K♥ K♦ K♣ K♠ K♥ + Joker — a dirty canasta worth 100 points.</p>
+                    <h3>Canastra Example</h3>
+                    <p><strong>Clean:</strong> 4♥ 5♥ 6♥ 7♥ 8♥ 9♥ 10♥ — seven hearts in order with no wild card. The cards are worth 5 + 5 + 5 + 5 + 10 + 10 + 10 = 50, plus the 200 bonus.</p>
+                    <p><strong>Dirty:</strong> 8♠ 9♠ 10♠ Joker Q♠ K♠ A♠ — the Joker stands in for the J♠. The cards are worth 10 + 10 + 10 + 20 + 10 + 10 + 15 = 85, plus the 100 bonus.</p>
                 </div>
 
+                <h2>Scoring</h2>
+                <p>Each side adds up:</p>
+                <ul>
+                    <li><strong>Plus</strong> the point values of all cards it has melded</li>
+                    <li><strong>Plus 200</strong> for each clean canastra and <strong>100</strong> for each dirty one</li>
+                    <li><strong>Plus 100</strong> for going out</li>
+                    <li><strong>Minus</strong> the point values of all cards left in both partners' hands</li>
+                    <li><strong>Minus 100</strong> if the side never picked up its morto</li>
+                </ul>
+
                 <h2>Winning the Game</h2>
-                <p>Play hands until one side passes <strong>3,000 points</strong>. The higher total wins.</p>
+                <p>Play rounds until a side reaches <strong>3,000 points</strong>. If both sides pass 3,000 in the same round, the higher total wins.</p>
 
                 <h2>Variations</h2>
+                <p>Buraco is played with many house rules. Settle these before the first deal:</p>
                 <ol>
-                    <li><strong>Buraco Fechado (closed):</strong> The discard pile may only be taken with a natural pair matching its top card in hand — much stricter.</li>
-                    <li><strong>Buraco Limpo:</strong> Only clean canastas allow going out; dirty canastas score half.</li>
-                    <li><strong>Two-player Buraco:</strong> The same game head-to-head, each player with their own morto.</li>
+                    <li><strong>Sets allowed:</strong> Many tables also accept melds of three or more cards of the same rank (three Kings, say), not only runs.</li>
+                    <li><strong>Buraco Fechado ("closed"):</strong> The discard pile is kept squared up, and you may only take it if you can immediately meld its top card with two cards from your hand.</li>
+                    <li><strong>Bigger wild cards:</strong> Some players count Jokers as 30 and 2s as 20.</li>
+                    <li><strong>Two-player Buraco:</strong> The same game head to head, each player with their own morto.</li>
                 </ol>
             </section>
 
@@ -889,7 +977,7 @@
                     <li>The scale runs 6♠ (lowest), 6♣, 6♦, 6♥, 6NT, then 7♠ ... up to 10NT (highest).</li>
                     <li>Each bid must outrank the last; players who pass are out of the auction.</li>
                     <li>The winner becomes the <strong>declarer</strong>; the other two are <strong>defenders</strong> who cooperate against them.</li>
-                    <li>A player may instead declare <strong>misère</strong> — a contract to win <strong>no tricks at all</strong>.</li>
+                    <li>A player may instead bid <strong>misère</strong> — a contract to win <strong>no tricks at all</strong>, played without a trump suit. It outranks every 8-trick bid and is outranked by every 9-trick bid.</li>
                 </ol>
 
                 <h2>Let's Play!</h2>
@@ -906,16 +994,49 @@
                 </div>
 
                 <h2>Scoring</h2>
-                <p>Preferans scoring uses three running tallies per player, and mastering it is half the game:</p>
+                <p>Before the first trick, each defender says <strong>"whist"</strong> (I will try to defeat the contract) or <strong>"pass"</strong> (I will not). Then the hand is played and scored. Every contract has a value:</p>
+                <table>
+                    <tr>
+                        <th>Contract</th>
+                        <th>Value</th>
+                        <th>Tricks the Defenders Should Take</th>
+                    </tr>
+                    <tr>
+                        <td>6 tricks</td>
+                        <td>2</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>7 tricks</td>
+                        <td>4</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>8 tricks</td>
+                        <td>6</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>9 tricks</td>
+                        <td>8</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>10 tricks, or misère</td>
+                        <td>10</td>
+                        <td>—</td>
+                    </tr>
+                </table>
+                <p>Each player keeps three running tallies on the score sheet:</p>
                 <ul>
-                    <li><strong>The pool (pulka):</strong> filled by successful contracts — the game ends when every pool is full.</li>
-                    <li><strong>The mountain (gora):</strong> penalty points from failed contracts — lower is better.</li>
-                    <li><strong>Whists:</strong> points defenders earn for tricks taken against the declarer.</li>
+                    <li><strong>The pool (<em>pulka</em>):</strong> A declarer who makes the contract writes its value in their pool. Pools are the goal: the game ends when every player's pool has reached an agreed total, such as 10.</li>
+                    <li><strong>The mountain (<em>gora</em>):</strong> Penalties. A declarer who fails writes the contract's value in their mountain once for <strong>each trick they fell short</strong>. Lower is better.</li>
+                    <li><strong>Whists:</strong> A defender who said "whist" scores the contract's value, against the declarer, for each trick the defenders take. If the whisting defenders take fewer tricks than the table above expects, the shortfall goes on their own mountain.</li>
                 </ul>
-                <p>Contract values rise with level and suit; misère scores like a high contract. Simplified house scoring is common — agree on your table's rules before starting.</p>
+                <p>The exact bookkeeping differs between the game's named conventions (see Variations), so agree on one before you start.</p>
 
                 <h2>Winning the Game</h2>
-                <p>When all pools are closed, mountains and whists are netted out between the players. The best net total wins.</p>
+                <p>When every pool is full, the three tallies are combined: each player's mountain counts against them, and whists are settled between each pair of players. The best net total wins.</p>
 
                 <h2>Variations</h2>
                 <ol>
@@ -968,7 +1089,7 @@
                     <li><strong>Sira:</strong> 3 consecutive cards of a suit = 20</li>
                     <li><strong>Fifty:</strong> 4 consecutive = 50</li>
                     <li><strong>Hundred:</strong> 5+ consecutive = 100</li>
-                    <li><strong>Four of a kind:</strong> 100 (150 for four Aces in some schools)</li>
+                    <li><strong>Four of a kind</strong> (10s, Jacks, Queens, or Kings): 100. Four Aces count 100 in Hokom and 400 in Sun.</li>
                     <li><strong>Baloot:</strong> the King and Queen of trump together = 20 (Hokom only)</li>
                 </ul>
                 <div class="info-card success">
@@ -979,10 +1100,11 @@
 
                 <h2>Scoring</h2>
                 <ul>
-                    <li>The claiming team must take more points than the defenders, or the defenders take the whole hand's score.</li>
-                    <li><strong>Duplesh (winning zero tricks):</strong> automatic loss of the hand for that team.</li>
-                    <li><strong>Kaboot (winning every trick):</strong> the hand scores double.</li>
-                    <li>Trick points are converted to game points (rounded, Sun hands counting double) and added to the running totals.</li>
+                    <li><strong>Card points in a hand:</strong> 162 in Hokom (152 in cards plus 10 for winning the last trick), or 130 in Sun (120 plus 10).</li>
+                    <li><strong>Converting to game points:</strong> divide each team's card points by 10 in Hokom, or by 5 in Sun, and round. A Hokom hand therefore shares out 16 game points, and a Sun hand 26.</li>
+                    <li><strong>Projects</strong> are converted the same way and added to the team that scored them.</li>
+                    <li><strong>The claiming team must outscore the defenders.</strong> If it does not, the defenders take every game point in the hand.</li>
+                    <li><strong>Kaboot (winning all eight tricks):</strong> a flat score instead of the usual count — at most tables 25 game points in Hokom and 44 in Sun.</li>
                 </ul>
 
                 <h2>Winning the Game</h2>
@@ -1018,14 +1140,14 @@
                 </ul>
 
                 <h2>Setup</h2>
-                <p>The dealer deals <strong>6 cards to each player</strong> (7 with only a few players, by agreement). The player to the dealer's left leads the first trick; play proceeds clockwise.</p>
+                <p>The dealer deals <strong>7 cards to each player</strong>. The player to the dealer's left leads the first trick; play proceeds clockwise.</p>
 
                 <h2>Let's Play!</h2>
                 <p>Each trick has one simple, brutal rule:</p>
                 <ol>
                     <li>The leader plays any card.</li>
                     <li>Each following player must play a card <strong>equal to or higher</strong> than the highest card so far — or, if they can't, they must play their <strong>lowest</strong> card.</li>
-                    <li>The highest card played wins the trick (the first-played of tied cards); the winner leads next.</li>
+                    <li>The highest card played wins the trick. If the highest rank was played more than once, the <strong>last</strong> player to play it wins. The winner leads next.</li>
                 </ol>
                 <p>Tricks themselves are worthless — except the last one. Everything is positioning for that final, fatal trick.</p>
 
@@ -1038,16 +1160,16 @@
                 </div>
 
                 <h2>Scoring</h2>
-                <p>Track each player's cucumbers across rounds. Reaching <strong>30 cucumbers</strong> eliminates you from the game (in a friendlier variant, a player's first elimination converts to a "second life" at 29).</p>
+                <p>Track each player's cucumbers across rounds. Reaching <strong>30 cucumbers</strong> eliminates you from the game. Many tables give each player one second chance: the first time you are eliminated you may re-enter, starting again level with the highest score still in the game.</p>
 
                 <h2>Winning the Game</h2>
                 <p>The last player below 30 cucumbers wins.</p>
 
                 <h2>Variations</h2>
                 <ol>
-                    <li><strong>The cucumber straight:</strong> Being dealt 2-3-4-5 (or ending with it) scores zero — announce it proudly.</li>
+                    <li><strong>Six cards:</strong> Deal 6 cards each for shorter hands, as in the Norwegian and Swedish versions.</li>
                     <li><strong>Visible shame:</strong> Losers keep one card face up in front of them per 10 cucumbers, so everyone can see who's in danger.</li>
-                    <li><strong>Short game:</strong> Play to 21 cucumbers.</li>
+                    <li><strong>Agurk (the Danish version):</strong> Players are eliminated at 21 points instead of 30.</li>
                 </ol>
             </section>
 
@@ -1057,7 +1179,7 @@
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 4 players &nbsp;|&nbsp; <strong>Ages:</strong> 8+<br>
-                    Pusoy Dos is the Philippines' favorite climbing game — a cousin of Big Two with its own suit order, where clubs reign supreme. Lead with the 3♦, climb through pairs and poker hands, and time your 2s ("dos") for maximum devastation.
+                    Pusoy Dos is the Philippines' favorite climbing game — a cousin of Big Two with its own suit order, where diamonds reign supreme. Lead with the 3♣, climb through pairs and poker hands, and time your 2s ("dos") for maximum devastation.
                 </div>
 
                 <h2>Object</h2>
@@ -1067,11 +1189,11 @@
                 <ul>
                     <li>Standard 52-card deck</li>
                     <li>Card ranking, low to high: 3 &lt; 4 &lt; 5 &lt; 6 &lt; 7 &lt; 8 &lt; 9 &lt; 10 &lt; J &lt; Q &lt; K &lt; A &lt; <strong>2</strong></li>
-                    <li>Suit ranking, low to high: ♦ &lt; ♥ &lt; ♠ &lt; ♣ — the <strong>2♣</strong> is the highest single card in the game</li>
+                    <li>Suit ranking, low to high: ♣ &lt; ♠ &lt; ♥ &lt; ♦ — so the <strong>2♦</strong> is the highest card in the game, and the 3♣ the lowest</li>
                 </ul>
 
                 <h2>Setup</h2>
-                <p>Deal the entire deck — <strong>13 cards to each player</strong>. The player holding the <strong>3♦</strong> leads the first play and must include it; no passing is allowed on that first play. Play proceeds counter-clockwise (or clockwise by agreement).</p>
+                <p>Deal the entire deck — <strong>13 cards to each player</strong>. The player holding the <strong>3♣</strong> leads the first play and must include it. Play proceeds counter-clockwise (or clockwise by agreement).</p>
 
                 <h2>Let's Play!</h2>
                 <p>Play climbs in matching combination types:</p>
@@ -1090,7 +1212,7 @@
                 <h3>Filipino Rules</h3>
                 <ul>
                     <li>Four of a kind plays with one kicker card as a five-card hand.</li>
-                    <li>A "burn" — beating a play with the same rank in a higher suit — is legal and stylish.</li>
+                    <li>A single can be beaten by the same rank in a higher suit (a 9♥ beats a 9♠). Between two pairs of the same rank, the pair holding the higher suit wins.</li>
                     <li>2s dominate singles and pairs but cannot appear in straights.</li>
                 </ul>
                 <div class="info-card success">
@@ -1138,7 +1260,7 @@
                 </ul>
 
                 <h2>Setup</h2>
-                <p>Deal <strong>7 cards to each player</strong> and <strong>3 face down</strong> to the middle — the <strong>talon</strong> (with some dealing traditions using two smaller talons; one of three is simplest).</p>
+                <p>Deal <strong>7 cards to each player</strong> and <strong>3 face down</strong> to the middle — the <strong>talon</strong>.</p>
 
                 <h2>The Bidding</h2>
                 <ol>
@@ -1165,7 +1287,7 @@
                 <ul>
                     <li><strong>The bidder:</strong> scores their bid if their tricks + marriages reach it — otherwise they <strong>lose</strong> the full bid amount.</li>
                     <li><strong>The defenders:</strong> each scores the points they actually took (rounded to the nearest 10).</li>
-                    <li>Players at 900+ traditionally score only as bidders ("on the barrel").</li>
+                    <li><strong>The barrel:</strong> A player with 800 or more points is "on the barrel." From then on they score nothing as a defender; they can only add to their total by winning the bidding and making their bid. (Some tables set the barrel at 900.)</li>
                 </ul>
 
                 <h2>Winning the Game</h2>
@@ -1175,7 +1297,7 @@
                 <ol>
                     <li><strong>Four-player Tysiąc:</strong> The dealer sits out each hand ("the dealer rests"), dealing for the other three.</li>
                     <li><strong>Two talons:</strong> Deal two 3-card talons; the bid winner picks one blind.</li>
-                    <li><strong>Barrel rule strict:</strong> Three failed bids on the barrel drop you back to 760.</li>
+                    <li><strong>Barrel penalties:</strong> Some tables deduct points from a player who stays on the barrel for three hands without winning.</li>
                 </ol>
             </section>
 
@@ -1240,11 +1362,11 @@
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 4 players &nbsp;|&nbsp; <strong>Ages:</strong> 10+<br>
-                    Batak is Turkey's coffeehouse trick-taking classic — think Spades' bolder cousin, where the auction winner names trump and must deliver. In its "King" style contract game, some hands flip the goal entirely: suddenly every Queen you capture is a disaster.
+                    Batak is Turkey's coffeehouse trick-taking game. Players bid for the right to name the trump suit, and the winner must then take at least as many tricks as they promised. The name means "sunk" — which is what happens to anyone who falls short.
                 </div>
 
                 <h2>Object</h2>
-                <p>Win the auction, name the contract, and score by taking (or avoiding!) the right tricks. The best total after the agreed number of hands wins.</p>
+                <p>Take as many tricks as you can — and, if you win the auction, at least as many as you bid. The highest total after an agreed number of hands wins.</p>
 
                 <h2>Contents</h2>
                 <ul>
@@ -1254,52 +1376,51 @@
                 </ul>
 
                 <h2>Setup</h2>
-                <p>Deal the entire deck — <strong>13 cards to each player</strong>. Batak is usually every player for themselves. The player to the dealer's left opens the bidding.</p>
+                <p>Everyone plays for themselves. The dealer deals the whole deck, one card at a time — <strong>13 cards to each player</strong>. The deal passes to the next player after every hand.</p>
 
                 <h2>The Bidding</h2>
-                <p>Players bid the number of tricks they'll win (the dealer may open at 4; others must bid at least 5), each bid higher than the last. The winner names the contract:</p>
-                <ol>
-                    <li><strong>Trump contracts:</strong> Name a trump suit and win at least your bid — each trick is worth +50.</li>
-                    <li><strong>NT (No Trump) negative contracts</strong>, for avoidance hands:
-                        <ul>
-                            <li><strong>Tricks:</strong> every trick taken = −50</li>
-                            <li><strong>Girls:</strong> every Queen captured = −100</li>
-                            <li><strong>Boys:</strong> every Jack captured = −60</li>
-                            <li><strong>King-Rıfkı:</strong> capturing the K♥ = −320</li>
-                            <li><strong>Last Two:</strong> each of the final two tricks = −180</li>
-                        </ul>
-                    </li>
-                </ol>
-                <p>Bids may be doubled and redoubled by opponents who think the contract will fail.</p>
+                <p>This version is called <em>İhaleli Batak</em> ("Batak with an auction"). Starting with the player next to the dealer, each player in turn either bids or passes:</p>
+                <ul>
+                    <li>A bid is a number of tricks, from <strong>5</strong> up to 13. No suit is named yet.</li>
+                    <li>Each bid must be higher than the one before it.</li>
+                    <li>A player who passes is out of the auction for that hand.</li>
+                    <li>If the first three players all pass, the dealer must take the contract at the minimum.</li>
+                </ul>
+                <p>The highest bidder wins the auction, <strong>names the trump suit</strong>, and leads to the first trick.</p>
 
                 <h2>Let's Play!</h2>
-                <p>The bid winner leads. Play all 13 tricks:</p>
+                <p>Play all 13 tricks. Batak's rules for what you may play are stricter than in most trick-taking games:</p>
                 <ol>
-                    <li>Follow suit if able; in trump contracts, void players may trump.</li>
-                    <li>The highest trump — or highest card of the led suit — wins the trick.</li>
-                    <li>In negative contracts there is no trump; the led suit alone decides.</li>
+                    <li><strong>Follow suit</strong> if you can.</li>
+                    <li><strong>Beat the trick if you can:</strong> when following suit, you must play a card higher than the highest card of that suit played so far, if you hold one.</li>
+                    <li><strong>Trump if you are void:</strong> with no card of the suit led, you must play a trump if you have one — and a higher trump than any already in the trick, if you can.</li>
+                    <li>With neither the suit led nor a trump, play any card. It cannot win.</li>
                 </ol>
+                <p>The highest trump wins the trick; if no trump was played, the highest card of the suit led wins. The winner leads to the next trick.</p>
+                <p><strong>Breaking trump:</strong> Trump may not be led until a trump has been played on another suit — unless the leader holds nothing but trumps.</p>
                 <div class="info-card success">
                     <h3>Auction Example</h3>
-                    <p><strong>Dealer:</strong> "4 NT" → <strong>Next:</strong> "5 Spades" → <strong>Next:</strong> "6 NT" → <strong>Next:</strong> "Pass"</p>
-                    <p>"6 NT" wins the auction — in an avoidance hand, that player must now steer clear of tricks while opponents shovel them their way.</p>
+                    <p><strong>First player:</strong> "Five." &nbsp; <strong>Second:</strong> "Pass." &nbsp; <strong>Third:</strong> "Seven." &nbsp; <strong>Dealer:</strong> "Pass." &nbsp; <strong>First player:</strong> "Pass."</p>
+                    <p>The third player wins the auction at seven, names hearts as trump, and leads. They now need at least 7 of the 13 tricks. The other three are not partners, but each of them does better when the bidder fails.</p>
                 </div>
 
                 <h2>Scoring</h2>
                 <ul>
-                    <li><strong>Trump contract made:</strong> +50 per trick won (bidder must reach their bid; failing scores −50 per bid trick).</li>
-                    <li><strong>Negative contracts:</strong> penalties land on whoever captures the forbidden cards or tricks.</li>
-                    <li>Doubles multiply the affected scores.</li>
+                    <li><strong>Bidder makes the bid:</strong> scores 1 point for each trick they took.</li>
+                    <li><strong>Bidder falls short:</strong> they are "sunk" and <strong>lose</strong> the number they bid. <em>Example: bid 7, took 6 = −7.</em></li>
+                    <li><strong>Other players:</strong> score 1 point for each trick they took.</li>
+                    <li><strong>Any player who takes no tricks at all</strong> is also sunk, and loses the number that was bid.</li>
                 </ul>
+                <p>Some tables multiply everything by 10, which changes nothing but the size of the numbers.</p>
 
                 <h2>Winning the Game</h2>
-                <p>Play a full cycle of deals (traditionally each player deals the same number of times). The highest score — or least catastrophic, in a Queens-heavy evening — wins.</p>
+                <p>Play an agreed number of hands — a multiple of four, so that everyone deals equally often; 12 is common. The highest total wins.</p>
 
                 <h2>Variations</h2>
                 <ol>
-                    <li><strong>İhaleli Batak:</strong> The pure trump-auction version — no negative contracts, first to a points target.</li>
-                    <li><strong>Eşli Batak:</strong> Partnership Batak, played like Spades with a named trump.</li>
-                    <li><strong>Gömme Batak:</strong> Three players with a buried widow hand.</li>
+                    <li><strong>Koz Maça ("spades trump"):</strong> There is no auction. Spades are always trump, and each player simply states how many tricks they will take, scoring or sinking on their own number.</li>
+                    <li><strong>Eşli Batak:</strong> Partnership Batak, two against two, with partners' tricks counted together and bidding starting higher.</li>
+                    <li><strong>Gömmeli Batak:</strong> A version with a few undealt cards that the winning bidder may exchange for cards from their hand.</li>
                 </ol>
             </section>
 
@@ -1308,67 +1429,107 @@
                 <h1 class="game-title">Diloti</h1>
 
                 <div class="info-card primary">
-                    <strong>Players:</strong> 4 players (two partnerships) &nbsp;|&nbsp; <strong>Ages:</strong> 12+<br>
-                    Diloti is a Greek partnership trick-and-declaration game played with a short deck. Win the auction, name your trump, and duel over "diles" — declarations of runs and four-of-a-kinds announced card by card, where only the best table's claim scores.
+                    <strong>Players:</strong> 2 players, or 4 in two partnerships &nbsp;|&nbsp; <strong>Ages:</strong> 10+<br>
+                    Diloti is Greece's classic "fishing" game: you play cards from your hand to capture cards lying face up on the table. Its name means "declared," after its signature move — stacking table cards into a pile and declaring the total you intend to capture next turn, if nobody takes it first.
                 </div>
 
                 <h2>Object</h2>
-                <p>Win at least the number of tricks your side bid, and out-declare your opponents. The first team to the agreed total wins.</p>
+                <p>Capture cards from the table to score points — for taking the most cards, for certain valuable cards, and for clearing the table in one play. The first side to 61 points wins.</p>
 
                 <h2>Contents</h2>
                 <ul>
-                    <li>32 cards: the 7, 8, 9, 10, J, Q, K, A of each suit</li>
-                    <li>Card ranking in each suit: A (high), K, Q, J, 10, 9, 8, 7</li>
+                    <li>Standard 52-card deck</li>
+                    <li>Capture values: Ace = 1, number cards = face value</li>
+                    <li>Jacks, Queens, and Kings have no number value — a picture card only ever captures its own rank</li>
                     <li>Paper and pencil for scoring</li>
                 </ul>
 
                 <h2>Setup</h2>
-                <p>Partners sit opposite each other. Deal the deck evenly — <strong>8 cards to each player</strong>. The player to the dealer's left opens the bidding.</p>
-
-                <h2>The Bidding</h2>
-                <ul>
-                    <li>Bids start at a minimum of <strong>6 tricks</strong> and rise from there.</li>
-                    <li>Each bid names a number of tricks with a trump suit — or "no trump."</li>
-                    <li>The highest bid wins; that player's team must make the contract.</li>
-                </ul>
-
-                <h2>Declarations (Diles)</h2>
-                <p>Before the first trick, players may announce combinations; only the team with the <strong>highest</strong> declaration scores its diles:</p>
-                <ul>
-                    <li><strong>Tierce:</strong> 3 consecutive cards of a suit = 20</li>
-                    <li><strong>Quarte:</strong> 4 consecutive = 50</li>
-                    <li><strong>Quinte:</strong> 5+ consecutive = 100</li>
-                    <li><strong>Four of a kind:</strong> Aces = 200, Kings or 10s = 150, Queens or Jacks = 100</li>
-                </ul>
-                <p>Declarations are compared by rank, then by height ("to the Queen" beats "to the Jack").</p>
+                <p>With four players, partners sit opposite each other. The dealer deals <strong>6 cards to each player</strong> and then <strong>4 cards face up</strong> to the middle of the table. The rest of the deck is set aside face down.</p>
+                <p>The player next to the dealer goes first, and turns pass around the table. When everyone has played all six cards, the dealer deals 6 more to each player — but no more cards to the table. This repeats until the deck runs out.</p>
 
                 <h2>Let's Play!</h2>
-                <p>The bid winner leads. Play all 8 tricks:</p>
+                <p>On your turn you play exactly one card from your hand, face up, and do one of three things with it:</p>
                 <ol>
-                    <li>Follow suit if able; if void, trump if you can.</li>
-                    <li>The highest trump — or highest card of the led suit — wins the trick.</li>
-                    <li>The winner leads next.</li>
+                    <li><strong>Capture</strong> cards from the table.</li>
+                    <li><strong>Declare:</strong> build a pile on the table to capture later.</li>
+                    <li><strong>Trail:</strong> if you do neither, your card simply stays on the table.</li>
                 </ol>
-                <div class="info-card success">
-                    <h3>Declaration War</h3>
-                    <p><strong>You:</strong> "Quarte!" &nbsp; <strong>Opponent:</strong> "How high?" &nbsp; <strong>You:</strong> "To the Jack."</p>
-                    <p><strong>Opponent:</strong> "Quarte to the Queen!" — their higher quarte wins, and only their team scores declaration points this hand.</p>
-                </div>
 
-                <h2>Scoring</h2>
+                <h3>Capturing</h3>
+                <p>A number card captures:</p>
                 <ul>
-                    <li><strong>Contract made:</strong> The bidding team scores its tricks plus its declarations.</li>
-                    <li><strong>Contract failed:</strong> The defenders score the bid amount instead, plus their declarations.</li>
+                    <li>Any table cards of the <strong>same rank</strong>, and</li>
+                    <li>Any group of table cards whose values <strong>add up</strong> to its rank.</li>
+                </ul>
+                <p>One card may make several captures at once. <em>Example: The table shows 8, 5, 3, and 2. You play an 8. You take the 8 (same rank) and also the 5 + 3 (which add up to 8). The 2 stays.</em></p>
+                <p>A Jack, Queen, or King captures only a card of its own rank. Captured cards, and the card that captured them, go face down in your pile (partners share one pile).</p>
+
+                <h3>Declaring</h3>
+                <p>Instead of capturing, you may place your card on top of one or more table cards to make a pile, and announce the pile's total. <strong>You must hold a card of that total in your hand</strong>, because the point of declaring is to capture the whole pile with that card on a later turn.</p>
+                <p><em>Example: There is a 3 on the table, and you hold a 4 and a 7. You put the 4 on the 3 and say "declaring seven." Next turn you can play your 7 and take both cards.</em></p>
+                <ul>
+                    <li>A declared pile counts as a single unit: it can only be captured whole, by a card equal to its announced total. Its cards can no longer be taken separately.</li>
+                    <li>A declaration can never total more than 10, and never uses picture cards.</li>
+                    <li><strong>Anyone</strong> holding the right card may capture your declaration before you do — declaring shows the table what you are holding.</li>
+                    <li>While your declaration is on the table, you may not trail. On each turn you must capture it, capture something else, or add to a declaration.</li>
                 </ul>
 
+                <h3>Raising and Grouping</h3>
+                <ul>
+                    <li><strong>Raising:</strong> You may add a card from your hand to a declared pile to change its total — for instance, putting a 2 on a "seven" to make it a "nine" — if you hold a card of the new total. You may raise an opponent's declaration as well as your own.</li>
+                    <li><strong>Grouping:</strong> You may add more cards <em>of the same total</em> to a declaration. <em>Example: Beside your "seven" pile lies a 5; you play a 2 onto the 5 and add them to the pile. The pile is still a "seven" — a single 7 now captures all of it.</em> A grouped declaration is locked at its total and cannot be raised.</li>
+                </ul>
+
+                <h3>Xeri (The Sweep)</h3>
+                <p>If your single card captures <strong>every</strong> card on the table, that is a <em>xeri</em> ("dry"), worth 10 points. Keep the capturing card face up in your pile as a reminder. The next player has nothing to capture and must trail.</p>
+                <div class="info-card success">
+                    <h3>Example Turn</h3>
+                    <p><strong>Table:</strong> 6♣, 4♥, K♦ &nbsp;|&nbsp; <strong>Your hand:</strong> 10♠, K♠, 2♦</p>
+                    <p>You have two possible captures. Your K♠ takes the K♦ — one card. Your 10♠ takes the 6♣ and 4♥ together, because 6 + 4 = 10 — two cards. The 10 is the better play: it wins more cards toward the 4 points for most cards, and the K♦ will probably still be there for your King next turn.</p>
+                </div>
+
+                <h2>Ending the Round</h2>
+                <p>The round ends when the deck is used up and all hands have been played. Any cards still on the table go to whoever made the last capture; this does not count as a xeri.</p>
+
+                <h2>Scoring</h2>
+                <p>Each side looks through its captured cards and scores:</p>
+                <table>
+                    <tr>
+                        <th>For</th>
+                        <th>Points</th>
+                    </tr>
+                    <tr>
+                        <td>Capturing the most cards (27 or more)</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>The 10♦</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>The 2♣</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Each Ace</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Each xeri</td>
+                        <td>10</td>
+                    </tr>
+                </table>
+                <p>That makes 11 points in every round before xeris. If the two sides tie at 26 cards each, nobody scores the 4 points for most cards.</p>
+
                 <h2>Winning the Game</h2>
-                <p>Play to an agreed total — 151 or 251 points are common targets. The first team past the post wins.</p>
+                <p>The deal passes to the next player and new rounds are played until a side reaches <strong>61 points</strong>. If both sides pass 61 in the same round, the higher total wins.</p>
 
                 <h2>Variations</h2>
                 <ol>
-                    <li><strong>Fishing Diloti:</strong> A different traditional Greek game of the same name, played by capturing table cards (like Scopa) — with "dilotí" sweeps scoring double.</li>
-                    <li><strong>No-trump bonus:</strong> No-trump contracts score half again as much.</li>
-                    <li><strong>Silent diles:</strong> Declarations shown only at the hand's end — more bluffing in the auction.</li>
+                    <li><strong>No declarations:</strong> For a first game, play with captures and xeris only. This is close to the simpler Greek game Kontsina.</li>
+                    <li><strong>Longer game:</strong> Play to 101 points.</li>
+                    <li><strong>Xeri (the game):</strong> A related Greek game where you capture by matching the top card of a single pile, and Jacks take everything.</li>
                 </ol>
             </section>
 
@@ -1400,7 +1561,7 @@
                 <ul>
                     <li><strong>Trump:</strong> Name any suit as trump.</li>
                     <li><strong>Obenabe ("top-down"):</strong> No trump; A-K-Q-J-10-9-8-7-6, with all four 8s worth 8 points each.</li>
-                    <li><strong>Undenufe ("bottom-up"):</strong> No trump and ranking inverted — 6 beats everything, and 6s score 11.</li>
+                    <li><strong>Undenufe ("bottom-up"):</strong> No trump and the ranking is upside down — the 6 is the highest card and the Ace the lowest. The 6s score 11 each and the Aces nothing; the 8s are again worth 8.</li>
                     <li><strong>Slalom and friends:</strong> Regional modes alternate top-down and bottom-up trick by trick.</li>
                 </ul>
 
@@ -1417,8 +1578,8 @@
                 <h2>Let's Play!</h2>
                 <p>The player to the dealer's right leads. Play all 9 tricks:</p>
                 <ol>
-                    <li>Follow suit if able — though the trump Jack may always be held back ("Puur bleibt").</li>
-                    <li>Void players may trump (but may not "under-trump" a trump already played, unless forced).</li>
+                    <li>Follow suit if you can — with two exceptions. You may always play a trump instead of following suit. And when trump is led, you are never forced to play the trump Jack: if it is the only trump you hold, you may keep it and play any card.</li>
+                    <li>If a trick already contains a trump, you may not play a <strong>lower</strong> trump on it ("under-trumping") unless trumps are all you have left.</li>
                     <li>The highest trump — or highest card of the led suit — wins; the winner leads next.</li>
                 </ol>
                 <div class="info-card success">
@@ -1435,7 +1596,7 @@
                 </ul>
 
                 <h2>Winning the Game</h2>
-                <p>Play hands until a team reaches the agreed target — <strong>2,500 points</strong> is standard for Schieber. First team past the post wins (announce "Beim Sieg" politely).</p>
+                <p>Play hands until a team reaches the agreed target — <strong>2,500 points</strong> is standard for Schieber. The first team to reach it wins. For a shorter evening, play to 1,000.</p>
 
                 <h2>Variations</h2>
                 <ol>
@@ -1534,72 +1695,148 @@
                 <h1 class="game-title">Scopa</h1>
 
                 <div class="info-card primary">
-                    <strong>Players:</strong> 2-4 players (best with 2) &nbsp;|&nbsp; <strong>Ages:</strong> 8+<br>
-                    Scopa is Italy's beloved fishing game — you "sweep" cards off the table by matching or adding up to their values. Clear the whole table at once and you've scored a scopa, announced with a proud flick of your card. Simple rules, endless nuance.
+                    <strong>Players:</strong> 2-4 players (best with 2; 4 play as two partnerships) &nbsp;|&nbsp; <strong>Ages:</strong> 8+<br>
+                    Scopa is Italy's best-loved "fishing" game: you play cards from your hand to capture cards lying face up on the table, by matching them or adding them up. Clear the whole table in one play and you have made a <em>scopa</em> — a "sweep" — which is where the game gets its name.
                 </div>
 
                 <h2>Object</h2>
-                <p>Capture cards from the table to score points — for most cards, most diamonds, the 7♦, the best "primiera," and every sweep. First to 11 points wins.</p>
+                <p>Capture cards from the table. At the end of each round, points are awarded for what you captured and for every sweep you made. The first side to 11 points wins.</p>
 
                 <h2>Contents</h2>
                 <ul>
                     <li>40 cards: a standard deck with all 8s, 9s, and 10s removed</li>
-                    <li>Capture values: Ace = 1, number cards = face value, Jack = 8, Queen = 9, King = 10</li>
+                    <li>Capture values: Ace = 1, 2 through 7 = face value, Jack = 8, Queen = 9, King = 10</li>
                     <li>Paper and pencil for scoring</li>
                 </ul>
 
                 <h2>Setup</h2>
-                <p>Choose one player to be dealer. The dealer deals <strong>3 cards to each player</strong>, face down, and <strong>4 cards face up</strong> to the middle of the table. If 3 or more Kings land on the table on the opening deal, gather and redeal.</p>
-                <p>The player to the dealer's right goes first (Italian games run counter-clockwise — or play clockwise, as you prefer; just be consistent).</p>
+                <p>Choose one player to be dealer. The dealer deals <strong>3 cards to each player</strong>, face down, and <strong>4 cards face up</strong> to the middle of the table. If 3 or 4 Kings land on the table in this opening deal, gather the cards and deal again.</p>
+                <p>The player to the dealer's right goes first, and play runs counter-clockwise, as Italian games traditionally do. (Play clockwise if you prefer — just be consistent.)</p>
 
                 <h2>Let's Play!</h2>
-                <p>On your turn, play exactly one card from your hand:</p>
+                <p>On your turn, play exactly one card from your hand, face up:</p>
                 <ol>
-                    <li>Capture table cards with it, if you can.</li>
-                    <li>If you can't capture, your card stays on the table.</li>
-                    <li>When hands are empty, the dealer deals 3 more to each player — no new table cards.</li>
+                    <li>If it can capture cards from the table, it must — take them.</li>
+                    <li>If it cannot capture anything, it stays on the table for others to capture.</li>
                 </ol>
+                <p>When all players have played their three cards, the dealer deals 3 more to each player from the deck. No new cards are dealt to the table. This repeats until the deck is used up.</p>
 
                 <h3>Capturing</h3>
-                <p>Your card captures either:</p>
+                <p>The card you play captures either:</p>
                 <ul>
-                    <li>A single table card of the <strong>same value</strong>, or</li>
+                    <li>One table card of the <strong>same value</strong>, or</li>
                     <li>Two or more table cards whose values <strong>add up</strong> to your card's value.</li>
                 </ul>
-                <p><em>Example: Playing a 7, you may take a 7 — or a 3 and a 4 — or an Ace, a 2, and a 4.</em> If a single matching card is available, you must take it rather than a combination. Captured cards go face down in your pile, along with the card you played.</p>
+                <p><em>Example: You play a 7. You may take a 7 from the table — or a 3 and a 4 — or an Ace, a 2, and a 4.</em></p>
+                <p>Two limits apply. You make only <strong>one</strong> capture per turn, so if several are possible you choose one of them. And if a single card of the same value is on the table, you must take that card rather than a combination.</p>
+                <p>Put the cards you capture, together with the card you played, face down in a pile in front of you. Partners share one pile.</p>
 
                 <h3>Scopa! (The Sweep)</h3>
-                <p>If your capture clears <strong>every</strong> card from the table, that's a scopa — worth 1 point immediately. Place the capturing card face up and sideways in your pile to remember it. (A sweep on the very last play of a round traditionally doesn't count.)</p>
-
-                <h2>Ending the Round</h2>
-                <p>When the deck is exhausted and all hands have been played, the last player who made a capture takes any cards left on the table (this does not count as a scopa). Then score the round.</p>
-
-                <h2>Scoring</h2>
-                <div class="info-card info">
-                    <h3>Point Categories (1 Point Each Per Round)</h3>
-                    <ul>
-                        <li><strong>Cards:</strong> Most cards captured</li>
-                        <li><strong>Diamonds:</strong> Most diamonds captured</li>
-                        <li><strong>Sette Bello:</strong> Capturing the 7♦</li>
-                        <li><strong>Primiera:</strong> Best "prime" — take your best card in each suit and sum their prime values: 7 = 21, 6 = 18, A = 16, 5 = 15, 4 = 14, 3 = 13, 2 = 12, face cards = 10</li>
-                        <li><strong>Scopas:</strong> 1 point for each sweep made during play</li>
-                    </ul>
-                    <p>Ties in a category score no point for anyone.</p>
-                </div>
+                <p>If your capture takes <strong>every</strong> card on the table, you have made a scopa, worth 1 point. To keep count, leave the capturing card face up and sideways in your pile. The next player has nothing to capture and must simply lay a card down.</p>
                 <div class="info-card success">
                     <h3>Example Capture</h3>
-                    <p><strong>Table:</strong> A♥ 3♦ 4♣ K♠ &nbsp;|&nbsp; <strong>Your card:</strong> 5♥</p>
-                    <p>You may capture A♥ + 4♣ (1 + 4 = 5). The 3♦ and K♠ can't be taken with a 5. When you have options, prefer captures that take diamonds and 7s!</p>
+                    <p><strong>Table:</strong> A♥ 3♦ 4♣ K♠ &nbsp;|&nbsp; <strong>You play:</strong> 5♥</p>
+                    <p>No 5 is on the table, so look for cards that add up to 5: the A♥ and 4♣ do (1 + 4). You take those two, plus your own 5♥. The 3♦ and K♠ stay where they are.</p>
+                </div>
+
+                <h2>Ending the Round</h2>
+                <p>The round ends when the deck is used up and everyone has played their last card. Any cards still on the table go to the player who made the most recent capture. This final clearing is not a scopa — and neither is a sweep made with the very last card of the round.</p>
+
+                <h2>Scoring</h2>
+                <p>Each side now looks through its pile. There are four points to be won at the end of every round, plus one point for each scopa made during play:</p>
+                <table>
+                    <tr>
+                        <th>Point</th>
+                        <th>Who Wins It</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Cards</strong> (<em>carte</em>)</td>
+                        <td>The side that captured the most cards — 21 or more of the 40</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Diamonds</strong> (<em>denari</em>)</td>
+                        <td>The side that captured the most diamonds — 6 or more of the 10</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sette Bello</strong> ("beautiful seven")</td>
+                        <td>The side that captured the 7♦</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Primiera</strong></td>
+                        <td>The side with the best primiera — explained below</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Each scopa</strong></td>
+                        <td>The side that made it</td>
+                    </tr>
+                </table>
+                <p>If the two sides tie for cards, diamonds, or primiera, nobody scores that point.</p>
+
+                <h3>The Primiera, Step by Step</h3>
+                <p>The primiera is the point new players find confusing, mostly because of its name. It has nothing to do with prime numbers: <em>Primiera</em> is the name of an old Italian card game, and this point borrows that game's way of valuing cards.</p>
+                <p>The idea is simple. Each side shows its <strong>best card in each of the four suits</strong> — four cards in all — and the side whose four cards are worth more wins the point. What makes it unusual is that "best" is measured on a special scale, used only for this one comparison and nowhere else in the game:</p>
+                <table>
+                    <tr>
+                        <th>Card</th>
+                        <th>Primiera Value</th>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>21</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>Ace</td>
+                        <td>16</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>13</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>King, Queen, or Jack</td>
+                        <td>10</td>
+                    </tr>
+                </table>
+                <p>To work out your primiera:</p>
+                <ol>
+                    <li>Sort your captured cards by suit.</li>
+                    <li>From each suit, pick the one card with the highest primiera value. A 7 is the best possible; if you have no 7 in that suit, a 6 is next best; then an Ace; and so on down the table.</li>
+                    <li>Add up the values of those four cards. The higher total wins the point.</li>
+                </ol>
+                <p>A side that captured <strong>no cards at all in one of the suits</strong> cannot win the primiera, because it cannot show four cards.</p>
+                <div class="info-card success">
+                    <h3>Primiera Example</h3>
+                    <p><strong>Your best card in each suit:</strong> 7♦, 6♣, A♥, K♠ &nbsp;→&nbsp; 21 + 18 + 16 + 10 = <strong>65</strong></p>
+                    <p><strong>Your opponent's best in each suit:</strong> 7♠, 7♥, 5♣, 4♦ &nbsp;→&nbsp; 21 + 21 + 15 + 14 = <strong>71</strong></p>
+                    <p>Your opponent wins the primiera point, 71 to 65. In practice the side holding more 7s nearly always wins it, with 6s deciding close calls — which is why experienced players fight hard over every 7 and 6 on the table.</p>
                 </div>
 
                 <h2>Winning the Game</h2>
-                <p>Play rounds until a player (or team) reaches <strong>11 points</strong> (some play to 21). If both sides cross 11 in the same round, the higher total wins.</p>
+                <p>The deal passes to the next player and new rounds are played until a side reaches <strong>11 points</strong>. If both sides pass 11 in the same round, the higher total wins; if they are level, play another round.</p>
 
                 <h2>Variations</h2>
                 <ol>
-                    <li><strong>Scopone:</strong> The classic 4-player partnership version — all 40 cards are dealt (10 each) with none to the table.</li>
-                    <li><strong>Scopa d'Assi:</strong> Playing an Ace captures the entire table (but scores no scopa point).</li>
-                    <li><strong>Re Bello:</strong> The K♦ is worth an extra point, like the 7♦.</li>
+                    <li><strong>Scopone:</strong> The classic four-player partnership version — all 40 cards are dealt out, 10 to each player, with none to the table.</li>
+                    <li><strong>Scopa d'Assi:</strong> Playing an Ace captures every card on the table (without scoring a scopa point).</li>
+                    <li><strong>Re Bello:</strong> The K♦ is worth a point of its own, like the 7♦.</li>
+                    <li><strong>Longer game:</strong> Play to 16 or 21 points.</li>
+                    <li><strong>Simple primiera:</strong> Skip the arithmetic and give the point to whoever captured the most 7s, with 6s breaking a tie.</li>
                 </ol>
             </section>
 
@@ -1632,8 +1869,8 @@
                         <li>All 2s</li>
                         <li>Remaining Aces (A♥ A♦)</li>
                         <li>All Kings</li>
-                        <li>All Jacks</li>
                         <li>All Queens</li>
+                        <li>All Jacks</li>
                         <li>Remaining 7s (7♥ 7♣)</li>
                         <li>All 6s, then 5s, then 4s</li>
                     </ol>
@@ -1646,9 +1883,10 @@
                 <p>Each hand is up to 3 quick tricks — first side to win 2 tricks takes the hand:</p>
                 <ol>
                     <li>Players play one card each; there is <strong>no</strong> obligation to follow suit.</li>
-                    <li>The highest-ranked card wins the trick; tied cards mean the first one played wins.</li>
-                    <li>The trick winner leads the next trick.</li>
+                    <li>The highest-ranked card wins the trick. If the two sides' best cards are of equal rank — two 3s, say — the trick is tied (<em>parda</em>) and nobody wins it.</li>
+                    <li>The trick winner leads the next trick. After a tied trick, the same player leads again.</li>
                 </ol>
+                <p><strong>When a trick is tied:</strong> If the first trick is tied, whoever wins the second trick wins the hand. If the second or third trick is tied, the side that won the first trick wins the hand. If all three are tied, the side of the player who led the first trick wins.</p>
 
                 <h3>The Truco Calls (Betting on the Hand)</h3>
                 <p>At any point during the hand, a player may raise the stakes on who wins the tricks:</p>
@@ -1686,7 +1924,7 @@
                 <h2>Variations</h2>
                 <ol>
                     <li><strong>Sin flor:</strong> Play without the flor rule — common in many households.</li>
-                    <li><strong>Six-player Truco:</strong> Two teams of three, teammates alternating seats; only the first-named calls change hands.</li>
+                    <li><strong>Six-player Truco:</strong> Two teams of three, with teammates in alternating seats.</li>
                     <li><strong>Uruguayan Truco:</strong> Adds the "muestra" (a turned card creating extra high-ranked cards).</li>
                 </ol>
             </section>
@@ -2025,7 +2263,7 @@
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2-4 players &nbsp;|&nbsp; <strong>Ages:</strong> 10+<br>
-                    Kalooki is the Caribbean's grand rummy game, played with a double deck and wild Jokers. Open your account with a 51-point meld, then race to empty your hand — but never get caught holding a Joker, and dream of going out in one glorious "Kalooki!"
+                    Kalooki (also spelled Kaluki) is a double-deck rummy game with wild Jokers, played in Britain, North America, and the Caribbean — each with its own rules. This is the widespread "51" version. Open your account with a 51-point meld, then race to empty your hand — but never get caught holding a Joker, and dream of going out in one glorious "Kalooki!"
                 </div>
 
                 <h2>Object</h2>
@@ -2060,7 +2298,7 @@
                 <p>Your first meld(s) of a round must total <strong>51 points or more</strong>, laid down together in one turn. Until you've opened, you may not lay off on other players' melds. After opening, you may meld and lay off freely on any melds.</p>
 
                 <h3>The Discard Pile</h3>
-                <p>You may take the top discard — or, in many games, the <strong>entire</strong> discard pile if you can immediately use the bottom-most card you pick up in a meld. You may never discard the same card you just took from the pile.</p>
+                <p>Only the top card of the discard pile may ever be taken. <strong>Before you have opened</strong>, you may take it only if you use it at once as part of your opening meld. <strong>After you have opened</strong>, you may take it freely. You may never discard the same card you just took from the pile.</p>
 
                 <h3>Going Out — "Kalooki!"</h3>
                 <p>Go out by melding or laying off every card in your hand. Going out <strong>without a final discard</strong> — melding everything at once — is a "Kalooki" and traditionally earns a bonus (or halves your accumulated score, by house rule).</p>
@@ -2083,7 +2321,7 @@
                 <ol>
                     <li><strong>Progressive opening:</strong> The required opening total rises each round (51, then 56, 61...).</li>
                     <li><strong>Elimination:</strong> Players over 150 points drop out; last player standing wins.</li>
-                    <li><strong>Strict pile:</strong> Only the top discard may ever be taken — a faster, tighter game.</li>
+                    <li><strong>Jamaican Kalooki:</strong> A quite different game played in the Caribbean, in which each deal sets a fixed contract of sets and runs to complete.</li>
                 </ol>
             </section>
 
@@ -2260,10 +2498,10 @@
             <!-- SPEED -->
             <section id="speed" class="game-section">
                 <h1 class="game-title">Speed</h1>
-                
+
                 <div class="info-card primary">
                     <strong>Players:</strong> 2 players &nbsp;|&nbsp; <strong>Ages:</strong> 8+<br>
-                    Speed is exactly what it sounds like — a frantic two-player race with no turns. Both players fling cards onto the center piles at once, always one rank up or down, until someone empties their hand and stock. Quick eyes and quicker hands win.
+                    Speed is exactly what it sounds like — a frantic two-player race with no turns. Both players fling cards onto two center piles at once, always one rank up or down, until someone has no cards left. Quick eyes and quicker hands win.
                 </div>
 
                 <h2>Object</h2>
@@ -2272,42 +2510,53 @@
                 <h2>Contents</h2>
                 <ul>
                     <li>Standard 52-card deck</li>
-                    <li>Card ranking wraps around: Ace connects King and 2</li>
+                    <li>Ranks run in a circle: the Ace sits between the King and the 2, so an Ace may be played on either one</li>
+                    <li>Suits do not matter</li>
                 </ul>
 
                 <h2>Setup</h2>
-                <p>Shuffle and split the deck so each player has 26 cards. Each player sets up:</p>
+                <p>Shuffle the deck and lay the cards out like this. Everything is dealt face down:</p>
                 <ul>
-                    <li><strong>Two draw piles:</strong> Deal 5 cards face down into each of two "replacement" piles (some play with a single 15-card stock instead).</li>
-                    <li><strong>Center cards:</strong> Each player places 5 cards face down as one of the two central starter piles.</li>
-                    <li><strong>Hand:</strong> Hold the remaining 5 cards as your starting hand.</li>
+                    <li><strong>Each player's hand:</strong> 5 cards, which that player picks up and looks at.</li>
+                    <li><strong>Each player's draw pile:</strong> 15 cards in a stack, placed face down in front of that player.</li>
+                    <li><strong>Two center cards:</strong> 2 single cards side by side in the middle of the table. These start the two play piles.</li>
+                    <li><strong>Two reserve piles:</strong> 5 cards each, one on the outer side of each center card. They are used only when both players get stuck.</li>
                 </ul>
+                <p>That accounts for all 52 cards: 5 + 15 for each player, plus 2 + 10 in the middle. Seen from above, the middle row looks like this:</p>
+                <pre style="font-family: monospace;">
+[reserve 5]  [center]  [center]  [reserve 5]
+                    </pre>
 
                 <h2>Let's Play!</h2>
                 <p>Both players play at the same time — there are no turns:</p>
                 <ol>
-                    <li>Count "3-2-1-Go!" and both flip one center card into the middle.</li>
-                    <li>Race to play cards onto either center pile.</li>
-                    <li>When both players are stuck, flip two new center cards.</li>
+                    <li>Count "3-2-1-Go!" and each player flips one of the two center cards face up.</li>
+                    <li>Race to play cards from your hand onto either center pile.</li>
+                    <li>Refill your hand from your own draw pile as you go.</li>
                 </ol>
 
                 <h3>Playing Cards</h3>
-                <p>Play any hand card that is <strong>one rank higher or lower</strong> than the top card of either center pile — suits don't matter, and Aces connect Kings and 2s. After playing, draw from your replacement pile so you always hold 5 cards (until your piles run out).</p>
+                <p>You may play a card from your hand onto either center pile if it is <strong>one rank higher or one rank lower</strong> than that pile's top card. <em>Example: On a 9 you may play a 10 or an 8. On a King you may play a Queen or an Ace. On an Ace, a King or a 2.</em></p>
+                <p>Play one card at a time, using one hand. The card you play becomes the new top card, so a run such as 6-7-8-7-6 can go down in a second or two.</p>
 
-                <h3>When Both Players Stall</h3>
-                <p>If neither player can play, both simultaneously flip the top card of their remaining center stock onto the two center piles, then play resumes instantly.</p>
+                <h3>Refilling Your Hand</h3>
+                <p>Whenever you hold fewer than 5 cards, draw from your own draw pile to bring your hand back up to 5. You may never hold more than 5. Once your draw pile is gone, you simply play out the cards left in your hand.</p>
+
+                <h3>When Both Players Are Stuck</h3>
+                <p>If neither player can play, each player takes the top card of one reserve pile and both flip them at the same moment onto the center piles. Play carries on at once from the two new top cards.</p>
+                <p>If the reserve piles run out and both players are stuck again, pick up each center pile, shuffle it, and turn it face down as a new reserve pile. Then flip the top cards as before.</p>
 
                 <h2>Ending the Game</h2>
-                <p>The game ends the moment a player has no cards left in hand and no cards to draw.</p>
+                <p>The game ends the moment one player has no cards left — nothing in hand and nothing in their draw pile.</p>
 
                 <h2>Winning the Game</h2>
-                <p>The first player to shed every card — hand and stock — wins. Many play best-of-three or best-of-five to settle a match.</p>
+                <p>The first player to play their last card wins; many players slap the table and shout "Speed!" to claim it. Play best-of-three or best-of-five to settle a match.</p>
 
                 <h2>Variations</h2>
                 <ol>
-                    <li><strong>Speed with wilds:</strong> Add jokers as "play on anything" cards.</li>
-                    <li><strong>Four-pile Speed:</strong> Use two decks and four center piles for a bigger, faster game.</li>
-                    <li><strong>Solitaire Speed:</strong> Play against a timer, beating your own best clear time.</li>
+                    <li><strong>Doubles:</strong> A card of the <em>same</em> rank as the top card may also be played.</li>
+                    <li><strong>Jokers wild:</strong> Add the two Jokers and make each reserve pile 6 cards. A Joker may be played on any card, and any card may be played on a Joker.</li>
+                    <li><strong>Spit:</strong> A close relative with five face-up piles in front of each player instead of a hand — see its own entry.</li>
                 </ol>
             </section>
 
@@ -2317,7 +2566,7 @@
                 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2-4 players &nbsp;|&nbsp; <strong>Ages:</strong> 8+<br>
-                    Kings Corner plays like a shared game of solitaire. You build descending, alternating-color piles in a cross-shaped layout, saving the coveted corner spots for Kings. Empty your hand first to win — but every turn you must play everything you can.
+                    Kings Corner plays like a shared game of solitaire. You build descending, alternating-color piles in a cross-shaped layout, saving the coveted corner spots for Kings. Empty your hand first to win — and one well-timed move can unload half of it.
                 </div>
 
                 <h2>Object</h2>
@@ -2336,8 +2585,8 @@
                 <p>On your turn:</p>
                 <ol>
                     <li>Draw one card from the stock.</li>
-                    <li>Make every play you can (you must play if able).</li>
-                    <li>Discard nothing — end your turn when out of plays.</li>
+                    <li>Make as many plays as you like.</li>
+                    <li>There is no discard: say "pass" when you have finished.</li>
                 </ol>
 
                 <h3>Playing Cards</h3>
@@ -2347,7 +2596,7 @@
                     <li><strong>Move whole piles:</strong> You may move an entire pile onto another if the sequence fits, freeing space.</li>
                     <li><strong>Fill empty sides:</strong> An empty side space may be filled with any card from your hand.</li>
                 </ul>
-                <p>You must make all available plays before ending your turn — you can't hold cards back.</p>
+                <p>You are never forced to play a card. Holding one back is legal, though rarely wise, since the aim is to empty your hand.</p>
 
                 <h2>Ending the Game</h2>
                 <p>The round ends the instant a player empties their hand.</p>
@@ -2524,7 +2773,7 @@
                 <h2>Variations</h2>
                 <ol>
                     <li><strong>One reprieve:</strong> When the fourth King appears, allow yourself to swap it once with any face-down card — a single second chance.</li>
-                    <li><strong>Watch:</strong> Deal the same layout but play the chain from any pile you choose to start.</li>
+                    <li><strong>Keep score:</strong> Instead of simply winning or losing, count the cards still face down when the fourth King appears, and try to beat your best result.</li>
                     <li><strong>Race the clock:</strong> With two decks and two players side by side, first to finish (win or lose) takes the round.</li>
                 </ol>
             </section>
@@ -2535,68 +2784,102 @@
 
                 <div class="info-card primary">
                     <strong>Players:</strong> 2 players &nbsp;|&nbsp; <strong>Ages:</strong> 10+<br>
-                    Fox in the Forest is a fairy-tale trick-taking duel where greed is punished. Win a comfortable middle number of tricks — or almost none — and you score well; win too many and you get nothing. Odd-numbered cards carry magical powers that twist every trick.
+                    Fox in the Forest is a trick-taking game built for exactly two players, adapted here from the published game for a standard deck. Its twist is that greed is punished: win a comfortable majority of the tricks and you score well, but win too many and you score nothing. The odd-numbered cards carry special powers.
                 </div>
 
                 <h2>Object</h2>
-                <p>Score points over several hands by winning a clever number of tricks — not too many, not too few. The first player to 21 points wins.</p>
+                <p>Score points over several hands by winning either very few tricks or a modest majority of them — but not too many. The first player to 21 points wins.</p>
 
                 <h2>Contents</h2>
                 <ul>
-                    <li>30 cards from a standard deck: A through 10 of hearts, diamonds, and clubs (remove all spades and all face cards)</li>
-                    <li>Card ranking in each suit: 10 (high), 9, 8, 7, 6, 5, 4, 3, 2, A (low)</li>
+                    <li>33 cards from a standard deck: the Ace through Jack of hearts, diamonds, and clubs. Set aside all spades, Queens, and Kings.</li>
+                    <li>Cards count as numbers 1 to 11: <strong>Ace = 1</strong> (the lowest), 2 through 10 = face value, <strong>Jack = 11</strong> (the highest)</li>
                     <li>Paper and pencil for scoring</li>
                 </ul>
-                <div class="info-card warning">
-                    <h3>Special Abilities (Activate When Played)</h3>
-                    <ul>
-                        <li><strong>Ace — Swan:</strong> If you lose this trick, you lead the next one</li>
-                        <li><strong>3 — Fox:</strong> Exchange the face-up decree card with a card from your hand</li>
-                        <li><strong>5 — Gazelle:</strong> Draw 1 card, then discard 1 card</li>
-                        <li><strong>7 — Gift:</strong> Your opponent leads the next trick, regardless of who wins this one</li>
-                        <li><strong>9 — Humble:</strong> If this is the only odd card in the trick, treat it as a trump</li>
-                    </ul>
-                </div>
 
                 <h2>Setup</h2>
-                <p>Shuffle the 30 cards and deal <strong>13 cards to each player</strong>. Flip one card face up — its suit is trump, and the card itself is called the "decree" card. Place the remaining 3 cards face down beside it as the decree pile.</p>
+                <p>Shuffle the 33 cards and deal <strong>13 cards to each player</strong>. Put the remaining 7 cards face down as a draw pile, and turn its top card face up beside it. This face-up card is the <strong>decree card</strong>: its suit is the trump suit.</p>
+                <p>The non-dealer leads to the first trick.</p>
 
                 <h2>Let's Play!</h2>
-                <p>The non-dealer leads the first trick. Play all 13 tricks:</p>
+                <p>A hand is 13 tricks. In each trick:</p>
                 <ol>
-                    <li>The leader plays any card; the follower must follow suit if able.</li>
-                    <li>The highest trump wins the trick, otherwise the highest card of the led suit.</li>
-                    <li>Special powers activate immediately when their card is played.</li>
+                    <li>The leader plays any card.</li>
+                    <li>The other player must play a card of the same suit if they have one. If they have none, they may play any card.</li>
+                    <li>If either card is a trump, the higher trump wins. Otherwise the higher card of the suit that was led wins.</li>
                 </ol>
-                <p>The Fox (3) lets you swap the decree card — changing the trump suit mid-hand! The Swan (A) and Gift (7) let you manipulate who leads, which is often more valuable than winning the trick itself.</p>
+                <p>The winner sets the trick aside and leads to the next one — unless a special card says otherwise.</p>
 
-                <h2>Scoring</h2>
-                <div class="info-card info">
-                    <h3>Tricks Won → Points</h3>
+                <h3>The Special Cards</h3>
+                <p>All the <strong>odd-numbered</strong> cards have a power. The even-numbered cards have none.</p>
+                <div class="info-card warning">
+                    <h3>Powers</h3>
                     <ul>
-                        <li><strong>0-3 tricks:</strong> 6 points (Humble)</li>
-                        <li><strong>4 tricks:</strong> 1 point</li>
-                        <li><strong>5 tricks:</strong> 2 points</li>
-                        <li><strong>6 tricks:</strong> 3 points</li>
-                        <li><strong>7-9 tricks:</strong> 6 points (Victorious)</li>
-                        <li><strong>10-13 tricks:</strong> 0 points (Greedy!)</li>
+                        <li><strong>Ace (1) — Swan:</strong> If you play this and <strong>lose</strong> the trick, you lead the next trick instead of the winner.</li>
+                        <li><strong>3 — Fox:</strong> When you play this, you may swap the decree card for a card from your hand. The new decree card's suit becomes trump at once, and it decides who wins this very trick.</li>
+                        <li><strong>5 — Woodcutter:</strong> When you play this, draw the top card of the draw pile, then put any one card from your hand on the bottom of the draw pile.</li>
+                        <li><strong>7 — Treasure:</strong> Whoever wins the trick scores 1 point for each 7 in it. These points are counted at the end of the hand.</li>
+                        <li><strong>9 — Witch:</strong> If a trick contains exactly one 9, that 9 counts as a trump — whatever its real suit.</li>
+                        <li><strong>Jack (11) — Monarch:</strong> If you <strong>lead</strong> this, your opponent must reply with either the Ace of that suit or their highest card of that suit, if they have any cards of that suit.</li>
                     </ul>
                 </div>
+
+                <h2>Scoring</h2>
+                <p>After all 13 tricks, each player scores according to how many tricks they won:</p>
+                <table>
+                    <tr>
+                        <th>Tricks Won</th>
+                        <th>Points</th>
+                        <th>Known As</th>
+                    </tr>
+                    <tr>
+                        <td>0 to 3</td>
+                        <td>6</td>
+                        <td>Humble</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>1</td>
+                        <td>Defeated</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>2</td>
+                        <td>Defeated</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>3</td>
+                        <td>Defeated</td>
+                    </tr>
+                    <tr>
+                        <td>7 to 9</td>
+                        <td>6</td>
+                        <td>Victorious</td>
+                    </tr>
+                    <tr>
+                        <td>10 to 13</td>
+                        <td>0</td>
+                        <td>Greedy</td>
+                    </tr>
+                </table>
+                <p>Because the two players' tricks always add up to 13, the table works as a pair. If you win 7, 8, or 9 tricks you score 6 and your opponent scores 3, 2, or 1. But if you win 10 or more, you score 0 and your opponent — left with 3 or fewer — scores 6.</p>
+                <p>Then each player adds 1 point for every 7 in the tricks they won.</p>
                 <div class="info-card success">
-                    <h3>Example Scenario</h3>
-                    <p><strong>Score:</strong> You 15, opponent 18 — they're close to winning. You've taken 8 tricks (on track for 6 points). <strong>Your hand:</strong> A♥, 7♦, 10♣. <strong>Trump:</strong> ♦.</p>
-                    <p><strong>Dilemma:</strong> Win exactly one more trick for 6 points — win two more and score 0.</p>
-                    <p><strong>Opponent leads 9♥.</strong> Smart play: the A♥! You lose the trick (Ace is low), but the Swan power hands you the lead. Lead 7♦ next — the Gift power passes the lead back after the trick — and steer yourself to exactly 9 tricks for the full 6 points.</p>
+                    <h3>Example: Stopping in Time</h3>
+                    <p><strong>Three tricks remain. You have won 8 so far; your opponent has won 2.</strong></p>
+                    <p>You are sitting on 6 points — but if you win two of the last three tricks you will reach 10, turning your 6 into 0 and handing your opponent 6 instead. You may win <strong>one</strong> more trick at most.</p>
+                    <p>So you play to lose. Your opponent leads the 9♥; you hold the A♥ and follow with it. The Ace is the lowest card, so you lose the trick as planned — and because the Ace is the Swan, you lead the next trick anyway, which lets you choose a card your opponent will be forced to beat.</p>
                 </div>
 
                 <h2>Winning the Game</h2>
-                <p>Play hands until a player reaches <strong>21 points</strong>. The higher score wins.</p>
+                <p>The deal alternates. Play hands until a player reaches <strong>21 points</strong> at the end of a hand; the higher score wins. If the scores are level, play another hand.</p>
 
                 <h2>Variations</h2>
                 <ol>
                     <li><strong>Short game:</strong> Play to 16 points.</li>
-                    <li><strong>Learning hand:</strong> Play one hand with powers ignored so new players can absorb the scoring curve first.</li>
-                    <li><strong>Different suits:</strong> Use spades in place of clubs — any three suits work, as long as both players know which are in play.</li>
+                    <li><strong>Long game:</strong> Play to 35 points.</li>
+                    <li><strong>Learning hand:</strong> Play the first hand with all powers ignored, so new players can get used to the scoring table first.</li>
                 </ol>
             </section>
 
@@ -2844,7 +3127,9 @@
                 <p>When neither player can play, both call "Spit!" and each flips one new card from their spit pile onto their center pile, creating fresh top cards. Play resumes instantly.</p>
 
                 <h2>Ending the Round</h2>
-                <p>When a player empties all five stock piles, both players race to slap the <strong>smaller</strong> center pile — the one you slap becomes your new spit pile. (If a player is entirely out of cards, they simply win — see below.) Reshuffle your own piles, lay out five new stock piles, and continue.</p>
+                <p>A round ends when one player has played every card from their five stock piles. Both players then race to slap the <strong>smaller</strong> center pile — smaller is better, because the aim is to have fewer cards. Whoever slaps it first takes it; the other player takes the other pile.</p>
+                <p>Each player then gathers the center pile they took, any cards left in their stock piles, and any cards left in their spit pile, and shuffles them together. From that packet each deals five new stock piles exactly as before (1, 2, 3, 4, and 5 cards) and holds the rest as a new spit pile. The next round starts with "Spit!"</p>
+                <p>A player with fewer than 15 cards deals as many stock piles as the cards allow and has no spit pile. In that round only one center pile is started, by the other player.</p>
 
                 <h2>Winning the Game</h2>
                 <p>You win the moment you get rid of all your cards — both your stock piles and your spit pile — so that you have nothing to lay out for the next round.</p>
@@ -2968,7 +3253,7 @@
                 <p>When you play an 8, announce the suit you want the next player to follow. <em>Example: You play the 8♠ and call "Diamonds!" The next player must play a diamond or another 8.</em></p>
 
                 <h3>Step 2: If You Can't Play, Draw</h3>
-                <p>If you cannot (or choose not to) play a card, draw cards from the draw pile one at a time until you draw a playable card. You may play that card immediately or keep it and continue your turn by passing.</p>
+                <p>If you cannot (or choose not to) play a card, draw cards from the draw pile one at a time until you draw a playable card. Play that card, and your turn ends.</p>
                 <p>If the draw pile runs out, set aside the top discard, shuffle the rest of the discard pile, and turn it face down as the new draw pile.</p>
 
                 <h2>Ending the Round</h2>
@@ -3069,7 +3354,7 @@
 
                 <h2>Contents</h2>
                 <ul>
-                    <li>Standard 52-card deck (add 2 Jokers for 5 or more players)</li>
+                    <li>Standard 52-card deck plus 2 Jokers (54 cards)</li>
                     <li>Card values: Ace = 1, number cards = face value, J/Q/K = 10, Joker = 0</li>
                     <li>Paper and pencil for scoring</li>
                 </ul>
@@ -3102,7 +3387,7 @@
                 <p>Draw exactly one card, either:</p>
                 <ul>
                     <li><strong>From the draw pile:</strong> the top card (unknown), or</li>
-                    <li><strong>From the discard pile:</strong> any <strong>one</strong> card from the previous player's discard. If they discarded a set or run, you may choose any single card from it — but never more than one.</li>
+                    <li><strong>From the discard pile:</strong> <strong>one</strong> card from what the previous player just discarded. If they discarded a set or a run, you may take only its first or last card.</li>
                 </ul>
 
                 <h3>Calling Yaniv</h3>
@@ -3593,13 +3878,12 @@
 
                 <h3>False Slap Penalties</h3>
                 <ul>
-                    <li><strong>False slap:</strong> Give one card from your stack to the player whose turn it was (placed at the bottom of their stack).</li>
-                    <li><strong>Multiple false slappers:</strong> One card from each offender.</li>
-                    <li><strong>Slapping an empty pile:</strong> Give one card to every player.</li>
+                    <li><strong>False slap:</strong> If you slap when no pattern is showing, "burn" a card: take the top card of your stack and put it face up on the <strong>bottom</strong> of the center pile.</li>
+                    <li><strong>Several false slappers:</strong> Each of them burns one card.</li>
                 </ul>
 
                 <h2>Ending the Game</h2>
-                <p>Running out of cards doesn't eliminate you immediately — you may still slap patterns to win a pile and get back in. But if a full round of slap opportunities passes without you winning any cards, you're out for good.</p>
+                <p>Running out of cards does not eliminate you. You skip your turns to flip, but you may still slap any legal pattern, and winning a pile puts you back in the game. You are only out for good when one player has collected every card.</p>
 
                 <h2>Winning the Game</h2>
                 <p>The last player holding cards — or the player who collects all of them — wins.</p>
@@ -3607,14 +3891,14 @@
                     <h3>Example Scenario</h3>
                     <p><strong>Pile builds:</strong> 7♣ → J♦ (face card!). The next player has 1 chance and flips K♥ — success, new challenge!</p>
                     <p><strong>Next player has 3 chances:</strong> flips 4♠, then 4♣ — <strong>DOUBLES!</strong> Everyone slaps.</p>
-                    <p><strong>You slap first</strong> and take the entire pile, King and Jack included. Jim slapped late — that's a false slap, so he hands you a penalty card. You lead the next round with a bigger stack!</p>
+                    <p><strong>Your hand lands first</strong>, so you take the entire pile, King and Jack included, and add it to the bottom of your stack. A slap beats a face-card challenge, so the challenge is simply cancelled. You flip the first card of the next pile.</p>
                 </div>
 
                 <h2>Variations</h2>
                 <ol>
                     <li><strong>Mercy rule:</strong> Players out of cards get three chances to slap back in before being eliminated.</li>
                     <li><strong>Fewer patterns:</strong> Play with only doubles and sandwiches for a calmer game with younger players.</li>
-                    <li><strong>Burn for false slaps:</strong> A false slapper "burns" a card face down into the pile instead of handing it over.</li>
+                    <li><strong>Costlier false slaps:</strong> A false slapper burns two cards instead of one.</li>
                 </ol>
             </section>
 
@@ -3756,7 +4040,7 @@
                 <h2>Setup</h2>
                 <p>Choose a dealer by cutting for high card; the deal rotates clockwise. Deal the entire deck evenly, one card at a time — 13 cards each with 4 players. For other player counts, remove low cards first so the deal comes out even:</p>
                 <ul>
-                    <li><strong>3 players:</strong> remove 2♣ (17 cards each)</li>
+                    <li><strong>3 players:</strong> remove 2♦ (17 cards each)</li>
                     <li><strong>5 players:</strong> remove 2♣ and 2♦ (10 cards each)</li>
                     <li><strong>6 players:</strong> remove 2♣, 2♦, 3♣, 3♦ (8 cards each)</li>
                 </ul>
@@ -3819,7 +4103,7 @@
                     <ul>
                         <li><strong>Trick 1:</strong> You lead 2♣ (required); everyone plays clubs.</li>
                         <li><strong>Trick 3:</strong> J♠ led; you play 3♠, saving your high spades.</li>
-                        <li><strong>Trick 5:</strong> K♦ led and you're void — you dump your K♥.</li>
+                        <li><strong>Trick 5:</strong> A club is led. Your only club went on trick 1, so you may play anything — you dump your K♥.</li>
                         <li><strong>Trick 8:</strong> You win with A♠; hearts are broken, so you lead 2♥ to stay safe.</li>
                     </ul>
                     <p><strong>Result:</strong> You captured 2♥, 4♥, 9♥ = 3 points, and dodged the Q♠. Your game total rises to 47 — still comfortably under 100.</p>
@@ -3831,7 +4115,7 @@
                 <h2>Variations</h2>
                 <ol>
                     <li><strong>Jack of Diamonds:</strong> Capturing the J♦ is worth −10 points.</li>
-                    <li><strong>Spot Hearts:</strong> Landing on exactly 50 or 100 points resets your score to zero — or wins instantly, by agreement.</li>
+                    <li><strong>Lucky hundred:</strong> A player whose score lands on exactly 100 drops back to 50 and the game goes on.</li>
                     <li><strong>Short game:</strong> Play to 50 points.</li>
                     <li><strong>Omnibus Hearts:</strong> Combine several special cards for a wilder scoring game.</li>
                 </ol>
@@ -3880,7 +4164,7 @@
                 <h2>Let's Play!</h2>
                 <p>Play out the 5 tricks:</p>
                 <ol>
-                    <li>The player left of the dealer leads (or left of the lone player's partner if someone is alone).</li>
+                    <li>The player left of the dealer leads. (If that player is sitting out because their partner is going alone, the next player leads.)</li>
                     <li>Follow suit if able — and remember, the left bower counts as trump, not its printed suit.</li>
                     <li>The highest trump wins the trick, or the highest card of the led suit if no trump was played. The winner leads next.</li>
                 </ol>
@@ -3898,10 +4182,10 @@
                 </div>
                 <div class="info-card success">
                     <h3>Example Scenario</h3>
-                    <p><strong>Turned card:</strong> J♥ &nbsp;|&nbsp; <strong>Your hand:</strong> J♦, A♥, K♣, 10♣, 9♠</p>
-                    <p><strong>Analysis with hearts as trump:</strong> Your J♦ is the left bower (second-best card in the deck) and A♥ is the third-best heart — two near-certain tricks. <strong>"Order it up!"</strong></p>
-                    <p><strong>The play:</strong> You lead J♦, winning the trick, then A♥. Your team cruises to 3+ tricks for the point.</p>
-                    <p><strong>Going alone:</strong> With J♥, J♦, A♥, K♥, A♣ you'd call "alone!" — all 5 tricks are likely, worth 4 points.</p>
+                    <p><strong>Turned card:</strong> K♥ &nbsp;|&nbsp; <strong>Your hand:</strong> J♥, J♦, A♥, K♣, 9♠</p>
+                    <p><strong>With hearts as trump</strong> you hold the right bower (J♥), the left bower (J♦, which becomes a heart), and the A♥ — the three highest trumps in the deck, and so three certain tricks. <strong>"Order it up!"</strong></p>
+                    <p><strong>The play:</strong> When you get the lead, play the J♥, then the J♦, then the A♥. Nothing can beat them, so your team has its three tricks and the point.</p>
+                    <p><strong>Going alone:</strong> With J♥, J♦, A♥, Q♥, A♣ you would call "alone!" — all five tricks are likely, worth 4 points.</p>
                 </div>
 
                 <h2>Winning the Game</h2>
@@ -4386,10 +4670,10 @@
                     <li><strong>2 game points:</strong> opponent had fewer than 33 points</li>
                     <li><strong>1 game point:</strong> opponent had 33 or more</li>
                 </ul>
-                <p>A player who closes the stock and <strong>fails</strong> to reach 66 hands the full score to their opponent (2 points, or 3 if the closer had no tricks). A false declaration of 66 costs 2 points.</p>
+                <p>A player who closes the stock and <strong>fails</strong> to reach 66 hands the full score to their opponent (2 points, or 3 if the opponent had won no tricks at the moment the stock was closed). A false declaration of 66 costs 2 points.</p>
 
                 <h2>Winning the Game</h2>
-                <p>Both players count <strong>down from 7</strong>; game points are subtracted as they're won. The first to reach exactly 0 or below wins the match — the "Schnapser."</p>
+                <p>Both players count <strong>down from 7</strong>; game points are subtracted as they're won. The first to reach 0 wins the match.</p>
 
                 <h2>Variations</h2>
                 <ol>
